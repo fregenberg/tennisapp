@@ -1,7 +1,7 @@
 /* BACKGROUND IMAGE */
 
 body {
-    background: url("/public/images/background_aufschlag.jpg") no-repeat center
+    background: url("../images/background_aufschlag.jpg") no-repeat center
         center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;

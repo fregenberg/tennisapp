@@ -18,11 +18,11 @@ Route::get('/', function () {
 });
 
 Route::get('/login', function () {
-    return view('auth.login');
+    return view('login.login');
 });
 
 Route::get('/register', function () {
-    return view('auth.register');
+    return view('login.register');
 });
 
 Route::get('/alletermine', function () {

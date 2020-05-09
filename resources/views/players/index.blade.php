@@ -1,14 +1,126 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('players/layouts/app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TennisApp - AlleSpieler</title>
+@section('body')
+<title>Tennis-App - AlleSpieler</title>
 </head>
 
 <body>
-    <h1>Hello, my name is AlleSpieler. I am under construction. Content is coming soon.</h1>
-</body>
 
-</html>
+    <div class="heading container-fluid bg-transparent shadow static-top justify-content-center p-3 d-flex">
+        <h2>Alle Spieler</h2>
+    </div>
+
+    <div class="container pb-5 mb-5">
+
+        <!-- Player-Card_1 -->
+        <div class="card border-0 shadow my-4">
+            <div class="card-body card-body-background">
+                <form>
+                    <div class="row">
+                        <small class="col-11">LK13 | ID 16751724 | Heckerodt, Stefan</small>
+                        <small class="text-right col-11">0151 29114492 | Tennis@TimFreienberg.de</small>
+                    </div>
+                    <a href="/spieler" class="stretched-link"></a>
+                </form>
+            </div>
+        </div>
+
+        <!-- Player-Card_2 -->
+        <div class="card border-0 shadow my-4">
+            <div class="card-body">
+                <form>
+                    <div class="row">
+                        <small class="col-11">LK13 | ID 16804547 | Schmidt, Helge</small>
+                        <small class="text-right col-11">0151 29114492 | Tennis@TimFreienberg.de</small>
+                    </div>
+                    <a href="/spieler" class="stretched-link"></a>
+                </form>
+            </div>
+        </div>
+
+        <!-- Player-Card_3 -->
+        <div class="card border-0 shadow my-4">
+            <div class="card-body">
+                <form>
+                    <div class="row">
+                        <small class="col-11">LK14 | ID 17301022 | Stiehl, Thomas</small>
+                        <small class="text-right col-11">0151 29114492 | Tennis@TimFreienberg.de</small>
+                    </div>
+                    <a href="/spieler" class="stretched-link"></a>
+                </form>
+            </div>
+        </div>
+
+        <!-- Player-Card_4 -->
+        <div class="card border-0 shadow my-4">
+            <div class="card-body">
+                <form>
+                    <div class="row">
+                        <small class="col-11">LK15 | ID 16950127 | Veltmann, Karsten</small>
+                        <small class="text-right col-11">0151 29114492 | Tennis@TimFreienberg.de</small>
+                    </div>
+                    <a href="/spieler" class="stretched-link"></a>
+                </form>
+            </div>
+        </div>
+
+        <!-- Player-Card_5 -->
+        <div class="card border-0 shadow my-4">
+            <div class="card-body">
+                <form>
+                    <div class="row">
+                        <small class="col-11">LK15 | ID 17451094 | Freienberg, Tim</small>
+                        <small class="text-right col-11">0151 29114492 | Tennis@TimFreienberg.de</small>
+                    </div>
+                    <a href="/spieler" class="stretched-link"></a>
+                </form>
+            </div>
+        </div>
+
+        <!-- Player-Card_6 -->
+        <div class="card border-0 shadow my-4">
+            <div class="card-body">
+                <form>
+                    <div class="row">
+                        <small class="col-11">LK16 | ID 16850994 | Neumann, Marcus</small>
+                        <small class="text-right col-11">0151 29114492 | Tennis@TimFreienberg.de</small>
+                    </div>
+                    <a href="/spieler" class="stretched-link"></a>
+                </form>
+            </div>
+        </div>
+
+        <!-- Player-Card_7 -->
+        <div class="card border-0 shadow my-4">
+            <div class="card-body">
+                <form>
+                    <div class="row">
+                        <small class="col-11">LK17 | ID 16351260 | Fehsenfeld, Stephan</small>
+                        <small class="text-right col-11">0151 29114492 | Tennis@TimFreienberg.de</small>
+                    </div>
+                    <a href="/spieler" class="stretched-link"></a>
+                </form>
+            </div>
+        </div>
+
+        <!-- Player-Card_8 -->
+        <div class="card border-0 shadow my-4">
+            <div class="card-body">
+                <form>
+                    <div class="row">
+                        <small class="col-11">LK20 | ID 17452378 | Müller, Markus</small>
+                        <small class="text-right col-11">0151 29114492 | Tennis@TimFreienberg.de</small>
+                    </div>
+                    <a href="/spieler" class="stretched-link"></a>
+                </form>
+            </div>
+        </div>
+
+        <div class="pt-4">
+            <a href="/spieler/create" class="btn btn-primary btn-block" type="button">neuer Spieler</a>
+        </div>
+
+        <!-- cards container closing tag -->
+    </div>
+
+    @endsection

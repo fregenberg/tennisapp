@@ -115,7 +115,7 @@
                         </div>
 
                         <div class="pt-3">
-                            <a href="/index.html" class="btn btn-primary btn-block" type="button">Register</a>
+                            <a href="/login" class="btn btn-primary btn-block" type="button">Register</a>
                         </div>
                     </form>
                 </div>
@@ -132,6 +132,6 @@
         <div class="col-9 image">
             <img src="images/logo_transparent.png" class="img-fluid" alt="">
         </div>
-        <a href="url('/login')" class="col-3 mb-1">Login</a>
+        <a href="/login" class="col-3 mb-1">Login</a>
     </div>
     @endsection

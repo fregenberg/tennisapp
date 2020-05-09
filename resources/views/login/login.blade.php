@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <div class="py-4">
-                    <a href="/index.html" class="btn btn-primary btn-block" type="button">Login</a>
+                    <a href="/alletermine" class="btn btn-primary btn-block" type="button">Login</a>
                 </div>
 
                 <div class="text-center">
@@ -46,6 +46,6 @@
         <div class="col-9 image">
             <img src="images/logo_transparent.png" class="img-fluid" alt="">
         </div>
-        <a href="url('/register')" class="col-3 mb-1">Register</a>
+        <a href="/register" class="col-3 mb-1">Register</a>
     </div>
     @endsection

@@ -49,7 +49,7 @@
 
                         <div class="row">
                             <p class="col-5">Tel mobil</p>
-                            <a href="tel:+4915129114492" class="col-7"><strong>0151 29114492</strong></a>
+                            <a href="https://wa.me/4915129114492?Yannik%ist%ein%toller%Typ" class="col-7"><strong>0151 29114492</strong></a> <!-- tel:+4915129114492 -->
                         </div>
 
                         <div class="row">

@@ -122,7 +122,7 @@
                 </div>
                 <div class="card-footer row justify-content-around">
                     <a href="/spieler" class="col-5 btn btn-primary btn-sm btn-block mt-2" type="button">Speichern</a>
-                    <a href="/allespieler" class="col-5 btn btn-primary btn-sm btn-block text-danger" type="button">Abbrechen</a>
+                    <a href="/error" class="col-5 btn btn-primary btn-sm btn-block text-danger" type="button">Abbrechen</a>
                 </div>
             </div>
 

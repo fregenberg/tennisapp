@@ -17,14 +17,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/login', function () {
-    return view('login.login');
-});
-
-Route::get('/register', function () {
-    return view('login.register');
-});
-
 Route::get('/alletermine', function () {
     return view('home');
 });
@@ -55,4 +47,12 @@ Route::get('/spieler/create', function () {
 
 Route::get('/planer', function () {
     return view('planner.planner');
+});
+
+Route::get('/login', function () {
+    return view('login.login');
+});
+
+Route::get('/register', function () {
+    return view('login.register');
 });

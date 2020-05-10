@@ -25,13 +25,9 @@ Route::get('/termine/edit', function () {
     return view('matchdays.edit');
 });
 
-Route::get('/termine/create', function () {
-    return view('matchdays.create');
-});
+Route::get('/termine/create', 'MatchdayController@create');
 
-Route::get('/allespieler', function () {
-    return view('players.index');
-});
+Route::get('/allespieler', 'PlayerController@index');
 
 Route::get('/spieler', function () {
     return view('players.show');
@@ -41,9 +37,7 @@ Route::get('/spieler/edit', function () {
     return view('players.edit');
 });
 
-Route::get('/spieler/create', function () {
-    return view('players.create');
-});
+Route::get('/spieler/create', 'PlayerController@create');
 
 Route::get('/planer', function () {
     return view('planner.planner');

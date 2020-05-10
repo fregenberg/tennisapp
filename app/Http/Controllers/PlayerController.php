@@ -14,6 +14,7 @@ class PlayerController extends Controller
     public function index()
     {
         // show ALL players (route '/allespieler'; view 'players.index')
+        return view('players.index');
     }
 
     /**
@@ -24,7 +25,7 @@ class PlayerController extends Controller
      */
     public function show($id)
     {
-        // show a SPECIFIC player (route '/spieler'; view 'players.show')
+        // show a SPECIFIC player (ID!) (route '/spieler'; view 'players.show')
     }
 
     /**
@@ -35,7 +36,7 @@ class PlayerController extends Controller
      */
     public function edit($id)
     {
-        // show an EXISTING player in a form for editing (route '/spieler/edit'; view 'players.edit'); followed by update
+        // show an EXISTING player (ID!) in a form for editing (route '/spieler/edit'; view 'players.edit'); followed by update
     }
 
     /**
@@ -47,7 +48,7 @@ class PlayerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // update an EXISTING player in storage (no own route; after view 'players.edit')
+        // update an EXISTING player (ID!) in storage (no own route; after view 'players.edit')
     }
 
     /**
@@ -58,7 +59,7 @@ class PlayerController extends Controller
      */
     public function destroy($id)
     {
-        // delete an EXISTING player (no route yet; on view 'players.edit')
+        // delete an EXISTING player (ID!) (no route yet; on view 'players.edit')
     }
 
     /**
@@ -69,6 +70,7 @@ class PlayerController extends Controller
     public function create()
     {
         // show a form for creating a NEW player (route '/spieler/create'; view 'players.create'); followed by store
+        return view('players.create');
     }
 
     /**

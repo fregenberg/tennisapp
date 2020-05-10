@@ -24,7 +24,7 @@ class MatchdayController extends Controller
      */
     public function edit($id)
     {
-        // show an EXISTING matchday in a form for editing (route '/termine/edit'; view 'matchdays.edit'); followed by update
+        // show an EXISTING matchday (ID!) in a form for editing (route '/termine/edit'; view 'matchdays.edit'); followed by update
     }
 
     /**
@@ -36,7 +36,7 @@ class MatchdayController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // update an EXISTING matchday in storage (no own route; after view 'matchdays.edit')
+        // update an EXISTING matchday (ID!) in storage (no own route; after view 'matchdays.edit')
     }
 
     /**
@@ -47,7 +47,7 @@ class MatchdayController extends Controller
      */
     public function destroy($id)
     {
-        // delete an EXISTING matchday (no route yet; on view 'matchdays.edit')
+        // delete an EXISTING matchday (ID!) (no route yet; on view 'matchdays.edit')
     }
 
     /**
@@ -58,6 +58,7 @@ class MatchdayController extends Controller
     public function create()
     {
         // show a form for creating a NEW matchday (route '/termine/create'; view 'matchdays.create'); followed by store
+        return view('matchdays.create');
     }
 
     /**

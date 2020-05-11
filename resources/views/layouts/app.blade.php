@@ -26,11 +26,13 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <!-- -- -- -- -- -- -- -- -- -- -- -->
+
+    <!-- // <title>{{ config('app.name', 'Laravel') }}</title>
 
 </head>
 
-<body>
+<body> -->
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -86,6 +88,6 @@
             @yield('content')
         </main>
     </div>
-</body>
+    </body>
 
 </html>

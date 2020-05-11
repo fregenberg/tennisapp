@@ -1,0 +1,89 @@
+/* BACKGROUND IMAGE */
+
+body {
+    background: url("../images/404_siehtgutausbringtabernichts.jpg") no-repeat
+        center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+/* HEADER */
+
+.top {
+    color: #fdfb50;
+}
+
+/* ROTATE */
+
+.container {
+    position: absolute;
+    top: 53%;
+}
+
+.middle {
+    background-color: #fdfb50;
+    color: #0275d8;
+    text-align: center;
+    transform: rotate(-10deg);
+}
+
+/* BACK-HOME-BUTTON */
+
+.btn {
+    border: 1px solid #fdfb50;
+    color: #fdfb50;
+}
+
+.btn:hover {
+    border: 1px solid #f5f5f5;
+    background: #f5f5f5;
+    color: #0275d8;
+}
+
+/* BOTTOM NAVIGATION TAB BAR */
+
+.navbar {
+    background-color: #fdfb50;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Style the links inside the navigation bar */
+.navbar svg {
+    max-width: 30%;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #0275d8;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+    background: #f5f5f5;
+    color: #0275d8;
+}
+
+/* Add a color to the active/current link */
+.navbar a.active {
+    background-color: #0275d8;
+    color: #fdfb50;
+}
+
+/* colors */
+
+colors {
+    color: #000; /* black */
+    color: #0275d8; /* blue */
+    color: #fdfb50; /* tennis-yellow */
+    color: #f5f5f5; /* white (alt: #e5e5e5 | #f2f6e9 */
+}

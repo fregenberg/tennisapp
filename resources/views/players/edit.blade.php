@@ -1,6 +1,6 @@
 @extends('players/layouts/app')
 
-@section('body')
+@section('content')
 
 <title>Tennis-App - Spieler/Edit</title>
 </head>

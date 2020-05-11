@@ -1,6 +1,6 @@
 @extends('login/layouts/app')
 
-@section('body')
+@section('content')
 <title>Tennis-App - Login</title>
 </head>
 

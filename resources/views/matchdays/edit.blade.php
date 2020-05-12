@@ -1,7 +1,7 @@
 @extends('matchdays/layouts/app')
 
 @section('content')
-<title>Tennis-App - Termine/Edit</title>
+<title>Tennis-App - Termine/Bearbeiten</title>
 </head>
 
 <body>

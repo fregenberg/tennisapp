@@ -69,7 +69,7 @@ class PlayerController extends Controller
      */
     public function create()
     {
-        // show a form for creating a NEW player (route '/spieler/create'; view 'players.create'); followed by store
+        // show a form for creating a NEW player (route '/spieler/erstellen'; view 'players.create'); followed by store
         return view('players.create');
     }
 

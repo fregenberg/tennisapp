@@ -22,11 +22,11 @@ Route::get('/alletermine', function () {
     return view('home');
 });
 
-Route::get('/termine/edit', function () {
+Route::get('/termine/bearbeiten', function () {
     return view('matchdays.edit');
 });
 
-Route::get('/termine/create', 'MatchdayController@create');
+Route::get('/termine/erstellen', 'MatchdayController@create');
 
 Route::get('/allespieler', 'PlayerController@index');
 
@@ -34,11 +34,11 @@ Route::get('/spieler', function () {
     return view('players.show');
 });
 
-Route::get('/spieler/edit', function () {
+Route::get('/spieler/bearbeiten', function () {
     return view('players.edit');
 });
 
-Route::get('/spieler/create', 'PlayerController@create');
+Route::get('/spieler/erstellen', 'PlayerController@create');
 
 Route::get('/planer', function () {
     return view('planner.planner');

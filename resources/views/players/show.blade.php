@@ -63,7 +63,7 @@
                         </div>
 
                         <div class="row pt-4">
-                            <a href="/spieler/edit" class="btn btn-primary btn-block" type="button">Bearbeiten</a>
+                            <a href="/spieler/bearbeiten" class="btn btn-primary btn-block" type="button">Bearbeiten</a>
                         </div>
                     </form>
                 </div>

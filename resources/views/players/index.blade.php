@@ -117,7 +117,7 @@
         </div>
 
         <div class="pt-4">
-            <a href="/spieler/create" class="btn btn-primary btn-block" type="button">neuer Spieler</a>
+            <a href="/spieler/erstellen" class="btn btn-primary btn-block" type="button">neuer Spieler</a>
         </div>
 
         <!-- cards container closing tag -->

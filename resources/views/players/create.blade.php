@@ -2,7 +2,7 @@
 
 @section('content')
 
-<title>Tennis-App - Spieler/Create</title>
+<title>Tennis-App - Spieler/Erstellen</title>
 </head>
 
 <body>

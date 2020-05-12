@@ -57,7 +57,7 @@ class MatchdayController extends Controller
      */
     public function create()
     {
-        // show a form for creating a NEW matchday (route '/termine/create'; view 'matchdays.create'); followed by store
+        // show a form for creating a NEW matchday (route '/termine/erstellen'; view 'matchdays.create'); followed by store
         return view('matchdays.create');
     }
 

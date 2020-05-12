@@ -59,7 +59,7 @@
             </div>
             <div class="card-footer row justify-content-around">
                 <a href="/planer" class="col-5 btn btn-sm btn-outline-secondary text-dark" type="button">Anzeigen</a>
-                <a href="/termine/edit" class="col-5 btn btn-sm btn-outline-secondary text-dark" type="button">Bearbeiten</a>
+                <a href="/termine/bearbeiten" class="col-5 btn btn-sm btn-outline-secondary text-dark" type="button">Bearbeiten</a>
             </div>
         </div>
 
@@ -110,7 +110,7 @@
             </div>
             <div class="card-footer row justify-content-around">
                 <a href="/planer" class="col-5 btn btn-sm btn-outline-secondary text-dark" type="button">Anzeigen</a>
-                <a href="/termine/edit" class="col-5 btn btn-sm btn-outline-secondary text-dark" type="button">Bearbeiten</a>
+                <a href="/termine/bearbeiten" class="col-5 btn btn-sm btn-outline-secondary text-dark" type="button">Bearbeiten</a>
             </div>
         </div>
 
@@ -161,7 +161,7 @@
             </div>
             <div class="card-footer row justify-content-around">
                 <a href="/planer" class="col-5 btn btn-sm btn-outline-secondary text-dark" type="button">Anzeigen</a>
-                <a href="/termine/edit" class="col-5 btn btn-sm btn-outline-secondary text-dark" type="button">Bearbeiten</a>
+                <a href="/termine/bearbeiten" class="col-5 btn btn-sm btn-outline-secondary text-dark" type="button">Bearbeiten</a>
             </div>
         </div>
 
@@ -212,7 +212,7 @@
             </div>
             <div class="card-footer row justify-content-around">
                 <a href="/planer" class="col-5 btn btn-sm btn-outline-secondary text-dark" type="button">Anzeigen</a>
-                <a href="/termine/edit" class="col-5 btn btn-sm btn-outline-secondary text-dark" type="button">Bearbeiten</a>
+                <a href="/termine/bearbeiten" class="col-5 btn btn-sm btn-outline-secondary text-dark" type="button">Bearbeiten</a>
             </div>
         </div>
 
@@ -263,12 +263,12 @@
             </div>
             <div class="card-footer row justify-content-around">
                 <a href="/planer" class="col-5 btn btn-sm btn-outline-secondary text-dark" type="button">Anzeigen</a>
-                <a href="/termine/edit" class="col-5 btn btn-sm btn-outline-secondary text-dark" type="button">Bearbeiten</a>
+                <a href="/termine/bearbeiten" class="col-5 btn btn-sm btn-outline-secondary text-dark" type="button">Bearbeiten</a>
             </div>
         </div>
 
         <div>
-            <a href="/termine/create" class="newdate btn btn-primary btn-block" type="button">neuen Termin anlegen</a>
+            <a href="/termine/erstellen" class="newdate btn btn-primary btn-block" type="button">neuen Termin anlegen</a>
         </div>
 
         <!-- cards container closing tag -->

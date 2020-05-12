@@ -1,22 +1,23 @@
-@extends('players/layouts/app')
+@extends('layouts.app')
 
 @section('title')
-TennisApp | Spieler/Erstellen
+TennisApp | Register
 @endsection
 
 @section('content')
 
 <div class="overlay">
 
-    <div class="heading container-fluid bg-transparent shadow static-top justify-content-center p-3 d-flex">
-        <h2>Spieler</h2>
-    </div>
-
-    <div class="container pb-5">
-
+    <div class="container pt-5 mt-5">
+        <h3 class="font-weight-normal pt-3">Register</h3>
+        <!-- <div class="row justify-content-center">
+                <div class="col-md-8"> -->
         <div class="card bg-transparent border-0 shadow pt-1 mb-5">
+            <!-- // <div class="card-header">{{ __('Register') }}</div> -->
+
             <div class="card-body">
-                <form>
+                <form method="POST" action="{{ route('register') }}">
+                    @csrf
                     <div class="form-group row">
                         <label for="lk" class="col-4 col-form-label col-form-label-sm">LK</label>
                         <div>
@@ -56,16 +57,23 @@ TennisApp | Spieler/Erstellen
                     </div>
 
                     <div class="form-group row">
-                        <label for="vorname" class="col-4 col-form-label col-form-label-sm">Vorname</label>
+                        <label for="vorname" class="col-4 col-form-label col-form-label-sm">Vorname*</label>
                         <div>
                             <input type="text" class="form-control form-control-sm" id="vorname" required placeholder="Otto">
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="name" class="col-4 col-form-label col-form-label-sm">Name</label>
+                        <label for="name" class="col-4 col-form-label col-form-label-sm">{{ __('Name*') }}</label>
+
                         <div>
-                            <input type="text" class="form-control form-control-sm" id="name" required placeholder="Mustermann">
+                            <input type="text" class="form-control form-control-sm @error('name') is-invalid @enderror" id="name" placeholder="Mustermann" name="name" value="{{ old('name') }}" required autocomplete="name">
+
+                            @error('name')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                         </div>
                     </div>
 
@@ -98,31 +106,50 @@ TennisApp | Spieler/Erstellen
                     </div>
 
                     <div class="form-group row">
-                        <label for="email" class="col-4 col-form-label col-form-label-sm">E-Mail</label>
+                        <label for="email" class="col-4 col-form-label col-form-label-sm">{{ __('E-Mail*') }}</label>
+
                         <div>
-                            <input type="email" class="form-control form-control-sm" id="email" required placeholder="otto@mustermann.de">
+                            <input type="email" class="form-control form-control-sm @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="otto@mustermann.de">
+
+                            @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="password" class="col-4 col-form-label col-form-label-sm">Passwort</label>
+                        <label for="password" class="col-4 col-form-label col-form-label-sm">{{ __('Passwort*') }}</label>
+
                         <div>
-                            <input type="password" class="form-control form-control-sm" id="password">
+                            <input type="password" class="form-control form-control-sm @error('password') is-invalid @enderror" id="password" name="password" required autocomplete="new-password">
+
+                            @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="confirmation" class="col-4 col-form-label col-form-label-sm">Bestätigung</label>
+                        <label for="password-confirm" class="col-4 col-form-label col-form-label-sm">{{ __('Bestätigung*') }}</label>
+
                         <div>
-                            <input type="password" class="form-control form-control-sm" id="confirmation">
+                            <input type="password" class="form-control form-control-sm" id="password-confirm" name="password_confirmation" required autocomplete="new-password">
                         </div>
                     </div>
 
+                    <div class="pt-3">
+                        <a href="/login" class="btn btn-primary btn-block" type="button">{{ __('Register') }}</a>
+                        <!-- <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+//                                    {{ __('Register') }}
+                                </button>
+                            </div> -->
+                    </div>
                 </form>
-            </div>
-            <div class="card-footer row justify-content-around">
-                <a href="/spieler" class="col-5 btn btn-primary btn-sm btn-block mt-2" type="button">Speichern</a>
-                <a href="/error" class="col-5 btn btn-primary btn-sm btn-block text-danger" type="button">Abbrechen</a>
             </div>
         </div>
 
@@ -132,4 +159,11 @@ TennisApp | Spieler/Erstellen
     <!-- overlay closing tag -->
 </div>
 
+<!-- header -->
+<div class="navbar p-1">
+    <div class="col-9 image">
+        <img src="images/logo_transparent.png" class="img-fluid" alt="">
+    </div>
+    <a href="/login" class="col-3 mb-1">Login</a>
+</div>
 @endsection

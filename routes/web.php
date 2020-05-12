@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,42 +18,32 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/login', function () {
-    return view('login.login');
-});
-
-Route::get('/register', function () {
-    return view('login.register');
-});
-
 Route::get('/alletermine', function () {
     return view('home');
 });
 
-Route::get('/termine/edit', function () {
+Route::get('/termine/bearbeiten', function () {
     return view('matchdays.edit');
 });
 
-Route::get('/termine/create', function () {
-    return view('matchdays.create');
-});
+Route::get('/termine/erstellen', 'MatchdayController@create');
 
-Route::get('/allespieler', function () {
-    return view('players.index');
-});
+Route::get('/allespieler', 'PlayerController@index');
 
 Route::get('/spieler', function () {
     return view('players.show');
 });
 
-Route::get('/spieler/edit', function () {
+Route::get('/spieler/bearbeiten', function () {
     return view('players.edit');
 });
 
-Route::get('/spieler/create', function () {
-    return view('players.create');
-});
+Route::get('/spieler/erstellen', 'PlayerController@create');
 
 Route::get('/planer', function () {
     return view('planner.planner');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

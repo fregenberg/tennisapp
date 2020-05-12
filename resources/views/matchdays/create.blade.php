@@ -19,14 +19,14 @@
                     <div class="form-group row">
                         <label for="gamedate" class="col-3 col-form-label col-form-label-sm">Datum</label>
                         <div>
-                            <input type="date" class="form-control form-control-sm" id="gamedate" placeholder="25.05.2020" />
+                            <input type="date" class="form-control form-control-sm" id="gamedate" value="2020-05-25" />
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label for="gametime" class="col-3 col-form-label col-form-label-sm">Uhrzeit</label>
                         <div>
-                            <input type="time" class="form-control form-control-sm" id="gametime" placeholder="15:00" />
+                            <input type="time" class="form-control form-control-sm" id="gametime" value="15:00" />
                         </div>
                     </div>
 
@@ -38,25 +38,25 @@
                     <div class="form-group row">
                         <label for="hometeam" class="col-3 col-form-label col-form-label-sm">Heim</label>
                         <div>
-                            <input type="text" class="form-control form-control-sm" id="hometeam" />
+                            <input type="text" class="form-control form-control-sm" id="hometeam" placeholder="THC neue fische e.V." />
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label for="awayteam" class="col-3 col-form-label col-form-label-sm">Gast</label>
                         <div>
-                            <input type="text" class="form-control form-control-sm" id="awayteam" />
+                            <input type="text" class="form-control form-control-sm" id="awayteam" placeholder="THC alte fische e.V." />
                         </div>
                     </div>
 
-                    <div class="form-group row">
+                    <div class=" form-group row">
                         <label for="venue" class="col-3 col-form-label col-form-label-sm">Spielort</label>
-                        <input type="text" class="col-6 form-control form-control-sm" id="venue" />
-                        <input type="text" class="col-2 form-control form-control-sm" id="venue" />
+                        <input type="text" class="col-6 form-control form-control-sm" id="venue" placeholder="Gasstraße" />
+                        <input type="text" class="col-2 form-control form-control-sm" id="venue" placeholder="6" />
 
                         <label for="venue" class="col-3 col-form-label col-form-label-sm"></label>
-                        <input type="tel" class="col-3 form-control form-control-sm" id="venue" />
-                        <input type="text" class="col-5 form-control form-control-sm" id="venue" />
+                        <input type="text" class="col-3 form-control form-control-sm" id="venue" pattern="[0-9]{5}" placeholder="22761" />
+                        <input type="text" class="col-5 form-control form-control-sm" id="venue" placeholder="Hamburg" />
                     </div>
 
                     <div class="form-group row">

@@ -51,21 +51,21 @@
                         <div class="form-group row">
                             <label for="id" class="col-4 col-form-label col-form-label-sm">ID-Nummer</label>
                             <div>
-                                <input type="tel" class="form-control form-control-sm" id="id" placeholder="17451094">
+                                <input type="text" class="form-control form-control-sm" id="id" pattern="[0-9]{8}" placeholder="17451094">
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="vorname" class="col-4 col-form-label col-form-label-sm">Vorname</label>
                             <div>
-                                <input type="text" class="form-control form-control-sm" id="vorname" placeholder="Tim">
+                                <input type="text" class="form-control form-control-sm" id="vorname" required placeholder="Tim">
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="name" class="col-4 col-form-label col-form-label-sm">Name</label>
                             <div>
-                                <input type="text" class="form-control form-control-sm" id="name" placeholder="Freienberg">
+                                <input type="text" class="form-control form-control-sm" id="name" required placeholder="Freienberg">
                             </div>
                         </div>
 
@@ -100,7 +100,7 @@
                         <div class="form-group row">
                             <label for="email" class="col-4 col-form-label col-form-label-sm">E-Mail</label>
                             <div>
-                                <input type="email" class="form-control form-control-sm" id="email" value="Tennis@TimFreienberg.de">
+                                <input type="email" class="form-control form-control-sm" id="email" required placeholder="Tennis@TimFreienberg.de">
                             </div>
                         </div>
 

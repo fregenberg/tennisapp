@@ -51,21 +51,21 @@
                         <div class="form-group row">
                             <label for="id" class="col-4 col-form-label col-form-label-sm">ID-Nummer</label>
                             <div>
-                                <input type="tel" class="form-control form-control-sm" id="id" placeholder="16700001">
+                                <input type="text" class="form-control form-control-sm" id="id" pattern="[0-9]{8}" placeholder="16700001">
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="vorname" class="col-4 col-form-label col-form-label-sm">Vorname</label>
                             <div>
-                                <input type="text" class="form-control form-control-sm" id="vorname" placeholder="Boris">
+                                <input type="text" class="form-control form-control-sm" id="vorname" required placeholder="Otto">
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="name" class="col-4 col-form-label col-form-label-sm">Name</label>
                             <div>
-                                <input type="text" class="form-control form-control-sm" id="name" placeholder="Becker">
+                                <input type="text" class="form-control form-control-sm" id="name" required placeholder="Mustermann">
                             </div>
                         </div>
 
@@ -79,14 +79,14 @@
                         <div class="form-group row">
                             <label for="telprivat" class="col-4 col-form-label col-form-label-sm">Tel privat</label>
                             <div>
-                                <input type="tel" class="form-control form-control-sm" id="telprivat" placeholder="+49 40 1234567">
+                                <input type="tel" class="form-control form-control-sm" id="telprivat" placeholder="+49 40 12345678">
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="telmobil" class="col-4 col-form-label col-form-label-sm">Tel mobil</label>
                             <div>
-                                <input type="tel" class="form-control form-control-sm" id="telmobil" placeholder="+49 171 1234567">
+                                <input type="tel" class="form-control form-control-sm" id="telmobil" placeholder="+49 171 2345678">
                             </div>
                         </div>
 
@@ -100,7 +100,7 @@
                         <div class="form-group row">
                             <label for="email" class="col-4 col-form-label col-form-label-sm">E-Mail</label>
                             <div>
-                                <input type="email" class="form-control form-control-sm" id="email">
+                                <input type="email" class="form-control form-control-sm" id="email" required placeholder="otto@mustermann.de">
                             </div>
                         </div>
 

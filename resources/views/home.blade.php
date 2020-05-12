@@ -33,12 +33,12 @@
 
                     <div class="row">
                         <p class="col-4">Heim</p>
-                        <p class="col-6">neue fische</p>
+                        <p class="col-6">THC neue fische e.V.</p>
                     </div>
 
                     <div class="row">
                         <p class="col-4">Gast</p>
-                        <p class="col-6">alte fische</p>
+                        <p class="col-6">THC alte fische e.V.</p>
                     </div>
 
                     <div class="row">
@@ -84,12 +84,12 @@
 
                     <div class="row">
                         <p class="col-4">Heim</p>
-                        <p class="col-6">neue fische</p>
+                        <p class="col-6">THC neue fische e.V.</p>
                     </div>
 
                     <div class="row">
                         <p class="col-4">Gast</p>
-                        <p class="col-6">alte fische</p>
+                        <p class="col-6">THC alte fische e.V.</p>
                     </div>
 
                     <div class="row">
@@ -135,12 +135,12 @@
 
                     <div class="row">
                         <p class="col-4">Heim</p>
-                        <p class="col-6">neue fische</p>
+                        <p class="col-6">THC neue fische e.V.</p>
                     </div>
 
                     <div class="row">
                         <p class="col-4">Gast</p>
-                        <p class="col-6">alte fische</p>
+                        <p class="col-6">THC alte fische e.V.</p>
                     </div>
 
                     <div class="row">
@@ -186,12 +186,12 @@
 
                     <div class="row">
                         <p class="col-4">Heim</p>
-                        <p class="col-6">neue fische</p>
+                        <p class="col-6">THC neue fische e.V.</p>
                     </div>
 
                     <div class="row">
                         <p class="col-4">Gast</p>
-                        <p class="col-6">alte fische</p>
+                        <p class="col-6">THC alte fische e.V.</p>
                     </div>
 
                     <div class="row">
@@ -237,12 +237,12 @@
 
                     <div class="row">
                         <p class="col-4">Heim</p>
-                        <p class="col-6">neue fische</p>
+                        <p class="col-6">THC neue fische e.V.</p>
                     </div>
 
                     <div class="row">
                         <p class="col-4">Gast</p>
-                        <p class="col-6">alte fische</p>
+                        <p class="col-6">THC alte fische e.V.</p>
                     </div>
 
                     <div class="row">

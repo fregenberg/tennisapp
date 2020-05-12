@@ -13,7 +13,7 @@ class MatchdayController extends Controller
      */
     public function index()
     {
-        // show ALL matchdays (routes '/' and '/alletermine'; view 'home')
+        // TODO show ALL matchdays (routes '/' and '/alletermine'; view 'home')
     }
 
     /**
@@ -24,7 +24,7 @@ class MatchdayController extends Controller
      */
     public function edit($id)
     {
-        // show an EXISTING matchday (ID!) in a form for editing (route '/termine/edit'; view 'matchdays.edit'); followed by update
+        // TODO show an EXISTING matchday (ID!) in a form for editing (route '/termine/bearbeiten'; view 'matchdays.edit'); followed by update
     }
 
     /**
@@ -36,7 +36,7 @@ class MatchdayController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // update an EXISTING matchday (ID!) in storage (no own route; after view 'matchdays.edit')
+        // TODO update an EXISTING matchday (ID!) in storage (no own route; after view 'matchdays.edit')
     }
 
     /**
@@ -47,7 +47,7 @@ class MatchdayController extends Controller
      */
     public function destroy($id)
     {
-        // delete an EXISTING matchday (ID!) (no route yet; on view 'matchdays.edit')
+        // TODO delete an EXISTING matchday (ID!) (no own route; on view 'matchdays.edit')
     }
 
     /**
@@ -57,7 +57,7 @@ class MatchdayController extends Controller
      */
     public function create()
     {
-        // show a form for creating a NEW matchday (route '/termine/erstellen'; view 'matchdays.create'); followed by store
+        // TODO show a form for creating a NEW matchday (route '/termine/erstellen'; view 'matchdays.create'); followed by store
         return view('matchdays.create');
     }
 
@@ -69,7 +69,7 @@ class MatchdayController extends Controller
      */
     public function store(Request $request)
     {
-        // store a NEW matchday in storage (no own route; after view 'matchdays.create')
+        // TODO store a NEW matchday in storage (no own route; after view 'matchdays.create')
     }
 
     /**
@@ -80,6 +80,6 @@ class MatchdayController extends Controller
      */
     public function show($id)
     {
-        // show a SPECIFIC matchday (no route; no view); 'anzeigen' leads to 'planner'
+        // TODO show a SPECIFIC matchday (no route; no view); 'anzeigen' leads to 'planner'
     }
 }

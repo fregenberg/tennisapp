@@ -67,15 +67,15 @@
                         <p class="col-4">Stefan</p>
                         <ul class="col-7 entry-list">
                             <li class="participation">
-                                <input type="checkbox" name="stefan" id="stefan_yes" class="input" value="yes">
+                                <input type="radio" name="stefan" id="stefan_yes" class="input" value="yes">
                                 <label for="stefan_yes" class="willingness">Ja</label>
                             </li>
                             <li class="participation">
-                                <input type="checkbox" name="stefan" id="stefan_maybe" class="input" value="maybe">
+                                <input type="radio" name="stefan" id="stefan_maybe" class="input" value="maybe">
                                 <label for="stefan_maybe" class="willingness">Vielleicht</label>
                             </li>
                             <li class="participation">
-                                <input type="checkbox" name="stefan" id="stefan_no" class="input" value="no">
+                                <input type="radio" name="stefan" id="stefan_no" class="input" value="no">
                                 <label for="stefan_no" class="willingness">Nein</label>
                             </li>
                         </ul>
@@ -85,15 +85,15 @@
                         <p class="col-4">Helge</p>
                         <ul class="col-7 entry-list">
                             <li class="participation">
-                                <input type="checkbox" name="helge" id="helge_yes" class="input" value="yes">
+                                <input type="radio" name="helge" id="helge_yes" class="input" value="yes">
                                 <label for="helge_yes" class="willingness">Ja</label>
                             </li>
                             <li class="participation">
-                                <input type="checkbox" name="helge" id="helge_maybe" class="input" value="maybe">
+                                <input type="radio" name="helge" id="helge_maybe" class="input" value="maybe">
                                 <label for="helge_maybe" class="willingness">Vielleicht</label>
                             </li>
                             <li class="participation">
-                                <input type="checkbox" name="helge" id="helge_no" class="input" value="no">
+                                <input type="radio" name="helge" id="helge_no" class="input" value="no">
                                 <label for="helge_no" class="willingness">Nein</label>
                             </li>
                         </ul>
@@ -103,15 +103,15 @@
                         <p class="col-4">Thomas</p>
                         <ul class="col-7 entry-list">
                             <li class="participation">
-                                <input type="checkbox" name="thomas" id="thomas_yes" class="input" value="yes">
+                                <input type="radio" name="thomas" id="thomas_yes" class="input" value="yes">
                                 <label for="thomas_yes" class="willingness">Ja</label>
                             </li>
                             <li class="participation">
-                                <input type="checkbox" name="thomas" id="thomas_maybe" class="input" value="maybe">
+                                <input type="radio" name="thomas" id="thomas_maybe" class="input" value="maybe">
                                 <label for="thomas_maybe" class="willingness">Vielleicht</label>
                             </li>
                             <li class="participation">
-                                <input type="checkbox" name="thomas" id="thomas_no" class="input" value="no">
+                                <input type="radio" name="thomas" id="thomas_no" class="input" value="no">
                                 <label for="thomas_no" class="willingness">Nein</label>
                             </li>
                         </ul>
@@ -121,15 +121,15 @@
                         <p class="col-4">Karsten</p>
                         <ul class="col-7 entry-list">
                             <li class="participation">
-                                <input type="checkbox" name="karsten" id="karsten_yes" class="input" value="yes">
+                                <input type="radio" name="karsten" id="karsten_yes" class="input" value="yes">
                                 <label for="karsten_yes" class="willingness">Ja</label>
                             </li>
                             <li class="participation">
-                                <input type="checkbox" name="karsten" id="karsten_maybe" class="input" value="maybe">
+                                <input type="radio" name="karsten" id="karsten_maybe" class="input" value="maybe">
                                 <label for="karsten_maybe" class="willingness">Vielleicht</label>
                             </li>
                             <li class="participation">
-                                <input type="checkbox" name="karsten" id="karsten_no" class="input" value="no">
+                                <input type="radio" name="karsten" id="karsten_no" class="input" value="no">
                                 <label for="karsten_no" class="willingness">Nein</label>
                             </li>
                         </ul>
@@ -139,15 +139,15 @@
                         <p class="col-4">Tim</p>
                         <ul class="col-7 entry-list">
                             <li class="participation">
-                                <input type="checkbox" name="tim" id="tim_yes" class="input" value="yes">
+                                <input type="radio" name="tim" id="tim_yes" class="input" value="yes">
                                 <label for="tim_yes" class="willingness">Ja</label>
                             </li>
                             <li class="participation">
-                                <input type="checkbox" name="tim" id="tim_maybe" class="input" value="maybe">
+                                <input type="radio" name="tim" id="tim_maybe" class="input" value="maybe">
                                 <label for="tim_maybe" class="willingness">Vielleicht</label>
                             </li>
                             <li class="participation">
-                                <input type="checkbox" name="tim" id="tim_no" class="input" value="no">
+                                <input type="radio" name="tim" id="tim_no" class="input" value="no">
                                 <label for="tim_no" class="willingness">Nein</label>
                             </li>
                         </ul>
@@ -157,15 +157,15 @@
                         <p class="col-4">Marcus</p>
                         <ul class="col-7 entry-list">
                             <li class="participation">
-                                <input type="checkbox" name="marcus" id="marcus_yes" class="input" value="yes">
+                                <input type="radio" name="marcus" id="marcus_yes" class="input" value="yes">
                                 <label for="marcus_yes" class="willingness">Ja</label>
                             </li>
                             <li class="participation">
-                                <input type="checkbox" name="marcus" id="marcus_maybe" class="input" value="maybe">
+                                <input type="radio" name="marcus" id="marcus_maybe" class="input" value="maybe">
                                 <label for="marcus_maybe" class="willingness">Vielleicht</label>
                             </li>
                             <li class="participation">
-                                <input type="checkbox" name="marcus" id="marcus_no" class="input" value="no">
+                                <input type="radio" name="marcus" id="marcus_no" class="input" value="no">
                                 <label for="marcus_no" class="willingness">Nein</label>
                             </li>
                         </ul>
@@ -175,15 +175,15 @@
                         <p class="col-4">Fehsi</p>
                         <ul class="col-7 entry-list">
                             <li class="participation">
-                                <input type="checkbox" name="fehsi" id="fehsi_yes" class="input" value="yes">
+                                <input type="radio" name="fehsi" id="fehsi_yes" class="input" value="yes">
                                 <label for="fehsi_yes" class="willingness">Ja</label>
                             </li>
                             <li class="participation">
-                                <input type="checkbox" name="fehsi" id="fehsi_maybe" class="input" value="maybe">
+                                <input type="radio" name="fehsi" id="fehsi_maybe" class="input" value="maybe">
                                 <label for="fehsi_maybe" class="willingness">Vielleicht</label>
                             </li>
                             <li class="participation">
-                                <input type="checkbox" name="fehsi" id="fehsi_no" class="input" value="no">
+                                <input type="radio" name="fehsi" id="fehsi_no" class="input" value="no">
                                 <label for="fehsi_no" class="willingness">Nein</label>
                             </li>
                         </ul>
@@ -193,15 +193,15 @@
                         <p class="col-4">MaMü</p>
                         <ul class="col-7 entry-list">
                             <li class="participation">
-                                <input type="checkbox" name="binni" id="binni_yes" class="input" value="yes">
+                                <input type="radio" name="binni" id="binni_yes" class="input" value="yes">
                                 <label for="binni_yes" class="willingness">Ja</label>
                             </li>
                             <li class="participation">
-                                <input type="checkbox" name="binni" id="binni_maybe" class="input" value="maybe">
+                                <input type="radio" name="binni" id="binni_maybe" class="input" value="maybe">
                                 <label for="binni_maybe" class="willingness">Vielleicht</label>
                             </li>
                             <li class="participation">
-                                <input type="checkbox" name="binni" id="binni_no" class="input" value="no">
+                                <input type="radio" name="binni" id="binni_no" class="input" value="no">
                                 <label for="binni_no" class="willingness">Nein</label>
                             </li>
                         </ul>

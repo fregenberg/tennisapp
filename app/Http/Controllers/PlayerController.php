@@ -48,6 +48,7 @@ class PlayerController extends Controller
      */
     public function update(Request $request, $id)
     {
+        // TODO validate the request and 
         // TODO update an EXISTING player (ID!) in storage (no own route; after view 'players.edit')
     }
 
@@ -81,6 +82,7 @@ class PlayerController extends Controller
      */
     public function store(Request $request)
     {
+        // TODO validate the request and 
         // TODO store a NEW player in storage (no own route; after view 'players.create')
     }
 }

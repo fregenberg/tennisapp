@@ -49,16 +49,16 @@ TennisApp | Spieler/Bearbeiten
                     </div>
 
                     <div class="form-group row">
-                        <label for="id" class="col-4 col-form-label col-form-label-sm">ID-Nummer</label>
+                        <label for="dtb_id" class="col-4 col-form-label col-form-label-sm">ID-Nummer</label>
                         <div>
-                            <input type="text" class="form-control form-control-sm" id="id" pattern="[0-9]{8}" placeholder="17451094">
+                            <input type="text" class="form-control form-control-sm" id="dtb_id" pattern="[0-9]{8}" placeholder="17451094">
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="vorname" class="col-4 col-form-label col-form-label-sm">Vorname</label>
+                        <label for="first_name" class="col-4 col-form-label col-form-label-sm">Vorname</label>
                         <div>
-                            <input type="text" class="form-control form-control-sm" id="vorname" required placeholder="Tim">
+                            <input type="text" class="form-control form-control-sm" id="first_name" required placeholder="Tim">
                         </div>
                     </div>
 
@@ -77,16 +77,16 @@ TennisApp | Spieler/Bearbeiten
                     </div>
 
                     <div class="form-group row">
-                        <label for="telprivat" class="col-4 col-form-label col-form-label-sm">Tel privat</label>
+                        <label for="tel_private" class="col-4 col-form-label col-form-label-sm">Tel privat</label>
                         <div>
-                            <input type="tel" class="form-control form-control-sm" id="telprivat" placeholder="+49 40 87976551">
+                            <input type="tel" class="form-control form-control-sm" id="tel_private" placeholder="+49 40 87976551">
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="telmobil" class="col-4 col-form-label col-form-label-sm">Tel mobil</label>
+                        <label for="tel_mobile" class="col-4 col-form-label col-form-label-sm">Tel mobil</label>
                         <div>
-                            <input type="tel" class="form-control form-control-sm" id="telmobil" placeholder="+49 151 29114492">
+                            <input type="tel" class="form-control form-control-sm" id="tel_mobile" placeholder="+49 151 29114492">
                         </div>
                     </div>
 
@@ -96,6 +96,8 @@ TennisApp | Spieler/Bearbeiten
                             <input type="date" class="form-control form-control-sm" id="birthday" value="1974-01-08">
                         </div>
                     </div>
+
+                    <!-- TODO core_team -->
 
                     <div class="form-group row">
                         <label for="email" class="col-4 col-form-label col-form-label-sm">E-Mail</label>

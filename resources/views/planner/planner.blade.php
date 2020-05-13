@@ -63,54 +63,159 @@
             <!-- Card body -->
             <div class="card-body">
                 <form>
-                    <div class="row d-flex justify-content-end pb-2">
-                        <small class="col-3 text-center">Ja </small>
-                        <small class="col-2 text-left pr-0">? </small>
-                        <small class="col-2 text-right pl-0">Nein </small>
-                    </div>
-
                     <div class="row">
                         <p class="col-4">Stefan</p>
-                        <input type="range" class="col-7 custom-range" min="1" max="4" step="1" value="1">
+                        <ul class="col-7 entry-list">
+                            <li class="participation">
+                                <input type="checkbox" name="stefan" id="stefan_yes" class="input" value="yes">
+                                <label for="stefan_yes" class="willingness">Ja</label>
+                            </li>
+                            <li class="participation">
+                                <input type="checkbox" name="stefan" id="stefan_maybe" class="input" value="maybe">
+                                <label for="stefan_maybe" class="willingness">Vielleicht</label>
+                            </li>
+                            <li class="participation">
+                                <input type="checkbox" name="stefan" id="stefan_no" class="input" value="no">
+                                <label for="stefan_no" class="willingness">Nein</label>
+                            </li>
+                        </ul>
                     </div>
 
                     <div class="row">
                         <p class="col-4">Helge</p>
-                        <input type="range" class="col-7 custom-range" min="1" max="4" step="1" value="1">
+                        <ul class="col-7 entry-list">
+                            <li class="participation">
+                                <input type="checkbox" name="helge" id="helge_yes" class="input" value="yes">
+                                <label for="helge_yes" class="willingness">Ja</label>
+                            </li>
+                            <li class="participation">
+                                <input type="checkbox" name="helge" id="helge_maybe" class="input" value="maybe">
+                                <label for="helge_maybe" class="willingness">Vielleicht</label>
+                            </li>
+                            <li class="participation">
+                                <input type="checkbox" name="helge" id="helge_no" class="input" value="no">
+                                <label for="helge_no" class="willingness">Nein</label>
+                            </li>
+                        </ul>
                     </div>
 
                     <div class="row">
                         <p class="col-4">Thomas</p>
-                        <input type="range" class="col-7 custom-range" min="1" max="4" step="1" value="1">
+                        <ul class="col-7 entry-list">
+                            <li class="participation">
+                                <input type="checkbox" name="thomas" id="thomas_yes" class="input" value="yes">
+                                <label for="thomas_yes" class="willingness">Ja</label>
+                            </li>
+                            <li class="participation">
+                                <input type="checkbox" name="thomas" id="thomas_maybe" class="input" value="maybe">
+                                <label for="thomas_maybe" class="willingness">Vielleicht</label>
+                            </li>
+                            <li class="participation">
+                                <input type="checkbox" name="thomas" id="thomas_no" class="input" value="no">
+                                <label for="thomas_no" class="willingness">Nein</label>
+                            </li>
+                        </ul>
                     </div>
 
                     <div class="row">
                         <p class="col-4">Karsten</p>
-                        <input type="range" class="col-7 custom-range" min="1" max="4" step="1" value="1">
+                        <ul class="col-7 entry-list">
+                            <li class="participation">
+                                <input type="checkbox" name="karsten" id="karsten_yes" class="input" value="yes">
+                                <label for="karsten_yes" class="willingness">Ja</label>
+                            </li>
+                            <li class="participation">
+                                <input type="checkbox" name="karsten" id="karsten_maybe" class="input" value="maybe">
+                                <label for="karsten_maybe" class="willingness">Vielleicht</label>
+                            </li>
+                            <li class="participation">
+                                <input type="checkbox" name="karsten" id="karsten_no" class="input" value="no">
+                                <label for="karsten_no" class="willingness">Nein</label>
+                            </li>
+                        </ul>
                     </div>
 
                     <div class="row">
                         <p class="col-4">Tim</p>
-                        <input type="range" class="col-7 custom-range" min="1" max="4" step="1" value="1">
+                        <ul class="col-7 entry-list">
+                            <li class="participation">
+                                <input type="checkbox" name="tim" id="tim_yes" class="input" value="yes">
+                                <label for="tim_yes" class="willingness">Ja</label>
+                            </li>
+                            <li class="participation">
+                                <input type="checkbox" name="tim" id="tim_maybe" class="input" value="maybe">
+                                <label for="tim_maybe" class="willingness">Vielleicht</label>
+                            </li>
+                            <li class="participation">
+                                <input type="checkbox" name="tim" id="tim_no" class="input" value="no">
+                                <label for="tim_no" class="willingness">Nein</label>
+                            </li>
+                        </ul>
                     </div>
 
                     <div class="row">
                         <p class="col-4">Marcus</p>
-                        <input type="range" class="col-7 custom-range" min="1" max="4" step="1" value="1">
+                        <ul class="col-7 entry-list">
+                            <li class="participation">
+                                <input type="checkbox" name="marcus" id="marcus_yes" class="input" value="yes">
+                                <label for="marcus_yes" class="willingness">Ja</label>
+                            </li>
+                            <li class="participation">
+                                <input type="checkbox" name="marcus" id="marcus_maybe" class="input" value="maybe">
+                                <label for="marcus_maybe" class="willingness">Vielleicht</label>
+                            </li>
+                            <li class="participation">
+                                <input type="checkbox" name="marcus" id="marcus_no" class="input" value="no">
+                                <label for="marcus_no" class="willingness">Nein</label>
+                            </li>
+                        </ul>
                     </div>
 
                     <div class="row">
                         <p class="col-4">Fehsi</p>
-                        <input type="range" class="col-7 custom-range" min="1" max="4" step="1" value="1">
+                        <ul class="col-7 entry-list">
+                            <li class="participation">
+                                <input type="checkbox" name="fehsi" id="fehsi_yes" class="input" value="yes">
+                                <label for="fehsi_yes" class="willingness">Ja</label>
+                            </li>
+                            <li class="participation">
+                                <input type="checkbox" name="fehsi" id="fehsi_maybe" class="input" value="maybe">
+                                <label for="fehsi_maybe" class="willingness">Vielleicht</label>
+                            </li>
+                            <li class="participation">
+                                <input type="checkbox" name="fehsi" id="fehsi_no" class="input" value="no">
+                                <label for="fehsi_no" class="willingness">Nein</label>
+                            </li>
+                        </ul>
                     </div>
 
                     <div class="row">
                         <p class="col-4">MaMü</p>
-                        <input type="range" class="col-7 custom-range" min="1" max="4" step="1" value="1">
+                        <ul class="col-7 entry-list">
+                            <li class="participation">
+                                <input type="checkbox" name="binni" id="binni_yes" class="input" value="yes">
+                                <label for="binni_yes" class="willingness">Ja</label>
+                            </li>
+                            <li class="participation">
+                                <input type="checkbox" name="binni" id="binni_maybe" class="input" value="maybe">
+                                <label for="binni_maybe" class="willingness">Vielleicht</label>
+                            </li>
+                            <li class="participation">
+                                <input type="checkbox" name="binni" id="binni_no" class="input" value="no">
+                                <label for="binni_no" class="willingness">Nein</label>
+                            </li>
+                        </ul>
                     </div>
                 </form>
             </div>
         </div>
+
+
+        <div class="pt-2">
+            <a href="/planer" class="btn btn-primary btn-block" type="button">Speichern</a>
+        </div>
+
+
 
         <!-- cards container closing tag -->
     </div>

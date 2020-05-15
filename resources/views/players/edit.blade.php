@@ -18,7 +18,7 @@ TennisApp | Spieler/Bearbeiten
             <div class="card-body">
                 <form>
 
-                    <!-- TODO rankinng -->
+                    <!-- TODO ranking -->
 
                     <div class="form-group row">
                         <label for="lk" class="col-4 col-form-label col-form-label-sm">LK</label>

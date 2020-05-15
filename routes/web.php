@@ -39,6 +39,10 @@ Route::get('/planer', function () {
     return view('planner.planner');
 });
 
+Route::get('/presentation', function () {
+    return view('presentation');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

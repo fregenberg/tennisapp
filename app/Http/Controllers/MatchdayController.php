@@ -36,6 +36,7 @@ class MatchdayController extends Controller
      */
     public function update(Request $request, $id)
     {
+        // TODO validate the request and 
         // TODO update an EXISTING matchday (ID!) in storage (no own route; after view 'matchdays.edit')
     }
 
@@ -69,6 +70,7 @@ class MatchdayController extends Controller
      */
     public function store(Request $request)
     {
+        // TODO validate the request and 
         // TODO store a NEW matchday in storage (no own route; after view 'matchdays.create')
     }
 
@@ -80,6 +82,6 @@ class MatchdayController extends Controller
      */
     public function show($id)
     {
-        // TODO show a SPECIFIC matchday (no route; no view); 'anzeigen' leads to 'planner'
+        // show a SPECIFIC matchday (no route; no view); 'anzeigen' leads to 'planner'
     }
 }

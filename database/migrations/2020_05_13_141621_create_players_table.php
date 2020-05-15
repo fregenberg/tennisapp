@@ -16,6 +16,7 @@ class CreatePlayersTable extends Migration
         Schema::create('players', function (Blueprint $table) {
             $table->id();
 
+            $table->integer('ranking')->nullable();
             $table->string('lk')->nullable();
             $table->integer('dtb_id')->nullable();
             $table->string('first_name');
@@ -27,6 +28,7 @@ class CreatePlayersTable extends Migration
             $table->boolean('core_team')->nullable();
             $table->string('email');
             $table->string('password');
+            $table->string('role');
 
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken()->nullable();

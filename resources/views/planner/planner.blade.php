@@ -63,6 +63,9 @@
             <!-- Card body -->
             <div class="card-body">
                 <form>
+
+                    <!-- // TODO search core_team (≈ bookmarking) -->
+
                     <div class="row">
                         <p class="col-4">Stefan</p>
                         <ul class="col-7 entry-list">

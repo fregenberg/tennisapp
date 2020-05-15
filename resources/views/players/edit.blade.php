@@ -17,6 +17,9 @@ TennisApp | Spieler/Bearbeiten
         <div class="card bg-transparent border-0 shadow pt-1 mb-5">
             <div class="card-body">
                 <form>
+
+                    <!-- TODO rankinng -->
+
                     <div class="form-group row">
                         <label for="lk" class="col-4 col-form-label col-form-label-sm">LK</label>
                         <div>
@@ -119,6 +122,8 @@ TennisApp | Spieler/Bearbeiten
                             <input type="password" class="form-control form-control-sm" id="confirmation">
                         </div>
                     </div>
+
+                    <!-- TODO role = captain -->
 
                 </form>
             </div>

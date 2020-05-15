@@ -97,8 +97,6 @@ TennisApp | Spieler/Erstellen
                         </div>
                     </div>
 
-                    <!-- TODO core_team -->
-
                     <div class="form-group row">
                         <label for="email" class="col-4 col-form-label col-form-label-sm">E-Mail</label>
                         <div>

@@ -17,6 +17,9 @@ TennisApp | Spieler
         <div class="card bg-transparent border-0 shadow pt-1 mb-5">
             <div class="card-body">
                 <form>
+
+                    <!-- TODO ranking -->
+
                     <div class="row">
                         <p class="col-5">LK</p>
                         <p class="col-7"><strong>LK15</strong></p>

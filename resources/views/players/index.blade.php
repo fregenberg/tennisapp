@@ -10,6 +10,8 @@ TennisApp | AlleSpieler
     <h2>Alle Spieler</h2>
 </div>
 
+<!-- // TODO search core_team (≈ bookmarking) -->
+
 <div class="container pb-5 mb-5">
 
     <!-- Player-Card_1 -->

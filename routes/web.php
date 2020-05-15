@@ -14,13 +14,8 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-
-Route::get('/alletermine', function () {
-    return view('home');
-});
+Route::get('/', 'MatchdayController@index');
+Route::get('/alletermine', 'MatchdayController@index');
 
 Route::get('/termine/bearbeiten', function () {
     return view('matchdays.edit');

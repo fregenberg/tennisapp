@@ -13,7 +13,9 @@ class MatchdayController extends Controller
      */
     public function index()
     {
-        // TODO show ALL matchdays (routes '/' and '/alletermine'; view 'home')
+        // show ALL matchdays (routes '/' and '/alletermine'; view 'home')
+        $matchdays = \App\Matchday::all();
+        return view('home', array('matchdays' => $matchdays));
     }
 
     /**

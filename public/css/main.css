@@ -1,7 +1,7 @@
 /* BACKGROUND IMAGE */
 
 body {
-    background: url("../images/matchdays_background.jpg") no-repeat center
+    background: url("../images/background_derwarnochdrauf.jpg") no-repeat center
         center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -11,47 +11,27 @@ body {
 
 /* HEADER */
 
-.heading {
-    background-color: transparent;
-    justify-content: center;
-}
-
-h1 {
+h2 {
     color: #fdfb50;
-    font-weight: bold;
 }
 
 /* CARDS */
 
-.card {
-    background-image: url("../images/matchdays_background_blurred.jpg");
-    background-size: cover;
-    border: 2px solid whitesmoke;
-    color: white;
+.card-body {
+    background-color: #f1f8e9; /* (alt: #eceff1) */
 }
 
-.card-footer {
-    justify-content: space-around;
-}
+/* NEUEN TERMIN ANLEGEN-BUTTON */
 
-.footer-buttons {
-    background-color: #0275d8;
-    color: #fdfb50;
+.newdate {
     border: 1px solid #fdfb50;
-}
-
-/* BIG BUTTON */
-
-.bigbutton {
-    background-color: #0275d8;
     color: #fdfb50;
-    border: 1px solid whitesmoke;
 }
 
-.bigbutton:hover {
-    background-color: whitesmoke;
+.newdate:hover {
+    border: 1px solid #f5f5f5;
+    background: #f5f5f5;
     color: #0275d8;
-    border: 1px solid whitesmoke;
 }
 
 /* BOTTOM NAVIGATION TAB BAR */
@@ -81,7 +61,7 @@ h1 {
 
 /* Change the color of links on hover */
 .navbar a:hover {
-    background: whitesmoke;
+    background: #f5f5f5;
     color: #0275d8;
 }
 
@@ -97,4 +77,5 @@ colors {
     color: #000; /* black */
     color: #0275d8; /* blue */
     color: #fdfb50; /* tennis-yellow */
+    color: #f5f5f5; /* white (alt: #e5e5e5 | #f2f6e9 */
 }

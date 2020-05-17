@@ -14,7 +14,8 @@ class PlayerController extends Controller
     public function index()
     {
         // TODO show ALL players (route '/allespieler'; view 'players.index')
-        return view('players.index');
+        $players = \App\Player::all();
+        return view('players.index', array('players' => $players));
     }
 
     /**

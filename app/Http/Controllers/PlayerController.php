@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Player;
 
 class PlayerController extends Controller
 {
@@ -13,9 +14,32 @@ class PlayerController extends Controller
      */
     public function index()
     {
-        // TODO show ALL players (route '/allespieler'; view 'players.index')
+        // show ALL players (route '/allespieler'; view 'players.index')
         $players = \App\Player::all();
-        return view('players.index', array('players' => $players));
+        return view('players/index', array('players' => $players));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        // TODO show a form for creating a NEW player (route '/spieler/erstellen'; view 'players.create'); followed by store
+        return view('players/create');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        // TODO validate the request and 
+        // TODO store a NEW player in storage (no own route; after view 'players.create')
     }
 
     /**
@@ -24,9 +48,10 @@ class PlayerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Player $player)
     {
-        // TODO show a SPECIFIC player (ID!) (route '/spieler'; view 'players.show')
+        // show a SPECIFIC player (ID!) (route '/spieler'; view 'players.show')
+        return view('players.show', array('player' => $player));
     }
 
     /**
@@ -64,26 +89,10 @@ class PlayerController extends Controller
         // TODO delete an EXISTING player (ID!) (no own route; on view 'players.edit')
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    private function validateData()
     {
-        // TODO show a form for creating a NEW player (route '/spieler/erstellen'; view 'players.create'); followed by store
-        return view('players.create');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        // TODO validate the request and 
-        // TODO store a NEW player in storage (no own route; after view 'players.create')
+        return request()->validate([
+            // 
+        ]);
     }
 }

@@ -162,6 +162,6 @@ TennisApp | Register
     <div class="col-9 image">
         <img src="images/logo_transparent.png" class="img-fluid" alt="">
     </div>
-    <a href="/login" class="col-3 mb-1">Login</a>
+    <a href="{{ url('/login') }}" class="col-3 mb-1">Login</a>
 </div>
 @endsection

@@ -14,39 +14,39 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', 'MatchdayController@index')->middleware('auth');
-Route::get('/alletermine', 'MatchdayController@index')->middleware('auth');
-
-Route::get('/termine/bearbeiten', function () {
-    return view('matchdays.edit');
-})->middleware('auth');
-// Route::get('/termine/bearbeiten', 'MatchdayController@edit')->middleware('auth');
-
-Route::get('/termine/erstellen', 'MatchdayController@create')->middleware('auth');
-
-
-Route::get('/allespieler', 'PlayerController@index')->middleware('auth');
-
-Route::get('/spieler', function () {
-    return view('players.show');
-})->middleware('auth');
-// Route::get('/spieler', 'PlayerController@show')->middleware('auth');
-
-Route::get('/spieler/bearbeiten', function () {
-    return view('players.edit');
-})->middleware('auth');
-// Route::get('/spieler/bearbeiten', 'PlayerController@edit')->middleware('auth');
-
-Route::get('/spieler/erstellen', 'PlayerController@create')->middleware('auth');
-
-
-Route::get('/planer', function () {
-    return view('planner.planner');
-})->middleware('auth');
-// Route::get('/planer', 'MatchdayController@show')->middleware('auth');
-
 Route::get('/presentation', function () {
     return view('presentation');
+});
+
+
+Route::group(['middleware' => 'loggedin'], function () {
+    Route::get('/', 'MatchdayController@index');
+    Route::get('/alletermine', 'MatchdayController@index');
+
+    Route::get('/termine/erstellen', 'MatchdayController@create');
+
+    Route::get('/termine/bearbeiten', function () {
+        return view('matchdays/edit');
+    });
+    // Route::get('/termine/bearbeiten', 'MatchdayController@edit');
+
+
+    Route::get('/allespieler', 'PlayerController@index');
+
+    Route::get('/spieler/erstellen', 'PlayerController@create');
+
+    Route::get('/spieler/bearbeiten', function () {
+        return view('players.edit');
+    });
+    // Route::get('/spieler/bearbeiten', 'PlayerController@edit');
+
+    Route::get('/spieler/{player}', 'PlayerController@show');
+
+
+    Route::get('/planer', function () {
+        return view('planner/planner');
+    });
+    // Route::get('/planer', 'MatchdayController@show');
 });
 
 Auth::routes();

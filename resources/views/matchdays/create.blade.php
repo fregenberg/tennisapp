@@ -84,8 +84,8 @@ TennisApp | Termine/Erstellen
             </form>
         </div>
         <div class="card-footer row justify-content-around">
-            <a href="/alletermine" class="col-5 btn btn-sm footer-buttons" type="button">Speichern</a>
-            <a href="/alletermine" class="col-5 btn btn-sm footer-buttons text-danger" type="button">Abbrechen</a>
+            <a href="{{ url('/alletermine') }}" class="col-5 btn btn-sm footer-buttons" type="button">Speichern</a>
+            <a href="{{ url('/alletermine') }}" class="col-5 btn btn-sm footer-buttons text-danger" type="button">Abbrechen</a>
         </div>
     </div>
 

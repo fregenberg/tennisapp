@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Matchday;
 
 class MatchdayController extends Controller
 {
@@ -16,6 +17,46 @@ class MatchdayController extends Controller
         // show ALL matchdays (routes '/' and '/alletermine'; view 'home')
         $matchdays = \App\Matchday::all();
         return view('home', array('matchdays' => $matchdays));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        // TODO show a form for creating a NEW matchday (route '/termine/erstellen'; view 'matchdays.create'); followed by store
+        return view('matchdays/create');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        // TODO validate the request and 
+        // TODO store a NEW matchday in storage (no own route; after view 'matchdays.create')
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Matchday $matchdays)
+    {
+        // show a SPECIFIC matchday (no route; no view); 'anzeigen' leads to 'planner'
+        $players = \App\Player::all();
+
+        return view('planner', [
+            'matchdays' => $matchdays,
+            'players' => $players
+        ]);
     }
 
     /**
@@ -53,37 +94,10 @@ class MatchdayController extends Controller
         // TODO delete an EXISTING matchday (ID!) (no own route; on view 'matchdays.edit')
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    private function validateData()
     {
-        // TODO show a form for creating a NEW matchday (route '/termine/erstellen'; view 'matchdays.create'); followed by store
-        return view('matchdays.create');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        // TODO validate the request and 
-        // TODO store a NEW matchday in storage (no own route; after view 'matchdays.create')
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        // show a SPECIFIC matchday (no route; no view); 'anzeigen' leads to 'planner'
+        return request()->validate([
+            // 
+        ]);
     }
 }

@@ -57,14 +57,14 @@ TennisApp | Termine
             </form>
         </div>
         <div class="card-footer row">
-            <a href="/planer" class="col-5 btn btn-sm footer-buttons" type="button">Anzeigen</a>
-            <a href="/termine/bearbeiten" class="col-5 btn btn-sm footer-buttons" type="button">Bearbeiten</a>
+            <a href="{{ url('/planer') }}" class="col-5 btn btn-sm footer-buttons" type="button">Anzeigen</a>
+            <a href="{{ url('/termine/bearbeiten') }}" class="col-5 btn btn-sm footer-buttons" type="button">Bearbeiten</a>
         </div>
     </div>
     @endforeach
 
     <div>
-        <a href="/termine/erstellen" class="bigbutton btn btn-primary btn-block" type="button">neuen Termin anlegen</a>
+        <a href="{{ url('/termine/erstellen') }}" class="bigbutton btn btn-primary btn-block" type="button">neuen Termin anlegen</a>
     </div>
 
     <!-- cards container closing tag -->

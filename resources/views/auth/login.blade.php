@@ -61,7 +61,9 @@ TennisApp | Login
             </div>
 
             <div>
-                <a href="/alletermine" class="btn btn-primary btn-block my-4" type="button">{{ __('Login') }}</a>
+                <button type="submit" class="btn btn-primary btn-block my-4">
+                    {{ __('Login') }}
+                </button>
 
                 @if (Route::has('password.request'))
                 <a class="text-center" href="{{ route('password.request') }}">

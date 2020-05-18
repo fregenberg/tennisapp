@@ -15,8 +15,11 @@ class PlayerController extends Controller
     public function index()
     {
         // show ALL players (route '/allespieler'; view 'players.index')
-        $players = \App\Player::all();
-        return view('players/index', array('players' => $players));
+        return view('players/index', [
+            'players' => Player::all()
+        ]);
+        // $players = \App\Player::all();
+        // return view('players/index', array('players' => $players));
     }
 
     /**
@@ -60,9 +63,10 @@ class PlayerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Player $player)
     {
         // TODO show an EXISTING player (ID!) in a form for editing (route '/spieler/bearbeiten'; view 'players.edit'); followed by update
+        return view('players.edit');
     }
 
     /**
@@ -72,7 +76,7 @@ class PlayerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Player $player)
     {
         // TODO validate the request and 
         // TODO update an EXISTING player (ID!) in storage (no own route; after view 'players.edit')
@@ -84,7 +88,7 @@ class PlayerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Player $player)
     {
         // TODO delete an EXISTING player (ID!) (no own route; on view 'players.edit')
     }

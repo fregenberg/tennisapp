@@ -20,32 +20,26 @@ Route::get('/presentation', function () {
 
 
 Route::group(['middleware' => 'loggedin'], function () {
-    Route::get('/', 'MatchdayController@index');
-    Route::get('/alletermine', 'MatchdayController@index');
+    Route::get('/alletermine', 'MatchdayController@index')->name('alletermine');
+    Route::get('/', 'MatchdayController@index')->name('alletermine');
 
     Route::get('/termine/erstellen', 'MatchdayController@create');
 
-    Route::get('/termine/bearbeiten', function () {
-        return view('matchdays/edit');
-    });
-    // Route::get('/termine/bearbeiten', 'MatchdayController@edit');
+    Route::get('/termine/bearbeiten', 'MatchdayController@edit');
 
 
-    Route::get('/allespieler', 'PlayerController@index');
+    Route::get('/allespieler', 'PlayerController@index')->name('allespieler');
 
     Route::get('/spieler/erstellen', 'PlayerController@create');
 
-    Route::get('/spieler/bearbeiten', function () {
-        return view('players.edit');
-    });
-    // Route::get('/spieler/bearbeiten', 'PlayerController@edit');
+    Route::get('/spieler/bearbeiten', 'PlayerController@edit');
 
     Route::get('/spieler/{player}', 'PlayerController@show');
 
 
     Route::get('/planer', function () {
         return view('planner/planner');
-    });
+    })->name('planer');
     // Route::get('/planer', 'MatchdayController@show');
 });
 

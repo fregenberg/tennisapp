@@ -15,8 +15,11 @@ class MatchdayController extends Controller
     public function index()
     {
         // show ALL matchdays (routes '/' and '/alletermine'; view 'home')
-        $matchdays = \App\Matchday::all();
-        return view('home', array('matchdays' => $matchdays));
+        return view('home', [
+            'matchdays' => Matchday::all()
+        ]);
+        // $matchdays = \App\Matchday::all();
+        // return view('home', array('matchdays' => $matchdays));
     }
 
     /**
@@ -65,9 +68,10 @@ class MatchdayController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Matchday $matchdays)
     {
         // TODO show an EXISTING matchday (ID!) in a form for editing (route '/termine/bearbeiten'; view 'matchdays.edit'); followed by update
+        return view('matchdays/edit');
     }
 
     /**
@@ -77,7 +81,7 @@ class MatchdayController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Matchday $matchdays)
     {
         // TODO validate the request and 
         // TODO update an EXISTING matchday (ID!) in storage (no own route; after view 'matchdays.edit')
@@ -89,7 +93,7 @@ class MatchdayController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Matchday $matchdays)
     {
         // TODO delete an EXISTING matchday (ID!) (no own route; on view 'matchdays.edit')
     }

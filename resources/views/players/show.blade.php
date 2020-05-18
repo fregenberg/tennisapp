@@ -16,8 +16,6 @@ TennisApp | Spieler
         <div class="card-body">
             <form>
 
-                <!-- TODO ranking -->
-
                 <div class="row">
                     <p class="col-5">LK</p>
                     <p class="col-7"><strong>{{ $player->performance_class }}</strong></p>
@@ -65,6 +63,7 @@ TennisApp | Spieler
 
                 <div>
                     <a href="{{ url('/spieler/bearbeiten') }}" class="bigbutton btn btn-primary btn-block" type="button">Bearbeiten</a>
+                    <!-- <a href="{{ url('/spieler/bearbeiten', ['player' => $player]) }}" class="bigbutton btn btn-primary btn-block" type="button">Bearbeiten</a> -->
                 </div>
             </form>
         </div>

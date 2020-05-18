@@ -59,6 +59,7 @@ TennisApp | Termine
         <div class="card-footer row">
             <a href="{{ url('/planer') }}" class="col-5 btn btn-sm footer-buttons" type="button">Anzeigen</a>
             <a href="{{ url('/termine/bearbeiten') }}" class="col-5 btn btn-sm footer-buttons" type="button">Bearbeiten</a>
+            <!-- <a href="{{ url('/termine/bearbeiten', ['matchdays' => $matchdays]) }}" class="col-5 btn btn-sm footer-buttons" type="button">Bearbeiten</a> -->
         </div>
     </div>
     @endforeach

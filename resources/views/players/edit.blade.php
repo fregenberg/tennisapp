@@ -126,8 +126,8 @@ TennisApp | Spieler/Bearbeiten
             </form>
         </div>
         <div class="card-footer row justify-content-around">
-            <a href="{{ url('/spieler/2') }}" class="col-5 btn btn-sm footer-buttons" type="button">Speichern</a>
-            <a href="{{ url('/allespieler') }}" class="col-5 btn btn-sm footer-buttons text-danger" type="button">Löschen</a>
+            <a href="{{ route('players.index') }}" class="col-5 btn btn-sm footer-buttons" type="button">Speichern</a>
+            <a href="{{ route('players.index') }}" class="col-5 btn btn-sm footer-buttons text-danger" type="button">Löschen</a>
         </div>
     </div>
 

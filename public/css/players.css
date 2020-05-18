@@ -47,6 +47,10 @@ h1 {
     border: 1px solid #fdfb50;
 }
 
+::placeholder {
+    color: #b0bec5 !important;
+}
+
 /* BIG BUTTON */
 
 .bigbutton {

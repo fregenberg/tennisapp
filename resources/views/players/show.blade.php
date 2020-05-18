@@ -43,27 +43,29 @@ TennisApp | Spieler
 
                 <div class="row">
                     <p class="col-5">Tel privat</p>
-                    <a href="tel:+494087976551" class="col-7"><strong>{{ $player->tel_private }}</strong></a>
+                    <a href="tel:{{ $player->tel_private }}" class="col-7"><strong>{{ $player->tel_private }}</strong></a>
                 </div>
 
                 <div class="row">
                     <p class="col-5">Tel mobil</p>
-                    <a href="https://wa.me/4915129114492?Yannik%ist%ein%toller%Typ" class="col-7"><strong>{{ $player->tel_mobile }}</strong></a> <!-- tel:+4915129114492 -->
+                    <a href="https://wa.me/{{ $player->tel_mobile }}" class="col-7"><strong>{{ $player->tel_mobile }}</strong></a> <!-- tel:+4915129114492 -->
                 </div>
 
+                @if($player->birthday != 0000-00-00)
                 <div class="row">
                     <p class="col-5">Geburtstag</p>
                     <p class="col-7"><strong>{{ $player->birthday }}</strong></p>
                 </div>
+                @endif
 
                 <div class="row">
                     <p class="col-4">E-Mail</p>
-                    <a href="mailto:Tennis@TimFreienberg.de" class="col-8">{{ $player->email }}</a>
+                    <a href="mailto:{{ $player->email }}" class="col-8">{{ $player->email }}</a>
                 </div>
 
                 <div>
-                    <a href="{{ url('/spieler/bearbeiten') }}" class="bigbutton btn btn-primary btn-block" type="button">Bearbeiten</a>
-                    <!-- <a href="{{ url('/spieler/bearbeiten', ['player' => $player]) }}" class="bigbutton btn btn-primary btn-block" type="button">Bearbeiten</a> -->
+                    <a href="{{ route('players.edit') }}" class="bigbutton btn btn-primary btn-block" type="button">Bearbeiten</a>
+                    <!-- <a href="{{ route('players.edit', ['player' => $player]) }}" class="bigbutton btn btn-primary btn-block" type="button">Bearbeiten</a> -->
                 </div>
             </form>
         </div>

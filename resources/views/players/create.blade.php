@@ -120,8 +120,8 @@ TennisApp | Spieler/Erstellen
             </form>
         </div>
         <div class="card-footer row justify-content-around">
-            <a href="{{ url('/allespieler') }}" class="col-5 btn btn-sm footer-buttons" type="button">Speichern</a>
-            <a href="{{ url('/allespieler') }}" class="col-5 btn btn-sm footer-buttons text-danger" type="button">Abbrechen</a>
+            <a href="{{ route('players.index') }}" class="col-5 btn btn-sm footer-buttons" type="button">Speichern</a>
+            <a href="{{ route('players.index') }}" class="col-5 btn btn-sm footer-buttons text-danger" type="button">Abbrechen</a>
         </div>
     </div>
 

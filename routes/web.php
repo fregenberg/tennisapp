@@ -19,27 +19,27 @@ Route::get('/presentation', function () {
 });
 
 
-Route::group(['middleware' => 'loggedin'], function () {
-    Route::get('/alletermine', 'MatchdayController@index')->name('alletermine');
-    Route::get('/', 'MatchdayController@index')->name('alletermine');
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/', 'MatchdayController@index')->name('home');
+    Route::get('/alletermine', 'MatchdayController@index')->name('home');
 
-    Route::get('/termine/erstellen', 'MatchdayController@create');
+    Route::get('/termine/erstellen', 'MatchdayController@create')->name('matchdays.create');
 
-    Route::get('/termine/bearbeiten', 'MatchdayController@edit');
+    Route::get('/termine/bearbeiten', 'MatchdayController@edit')->name('matchdays.edit');
 
 
-    Route::get('/allespieler', 'PlayerController@index')->name('allespieler');
+    Route::get('/allespieler', 'PlayerController@index')->name('players.index');
 
-    Route::get('/spieler/erstellen', 'PlayerController@create');
+    Route::get('/spieler/erstellen', 'PlayerController@create')->name('players.create');
 
-    Route::get('/spieler/bearbeiten', 'PlayerController@edit');
+    Route::get('/spieler/bearbeiten', 'PlayerController@edit')->name('players.edit');
 
-    Route::get('/spieler/{player}', 'PlayerController@show');
+    Route::get('/spieler/{player}', 'PlayerController@show')->name('players.show');
 
 
     Route::get('/planer', function () {
         return view('planner/planner');
-    })->name('planer');
+    })->name('planner.planner');
     // Route::get('/planer', 'MatchdayController@show');
 });
 

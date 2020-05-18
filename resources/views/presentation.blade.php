@@ -31,7 +31,7 @@
 </head>
 
 <body>
-    <a href="{{ url('/register') }}" class="frontpage">
+    <a href="{{ route('home') }}" class="frontpage">
 </body>
 
 </html>

@@ -30,7 +30,7 @@ class MatchdayController extends Controller
     public function create()
     {
         // TODO show a form for creating a NEW matchday (route '/termine/erstellen'; view 'matchdays.create'); followed by store
-        return view('matchdays/create');
+        return view('matchdays.create');
     }
 
     /**
@@ -51,13 +51,14 @@ class MatchdayController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Matchday $matchdays)
+    public function show(Matchday $matchday)
     {
         // show a SPECIFIC matchday (no route; no view); 'anzeigen' leads to 'planner'
+        // alt.: TODO create a PlannerController
         $players = \App\Player::all();
 
-        return view('planner', [
-            'matchdays' => $matchdays,
+        return view('planner.planner', [
+            'matchday' => $matchday,
             'players' => $players
         ]);
     }
@@ -68,10 +69,10 @@ class MatchdayController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Matchday $matchdays)
+    public function edit(Matchday $matchday)
     {
         // TODO show an EXISTING matchday (ID!) in a form for editing (route '/termine/bearbeiten'; view 'matchdays.edit'); followed by update
-        return view('matchdays/edit');
+        return view('matchdays.edit');
     }
 
     /**
@@ -81,7 +82,7 @@ class MatchdayController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Matchday $matchdays)
+    public function update(Request $request, Matchday $matchday)
     {
         // TODO validate the request and 
         // TODO update an EXISTING matchday (ID!) in storage (no own route; after view 'matchdays.edit')
@@ -93,7 +94,7 @@ class MatchdayController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Matchday $matchdays)
+    public function destroy(Matchday $matchday)
     {
         // TODO delete an EXISTING matchday (ID!) (no own route; on view 'matchdays.edit')
     }
@@ -101,7 +102,7 @@ class MatchdayController extends Controller
     private function validateData()
     {
         return request()->validate([
-            // 
+            // TODO implement here
         ]);
     }
 }

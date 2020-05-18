@@ -215,7 +215,7 @@
 
 
         <div class="pt-2">
-            <a href="{{ url('/planer') }}" class="bigbutton btn btn-primary btn-block" type="button">Speichern</a>
+            <a href="{{ route('planner.planner') }}" class="bigbutton btn btn-primary btn-block" type="button">Speichern</a>
         </div>
 
         <!-- cards container closing tag -->

@@ -15,10 +15,10 @@ class PlayerController extends Controller
     public function index()
     {
         // show ALL players (route '/allespieler'; view 'players.index')
-        return view('players/index', [
+        return view('players.index', [
             'players' => Player::all()
         ]);
-        // $players = \App\Player::all();
+        // $players = Player::all();
         // return view('players/index', array('players' => $players));
     }
 
@@ -30,7 +30,7 @@ class PlayerController extends Controller
     public function create()
     {
         // TODO show a form for creating a NEW player (route '/spieler/erstellen'; view 'players.create'); followed by store
-        return view('players/create');
+        return view('players.create');
     }
 
     /**
@@ -96,7 +96,7 @@ class PlayerController extends Controller
     private function validateData()
     {
         return request()->validate([
-            // 
+            // TODO implement here
         ]);
     }
 }

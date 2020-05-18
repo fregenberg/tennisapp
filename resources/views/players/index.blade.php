@@ -19,13 +19,13 @@ TennisApp | AlleSpieler
     <div class="card shadow my-4 text-center lineimage">
         <div class="card-body py-0">
             <p class="m-1">{{ $player->ranking }}. {{ $player->firstname }} {{ $player->name }}</p>
-            <a href="{{ url('/spieler/' . $player->id) }}" class="stretched-link"></a>
+            <a href="{{ route('players.show', $player->id) }}" class="stretched-link"></a>
         </div>
     </div>
     @endforeach
 
     <div class="interval">
-        <a href="{{ url('/spieler/erstellen') }}" class="bigbutton btn btn-primary btn-block" type="button">neuer Spieler</a>
+        <a href="{{ route('players.create') }}" class="bigbutton btn btn-primary btn-block" type="button">neuer Spieler</a>
     </div>
 
     <!-- cards container closing tag -->

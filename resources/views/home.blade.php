@@ -6,15 +6,15 @@ TennisApp | Termine
 
 @section('content')
 
-<div class="heading container-fluid bg-transparent shadow static-top justify-content-center p-3 d-flex">
-    <h2>Spieltermine</h2>
+<div class="heading container-fluid shadow static-top p-3 d-flex">
+    <h1 class="pt-1">Spieltermine</h1>
 </div>
 
 <div class="container pb-5 mb-5">
 
     <!-- Gamedate-Card_dynamic -->
     @foreach ($matchdays as $matchday)
-    <div class="card border-0 shadow my-4">
+    <div class="card shadow my-4">
         <div class="card-body">
             <form>
                 <div class="row">
@@ -25,11 +25,6 @@ TennisApp | Termine
                 <div class="row">
                     <p class="col-4">Uhrzeit</p>
                     <p class="col-6">{{ \Carbon\Carbon::parse($matchday->gametime)->format('G:i')}}</p> <!-- // ('H:i') -->
-                </div>
-
-                <div class="row">
-                    <p class="col-4"></p>
-                    <small class="col-6 text-muted">Mannschaften</small>
                 </div>
 
                 <div class="row">

@@ -1,8 +1,8 @@
 /* BACKGROUND IMAGE */
 
 body {
-    background: url("../images/background_sonne.jpg") no-repeat center center
-        fixed;
+    background: url("../images/matchdays_background.jpg") no-repeat center
+        center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -11,14 +11,33 @@ body {
 
 /* HEADER */
 
-h2 {
+.heading {
+    background-color: transparent;
+    justify-content: center;
+}
+
+h1 {
     color: #fdfb50;
+    font-weight: bold;
 }
 
 /* CARDS */
 
-.card-body {
-    background-color: #f1f8e9; /* (alt: #eceff1) */
+.card {
+    background-image: url("../images/matchdays_background_blurred.jpg");
+    background-size: cover;
+    border: 2px solid whitesmoke;
+    color: white;
+}
+
+.card-footer {
+    justify-content: space-around;
+}
+
+.footer-buttons {
+    background-color: #0275d8;
+    color: #fdfb50;
+    border: 1px solid #fdfb50;
 }
 
 /* THREE-WAY TOGGLE WITH RADIO BUTTONS */
@@ -61,17 +80,18 @@ h2 {
     color: #fdfb50;
 }
 
-/* SAVE-BUTTON */
+/* BIG BUTTON */
 
-.btn {
-    border: 1px solid #fdfb50;
+.bigbutton {
+    background-color: #0275d8;
     color: #fdfb50;
+    border: 1px solid whitesmoke;
 }
 
-.btn:hover {
-    border: 1px solid #f5f5f5;
-    background: #f5f5f5;
+.bigbutton:hover {
+    background-color: whitesmoke;
     color: #0275d8;
+    border: 1px solid whitesmoke;
 }
 
 /* BOTTOM NAVIGATION TAB BAR */
@@ -117,5 +137,4 @@ colors {
     color: #000; /* black */
     color: #0275d8; /* blue */
     color: #fdfb50; /* tennis-yellow */
-    color: #f5f5f5; /* white (alt: #e5e5e5 | #f2f6e9 */
 }

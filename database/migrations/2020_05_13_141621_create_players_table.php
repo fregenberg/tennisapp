@@ -17,23 +17,19 @@ class CreatePlayersTable extends Migration
             $table->id();
 
             $table->integer('ranking')->nullable();
-            $table->string('lk')->nullable();
+            $table->string('performance_class')->nullable();
             $table->integer('dtb_id')->nullable();
-            $table->string('first_name');
+            $table->string('firstname');
             $table->string('name');
             $table->string('nickname')->nullable();
-            $table->string('tel_pivate')->nullable();
+            $table->string('tel_private')->nullable();
             $table->string('tel_mobile')->nullable();
             $table->date('birthday')->nullable();
             $table->boolean('core_team')->nullable();
+            $table->string('role')->nullable();
+
             $table->string('email');
-            $table->string('password');
-            $table->string('role');
-
-            $table->timestamp('email_verified_at')->nullable();
-            $table->rememberToken()->nullable();
             $table->timestamps();
-
             $table->softDeletes();
         });
     }

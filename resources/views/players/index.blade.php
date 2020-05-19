@@ -6,13 +6,13 @@ TennisApp | AlleSpieler
 
 @section('content')
 
-<div class="heading container-fluid bg-transparent shadow static-top justify-content-center p-3 d-flex">
-    <h2>Alle Spieler</h2>
+<div class="heading container-fluid shadow static-top p-3 d-flex">
+    <h1 class="pt-1">Alle Spieler</h1>
 </div>
 
 <!-- // TODO search core_team (≈ bookmarking) -->
 
-<div class="container pb-5 mb-5">
+<div class="container align-items-center">
 
     <!-- Player-Card_dynamic -->
     @foreach ($players->sortBy('ranking') as $player)
@@ -22,6 +22,7 @@ TennisApp | AlleSpieler
             <a href="{{ route('players.show', $player->id) }}" class="stretched-link"></a>
         </div>
     </div>
+    @endforeach
 
     <div class="interval">
         <a href="{{ route('players.create') }}" class="bigbutton btn btn-primary btn-block" type="button">neuer Spieler</a>

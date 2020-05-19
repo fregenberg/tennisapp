@@ -6,14 +6,14 @@ TennisApp | Termine/Erstellen
 
 @section('content')
 
-<div class="heading container-fluid bg-transparent shadow static-top justify-content-center p-3 d-flex">
-    <h2>Spieltermine</h2>
+<div class="heading container-fluid shadow static-top p-3 d-flex">
+    <h1 class="pt-1">Spieltermine</h1>
 </div>
 
-<div class="container pb-5">
+<div class="container pb-5 mb-5">
 
     <!-- Card -->
-    <div class="card border-0 shadow my-5">
+    <div class="card shadow my-4">
         <div class="card-body">
             <form>
                 <div class="form-group row">
@@ -31,11 +31,6 @@ TennisApp | Termine/Erstellen
                 </div>
 
                 <div class="form-group row">
-                    <p class="col-3"></p>
-                    <small class="text-muted">Mannschaften</small>
-                </div>
-
-                <div class="form-group row">
                     <label for="hometeam" class="col-3 col-form-label col-form-label-sm">Heim</label>
                     <div>
                         <input type="text" class="form-control form-control-sm" id="hometeam" placeholder="THC neue fische e.V." />
@@ -49,7 +44,7 @@ TennisApp | Termine/Erstellen
                     </div>
                 </div>
 
-                <div class=" form-group row">
+                <div class="form-group row">
                     <label for="venue" class="col-3 col-form-label col-form-label-sm">Spielort</label>
                     <input type="text" class="col-6 form-control form-control-sm" id="venue" placeholder="Gasstraße" />
                     <input type="text" class="col-2 form-control form-control-sm" id="venue" placeholder="6" />

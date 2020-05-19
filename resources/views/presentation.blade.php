@@ -31,7 +31,7 @@
 </head>
 
 <body>
-    <a href="{{ route('home') }}" class="frontpage">
+    <a href="{{ url('/') }}" class="frontpage">
 </body>
 
 </html>

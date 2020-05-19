@@ -14,17 +14,12 @@ class PlayerController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
-        // TODO show ALL players (route '/allespieler'; view 'players.index')
-        return view('players.index');
-=======
         // show ALL players (route '/allespieler'; view 'players.index')
         return view('players.index', [
             'players' => Player::all()
         ]);
         // $players = Player::all();
         // return view('players/index', array('players' => $players));
->>>>>>> dev
     }
 
     /**

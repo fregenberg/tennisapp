@@ -125,26 +125,17 @@ TennisApp | Spieler/Bearbeiten
 
                     <!-- TODO role = captain -->
 
-<<<<<<< HEAD
                 </form>
             </div>
             <div class="card-footer row justify-content-around">
-                <a href="/spieler" class="col-5 btn btn-primary btn-sm btn-block mt-2" type="button">Speichern</a>
-                <a href="/allespieler" class="col-5 btn btn-primary btn-sm btn-block text-danger" type="button">Löschen</a>
+                <a href="{{ route('players.index') }}" class="col-5 btn btn-sm footer-buttons" type="button">Speichern</a>
+                <a href="{{ route('players.index') }}" class="col-5 btn btn-sm footer-buttons text-danger" type="button">Löschen</a>
             </div>
-=======
-            </form>
-        </div>
-        <div class="card-footer row justify-content-around">
-            <a href="{{ route('players.index') }}" class="col-5 btn btn-sm footer-buttons" type="button">Speichern</a>
-            <a href="{{ route('players.index') }}" class="col-5 btn btn-sm footer-buttons text-danger" type="button">Löschen</a>
->>>>>>> dev
+
+            <!-- container closing tag -->
         </div>
 
-        <!-- container closing tag -->
+        <!-- overlay closing tag -->
     </div>
 
-    <!-- overlay closing tag -->
-</div>
-
-@endsection
+    @endsection

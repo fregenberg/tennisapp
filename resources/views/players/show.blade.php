@@ -110,7 +110,7 @@ TennisApp | Spieler
 
                 <div class="row">
                     <p class="col-5">Tel mobil</p>
-                    <a href="tel:{{ $player->tel_mobile }} class=" col-7"><strong>{{ $player->tel_mobile }}</strong></a> <!-- tel:+4915129114492 -->
+                    <a href="https://wa.me/{{ $player->tel_mobile }}" class="col-7"><strong>{{ $player->tel_mobile }}</strong></a> <!-- tel:+4915129114492 -->
                 </div>
 
                 @if($player->birthday != 0000-00-00)

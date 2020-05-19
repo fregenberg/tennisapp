@@ -61,7 +61,9 @@ TennisApp | Login
             </div>
 
             <div>
-                <a href="/alletermine" class="btn btn-primary btn-block my-4" type="button">{{ __('Login') }}</a>
+                <button type="submit" class="btn btn-primary btn-block my-4">
+                    {{ __('Login') }}
+                </button>
 
                 @if (Route::has('password.request'))
                 <a class="text-center" href="{{ route('password.request') }}">
@@ -82,6 +84,6 @@ TennisApp | Login
     <div class="col-9 image">
         <img src="images/logo_transparent.png" class="img-fluid" alt="">
     </div>
-    <a href="{{ route('register') }}" class="col-3 mb-1">Register</a>
+    <a href="/register" class="col-3 mb-1">Register</a>
 </div>
 @endsection

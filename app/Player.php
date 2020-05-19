@@ -14,7 +14,7 @@ class Player extends Model
      * @var array
      */
     protected $guarded = [
-        'ranking', 'core_team', 'role', 'email'
+        'ranking', 'core_team', 'email', 'password', 'role', 'email_verified_at', 'rememberToken',
     ];
 
     /** 

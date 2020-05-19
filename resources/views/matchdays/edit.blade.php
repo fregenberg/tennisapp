@@ -6,14 +6,14 @@ TennisApp | Termine/Bearbeiten
 
 @section('content')
 
-<div class="heading container-fluid shadow static-top p-3 d-flex">
-    <h1 class="pt-1">Spieltermine</h1>
+<div class="heading container-fluid bg-transparent shadow static-top justify-content-center p-3 d-flex">
+    <h2>Spieltermine</h2>
 </div>
 
-<div class="container pb-5 mb-5">
+<div class="container pb-5">
 
     <!-- Card -->
-    <div class="card shadow my-4">
+    <div class="card border-0 shadow my-5">
         <div class="card-body">
             <form>
                 <div class="form-group row">
@@ -28,6 +28,11 @@ TennisApp | Termine/Bearbeiten
                     <div>
                         <input type="time" class="form-control form-control-sm" id="gametime" value="15:00" />
                     </div>
+                </div>
+
+                <div class="form-group row">
+                    <p class="col-3"></p>
+                    <small class="text-muted">Mannschaften</small>
                 </div>
 
                 <div class="form-group row">
@@ -84,8 +89,13 @@ TennisApp | Termine/Bearbeiten
             </form>
         </div>
         <div class="card-footer row justify-content-around">
+<<<<<<< HEAD
+            <a href="/alletermine" class="col-5 btn btn-sm btn-outline-secondary text-dark" type="button">Speichern</a>
+            <a href="/alletermine" class="col-5 btn btn-sm btn-outline-secondary text-danger" type="button">Löschen</a>
+=======
             <a href="{{ route('home') }}" class="col-5 btn btn-sm footer-buttons" type="button">Speichern</a>
             <a href="{{ route('home') }}" class="col-5 btn btn-sm footer-buttons text-danger" type="button">Löschen</a>
+>>>>>>> dev
         </div>
     </div>
 

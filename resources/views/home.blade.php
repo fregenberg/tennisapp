@@ -6,15 +6,15 @@ TennisApp | Termine
 
 @section('content')
 
-<div class="heading container-fluid shadow static-top p-3 d-flex">
-    <h1 class="pt-1">Spieltermine</h1>
+<div class="heading container-fluid bg-transparent shadow static-top justify-content-center p-3 d-flex">
+    <h2>Spieltermine</h2>
 </div>
 
 <div class="container pb-5 mb-5">
 
     <!-- Gamedate-Card_dynamic -->
     @foreach ($matchdays as $matchday)
-    <div class="card shadow my-4">
+    <div class="card border-0 shadow my-4">
         <div class="card-body">
             <form>
                 <div class="row">
@@ -25,6 +25,11 @@ TennisApp | Termine
                 <div class="row">
                     <p class="col-4">Uhrzeit</p>
                     <p class="col-6">{{ \Carbon\Carbon::parse($matchday->gametime)->format('G:i')}}</p> <!-- // ('H:i') -->
+                </div>
+
+                <div class="row">
+                    <p class="col-4"></p>
+                    <small class="col-6 text-muted">Mannschaften</small>
                 </div>
 
                 <div class="row">
@@ -56,16 +61,26 @@ TennisApp | Termine
 
             </form>
         </div>
+<<<<<<< HEAD
+        <div class="card-footer row justify-content-around">
+            <a href="/planer" class="col-5 btn btn-sm btn-outline-secondary text-dark" type="button">Anzeigen</a>
+            <a href="/termine/bearbeiten" class="col-5 btn btn-sm btn-outline-secondary text-dark" type="button">Bearbeiten</a>
+=======
         <div class="card-footer row">
             <a href="{{ route('planner.planner') }}" class="col-5 btn btn-sm footer-buttons" type="button">Anzeigen</a>
             <a href="{{ route('matchdays.edit') }}" class="col-5 btn btn-sm footer-buttons" type="button">Bearbeiten</a>
             <!-- <a href="{{ route('matchdays.edit', ['matchday' => $matchday]) }}" class="col-5 btn btn-sm footer-buttons" type="button">Bearbeiten</a> -->
+>>>>>>> dev
         </div>
     </div>
     @endforeach
 
     <div>
+<<<<<<< HEAD
+        <a href="/termine/erstellen" class="newdate btn btn-primary btn-block" type="button">neuen Termin anlegen</a>
+=======
         <a href="{{ route('matchdays.create') }}" class="bigbutton btn btn-primary btn-block" type="button">neuen Termin anlegen</a>
+>>>>>>> dev
     </div>
 
     <!-- cards container closing tag -->

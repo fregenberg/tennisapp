@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
+
 Route::get('/presentation', function () {
     return view('presentation');
 });

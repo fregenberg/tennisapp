@@ -19,12 +19,12 @@ TennisApp | Termine
             <form>
                 <div class="row">
                     <p class="col-4">Datum</p>
-                    <p class="col-6">{{ $matchday->gamedate }}</p>
+                    <p class="col-6">{{ \Carbon\Carbon::parse($matchday->gamedate)->format('j.n.Y')}}</p> <!-- // ('d.m.Y') -->
                 </div>
 
                 <div class="row">
                     <p class="col-4">Uhrzeit</p>
-                    <p class="col-6">{{ $matchday->gametime }}</p>
+                    <p class="col-6">{{ \Carbon\Carbon::parse($matchday->gametime)->format('G:i')}}</p> <!-- // ('H:i') -->
                 </div>
 
                 <div class="row">

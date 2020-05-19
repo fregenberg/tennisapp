@@ -54,7 +54,7 @@ TennisApp | Spieler
                 @if($player->birthday != 0000-00-00)
                 <div class="row">
                     <p class="col-5">Geburtstag</p>
-                    <p class="col-7"><strong>{{ $player->birthday }}</strong></p>
+                    <p class="col-7"><strong>{{ \Carbon\Carbon::parse($player->birthday)->format('j.n.Y')}}</strong></p> <!-- // ('d.m.Y') -->
                 </div>
                 @endif
 

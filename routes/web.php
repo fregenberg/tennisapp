@@ -21,7 +21,6 @@ Route::get('/presentation', function () {
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', 'MatchdayController@index')->name('home');
-    Route::get('/alletermine', 'MatchdayController@index')->name('home');
 
     Route::get('/termine/erstellen', 'MatchdayController@create')->name('matchdays.create');
 
@@ -44,4 +43,3 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');

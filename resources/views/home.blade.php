@@ -19,12 +19,12 @@ TennisApp | Termine
             <form>
                 <div class="row">
                     <p class="col-4">Datum</p>
-                    <p class="col-6">{{ $matchday->gamedate }}</p>
+                    <p class="col-6">{{ \Carbon\Carbon::parse($matchday->gamedate)->format('j.n.Y')}}</p> <!-- // ('d.m.Y') -->
                 </div>
 
                 <div class="row">
                     <p class="col-4">Uhrzeit</p>
-                    <p class="col-6">{{ $matchday->gametime }}</p>
+                    <p class="col-6">{{ \Carbon\Carbon::parse($matchday->gametime)->format('G:i')}}</p> <!-- // ('H:i') -->
                 </div>
 
                 <div class="row">
@@ -61,15 +61,26 @@ TennisApp | Termine
 
             </form>
         </div>
+<<<<<<< HEAD
         <div class="card-footer row justify-content-around">
             <a href="/planer" class="col-5 btn btn-sm btn-outline-secondary text-dark" type="button">Anzeigen</a>
             <a href="/termine/bearbeiten" class="col-5 btn btn-sm btn-outline-secondary text-dark" type="button">Bearbeiten</a>
+=======
+        <div class="card-footer row">
+            <a href="{{ route('planner.planner') }}" class="col-5 btn btn-sm footer-buttons" type="button">Anzeigen</a>
+            <a href="{{ route('matchdays.edit') }}" class="col-5 btn btn-sm footer-buttons" type="button">Bearbeiten</a>
+            <!-- <a href="{{ route('matchdays.edit', ['matchday' => $matchday]) }}" class="col-5 btn btn-sm footer-buttons" type="button">Bearbeiten</a> -->
+>>>>>>> dev
         </div>
     </div>
     @endforeach
 
     <div>
+<<<<<<< HEAD
         <a href="/termine/erstellen" class="newdate btn btn-primary btn-block" type="button">neuen Termin anlegen</a>
+=======
+        <a href="{{ route('matchdays.create') }}" class="bigbutton btn btn-primary btn-block" type="button">neuen Termin anlegen</a>
+>>>>>>> dev
     </div>
 
     <!-- cards container closing tag -->

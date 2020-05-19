@@ -25,6 +25,19 @@ h2 {
 
 .newdate {
     border: 1px solid #fdfb50;
+<<<<<<< HEAD
+=======
+}
+
+::placeholder {
+    color: #b0bec5 !important;
+}
+
+/* BIG BUTTON */
+
+.bigbutton {
+    background-color: #0275d8;
+>>>>>>> dev
     color: #fdfb50;
 }
 

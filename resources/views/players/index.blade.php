@@ -14,6 +14,7 @@ TennisApp | AlleSpieler
 
 <div class="container pb-5 mb-5">
 
+<<<<<<< HEAD
     <!-- Player-Card_1 -->
     <div class="card border-0 shadow my-4">
         <div class="card-body card-body-background">
@@ -24,9 +25,18 @@ TennisApp | AlleSpieler
                 </div>
                 <a href="/spieler" class="stretched-link"></a>
             </form>
+=======
+    <!-- Player-Card_dynamic -->
+    @foreach ($players->sortBy('ranking') as $player)
+    <div class="card shadow my-4 text-center lineimage">
+        <div class="card-body py-0">
+            <p class="m-1">{{ $player->ranking }}. {{ $player->firstname }} {{ $player->name }}</p>
+            <a href="{{ route('players.show', $player->id) }}" class="stretched-link"></a>
+>>>>>>> dev
         </div>
     </div>
 
+<<<<<<< HEAD
     <!-- Player-Card_2 -->
     <div class="card border-0 shadow my-4">
         <div class="card-body">
@@ -120,6 +130,10 @@ TennisApp | AlleSpieler
 
     <div class="pt-4">
         <a href="/spieler/erstellen" class="btn btn-primary btn-block" type="button">neuer Spieler</a>
+=======
+    <div class="interval">
+        <a href="{{ route('players.create') }}" class="bigbutton btn btn-primary btn-block" type="button">neuer Spieler</a>
+>>>>>>> dev
     </div>
 
     <!-- cards container closing tag -->

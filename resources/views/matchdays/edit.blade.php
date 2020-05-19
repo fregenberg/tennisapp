@@ -89,8 +89,13 @@ TennisApp | Termine/Bearbeiten
             </form>
         </div>
         <div class="card-footer row justify-content-around">
+<<<<<<< HEAD
             <a href="/alletermine" class="col-5 btn btn-sm btn-outline-secondary text-dark" type="button">Speichern</a>
             <a href="/alletermine" class="col-5 btn btn-sm btn-outline-secondary text-danger" type="button">Löschen</a>
+=======
+            <a href="{{ route('home') }}" class="col-5 btn btn-sm footer-buttons" type="button">Speichern</a>
+            <a href="{{ route('home') }}" class="col-5 btn btn-sm footer-buttons text-danger" type="button">Löschen</a>
+>>>>>>> dev
         </div>
     </div>
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Matchday;
 
 class MatchdayController extends Controller
 {
@@ -14,43 +15,11 @@ class MatchdayController extends Controller
     public function index()
     {
         // show ALL matchdays (routes '/' and '/alletermine'; view 'home')
-        $matchdays = \App\Matchday::all();
-        return view('home', array('matchdays' => $matchdays));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        // TODO show an EXISTING matchday (ID!) in a form for editing (route '/termine/bearbeiten'; view 'matchdays.edit'); followed by update
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        // TODO validate the request and 
-        // TODO update an EXISTING matchday (ID!) in storage (no own route; after view 'matchdays.edit')
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        // TODO delete an EXISTING matchday (ID!) (no own route; on view 'matchdays.edit')
+        return view('home', [
+            'matchdays' => Matchday::all()
+        ]);
+        // $matchdays = \App\Matchday::all();
+        // return view('home', array('matchdays' => $matchdays));
     }
 
     /**
@@ -82,8 +51,58 @@ class MatchdayController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Matchday $matchday)
     {
         // show a SPECIFIC matchday (no route; no view); 'anzeigen' leads to 'planner'
+        // alt.: TODO create a PlannerController
+        $players = \App\Player::all();
+
+        return view('planner.planner', [
+            'matchday' => $matchday,
+            'players' => $players
+        ]);
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Matchday $matchday)
+    {
+        // TODO show an EXISTING matchday (ID!) in a form for editing (route '/termine/bearbeiten'; view 'matchdays.edit'); followed by update
+        return view('matchdays.edit');
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Matchday $matchday)
+    {
+        // TODO validate the request and 
+        // TODO update an EXISTING matchday (ID!) in storage (no own route; after view 'matchdays.edit')
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Matchday $matchday)
+    {
+        // TODO delete an EXISTING matchday (ID!) (no own route; on view 'matchdays.edit')
+    }
+
+    private function validateData()
+    {
+        return request()->validate([
+            // TODO implement here
+        ]);
     }
 }

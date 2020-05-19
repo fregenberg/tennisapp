@@ -1,8 +1,8 @@
 /* BACKGROUND IMAGE */
 
 body {
-    background: url("../images/background_aufschlag.jpg") no-repeat center
-        center fixed;
+    background: url("../images/players_background.jpg") no-repeat center center
+        fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -51,6 +51,10 @@ h3 {
 
 label {
     color: #f5f5f5;
+}
+
+::placeholder {
+    color: #b0bec5 !important;
 }
 
 /* input {

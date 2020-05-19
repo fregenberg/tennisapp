@@ -215,7 +215,11 @@
 
 
         <div class="pt-2">
+<<<<<<< HEAD
             <a href="/planer" class="btn btn-primary btn-block" type="button">Speichern</a>
+=======
+            <a href="{{ route('planner.planner') }}" class="bigbutton btn btn-primary btn-block" type="button">Speichern</a>
+>>>>>>> dev
         </div>
 
 

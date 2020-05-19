@@ -142,11 +142,13 @@ TennisApp | Register
                     </div>
 
                     <div class="pt-3">
-                        <button type="submit" class="btn btn-primary btn-block">
-                            {{ __('Register') }}
-                        </button>
+                        <a href="/login" class="btn btn-primary btn-block" type="button">{{ __('Register') }}</a>
+                        <!-- <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+//                                    {{ __('Register') }}
+                                </button>
+                            </div> -->
                     </div>
-
                 </form>
             </div>
         </div>

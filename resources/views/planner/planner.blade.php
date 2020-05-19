@@ -23,12 +23,12 @@
 
 <body>
 
-    <div class="heading container-fluid shadow static-top p-3 d-flex">
-        <h1 class="pt-1">Punktspiel Planer</h1>
+    <div class="heading container-fluid bg-transparent shadow static-top justify-content-center p-3 d-flex">
+        <h2>Punktspiel Planer</h2>
     </div>
 
     <div class="container pb-5 mb-5">
-        <div class="card shadow my-4">
+        <div class="card border-0 shadow my-4">
 
             <!-- Card header -->
             <div class="card-header">
@@ -215,8 +215,14 @@
 
 
         <div class="pt-2">
+<<<<<<< HEAD
+            <a href="/planer" class="btn btn-primary btn-block" type="button">Speichern</a>
+=======
             <a href="{{ route('planner.planner') }}" class="bigbutton btn btn-primary btn-block" type="button">Speichern</a>
+>>>>>>> dev
         </div>
+
+
 
         <!-- cards container closing tag -->
     </div>

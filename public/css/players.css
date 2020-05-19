@@ -40,15 +40,11 @@ p {
     background-color: #f1f8e9; /* (alt: #eceff1) */
 }
 
-<<<<<<< HEAD
-/* NEUEN SPIELER ANLEGEN-/SPIELER BEARBEITEN-BUTTON */
-=======
 ::placeholder {
     color: #b0bec5 !important;
 }
 
 /* BIG BUTTON */
->>>>>>> dev
 
 .btn {
     border: 1px solid #fdfb50;

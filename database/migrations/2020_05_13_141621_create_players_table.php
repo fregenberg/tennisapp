@@ -28,7 +28,14 @@ class CreatePlayersTable extends Migration
             $table->boolean('core_team')->nullable();
             $table->string('role')->nullable();
 
-            $table->string('email');
+            $table->string('email')->unique();
+
+            // $table->foreignId('user_id');
+
+            // $table->integer('user_id')->unsigned()->index()->nullable();
+            // $table->foreign('user_id')->references('id')->on('users')
+            //     ->onDelete('cascade');
+
             $table->timestamps();
             $table->softDeletes();
         });

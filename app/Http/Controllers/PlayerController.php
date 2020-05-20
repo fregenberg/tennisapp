@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Player;
+use App\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class PlayerController extends Controller
 {
@@ -43,6 +46,16 @@ class PlayerController extends Controller
     {
         // TODO validate the request and 
         // TODO store a NEW player in storage (no own route; after view 'players.create')
+        $user = Auth::user();
+        // $data = $this->validateData();
+        $data['user_id'] = $user->id;
+        $player = Player::create($data);
+        $user->player()->save($player);
+        // $player->user()->associate($user)->save();
+
+        return view('players.show', [
+            'player' => $player
+        ]);
     }
 
     /**
@@ -54,6 +67,8 @@ class PlayerController extends Controller
     public function show(Player $player)
     {
         // show a SPECIFIC player (ID!) (route '/spieler'; view 'players.show')
+        $user = Auth::user();
+
         return view('players.show', array('player' => $player));
     }
 

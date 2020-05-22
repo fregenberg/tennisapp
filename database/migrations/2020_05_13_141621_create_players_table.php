@@ -30,11 +30,8 @@ class CreatePlayersTable extends Migration
 
             $table->string('email')->unique();
 
-            // $table->foreignId('user_id');
-
-            // $table->integer('user_id')->unsigned()->index()->nullable();
-            // $table->foreign('user_id')->references('id')->on('users')
-            //     ->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->nullable()
+                ->onDelete('cascade');
 
             $table->timestamps();
             $table->softDeletes();

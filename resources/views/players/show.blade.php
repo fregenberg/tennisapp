@@ -17,6 +17,11 @@ TennisApp | Spieler
             <form>
 
                 <div class="row">
+                    <p class="col-5">Rang</p>
+                    <p class="col-7"><strong>{{ $player->ranking }}</strong></p>
+                </div>
+
+                <div class="row">
                     <p class="col-5">LK</p>
                     <p class="col-7"><strong>{{ $player->performance_class }}</strong></p>
                 </div>
@@ -64,8 +69,7 @@ TennisApp | Spieler
                 </div>
 
                 <div>
-                    <a href="{{ route('players.edit') }}" class="bigbutton btn btn-primary btn-block" type="button">Bearbeiten</a>
-                    <!-- <a href="{{ route('players.edit', ['player' => $player]) }}" class="bigbutton btn btn-primary btn-block" type="button">Bearbeiten</a> -->
+                    <a href="{{ route('players.edit', ['player' => $player]) }}" class="bigbutton btn btn-primary btn-block" type="button">Bearbeiten</a>
                 </div>
             </form>
         </div>

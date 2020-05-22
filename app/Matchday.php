@@ -7,16 +7,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Matchday extends Model
 {
-    /**
-     * The attributes that aren't mass assignable.
-     * Importantly, you should use either $fillable or $guarded - not both.
-     *
-     * @var array
-     */
-    protected $guarded = [];
+    protected $fillable = [
+        'gamedate', 'gametime', 'hometeam', 'awayteam', 'venue_street', 'venue_housenumber', 'venue_zip', 'venue_city', 'result_hometeam', 'result_awayteam'
+    ];
 
-    /** 
-     * 
-     */
     use SoftDeletes;
 }

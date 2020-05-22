@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\Player;
-use App\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 
 class PlayerController extends Controller
 {
@@ -25,6 +23,13 @@ class PlayerController extends Controller
         // return view('players/index', array('players' => $players));
     }
 
+    // One-to-One-Relationship
+    // public function index($user_id)
+    // {
+    //     $user = User::find($user_id);
+    //     return view('players.index', compact('user'));
+    // }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -32,7 +37,7 @@ class PlayerController extends Controller
      */
     public function create()
     {
-        // TODO show a form for creating a NEW player (route '/spieler/erstellen'; view 'players.create'); followed by store
+        // show a form for creating a NEW player (route '/spieler/erstellen'; view 'players.create'); followed by store
         return view('players.create');
     }
 
@@ -44,18 +49,14 @@ class PlayerController extends Controller
      */
     public function store(Request $request)
     {
-        // TODO validate the request and 
+        // validate the request and 
         // TODO store a NEW player in storage (no own route; after view 'players.create')
-        $user = Auth::user();
-        // $data = $this->validateData();
-        $data['user_id'] = $user->id;
-        $player = Player::create($data);
-        $user->player()->save($player);
-        // $player->user()->associate($user)->save();
+        Player::create($this->validateData());
+        return redirect()->route('players.index');
 
-        return view('players.show', [
-            'player' => $player
-        ]);
+        // $newPlayer = $this->validateData();
+        // Player::create($newPlayer);
+        // return redirect()->route('players.show');
     }
 
     /**
@@ -67,9 +68,7 @@ class PlayerController extends Controller
     public function show(Player $player)
     {
         // show a SPECIFIC player (ID!) (route '/spieler'; view 'players.show')
-        $user = Auth::user();
-
-        return view('players.show', array('player' => $player));
+        return view('players.show', ['player' => $player]);
     }
 
     /**
@@ -80,8 +79,8 @@ class PlayerController extends Controller
      */
     public function edit(Player $player)
     {
-        // TODO show an EXISTING player (ID!) in a form for editing (route '/spieler/bearbeiten'; view 'players.edit'); followed by update
-        return view('players.edit');
+        // show an EXISTING player (ID!) in a form for editing (route '/spieler/bearbeiten'; view 'players.edit'); followed by update
+        return view('players.edit', ['player' => $player]);
     }
 
     /**
@@ -93,8 +92,10 @@ class PlayerController extends Controller
      */
     public function update(Request $request, Player $player)
     {
-        // TODO validate the request and 
-        // TODO update an EXISTING player (ID!) in storage (no own route; after view 'players.edit')
+        // validate the request and 
+        // update an EXISTING player (ID!) in storage (no own route; after view 'players.edit')
+        $player->update($this->validateData());
+        return redirect()->route('players.show', $player->id);
     }
 
     /**
@@ -105,13 +106,29 @@ class PlayerController extends Controller
      */
     public function destroy(Player $player)
     {
-        // TODO delete an EXISTING player (ID!) (no own route; on view 'players.edit')
+        // delete an EXISTING player (ID!) (no own route; on view 'players.edit')
+        $player->delete();
+
+        return redirect()->route('players.index')
+            ->with('success', 'Spieler erfolgreich gelöscht');
     }
 
-    private function validateData()
+    public function validateData()
     {
         return request()->validate([
-            // TODO implement here
+            'ranking' => 'nullable',
+            'performance_class' => 'nullable',
+            'dtb_id' => 'digits:8|nullable',
+            'firstname' => 'required',
+            'name' => 'required',
+            'nickname' => 'nullable',
+            'tel_private' => 'nullable',
+            'tel_mobile' => 'nullable',
+            'birthday' => 'date|nullable',
+            'core_team' => 'boolean|nullable',
+            'role' => 'nullable',
+
+            'email' => 'email|required',
         ]);
     }
 }

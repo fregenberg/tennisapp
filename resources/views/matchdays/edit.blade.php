@@ -10,53 +10,78 @@ TennisApp | Termine/Bearbeiten
     <h1 class="pt-1">Spieltermine</h1>
 </div>
 
+<!-- // @if ($errors->any())
+<div class="alert alert-danger">
+    <ul>
+//        @foreach ($errors->all() as $error)
+//        <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+@endif -->
+
 <div class="container pb-5 mb-5">
 
-    <!-- Card -->
-    <div class="card shadow my-4">
-        <div class="card-body">
-            <form>
+    <form method="POST" action="{{ route('matchdays.update', $matchday->id) }}">
+        @csrf
+        @method('PATCH')
+
+        <div class="card shadow my-4">
+            <div class="card-body">
+
                 <div class="form-group row">
                     <label for="gamedate" class="col-3 col-form-label col-form-label-sm">Datum</label>
                     <div>
-                        <input type="date" class="form-control form-control-sm" id="gamedate" value="2020-05-25" />
+                        <input type="date" class="form-control form-control-sm @error('gamedate') is-invalid @enderror" id="gamedate" name="gamedate" value="{{ old('gamedate') ?? $matchday->gamedate }}">
+                        @error('gamedate')
+                        <p class="invalid-feedback">{{ $errors->first('gamedate') }}</p>
+                        @enderror
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label for="gametime" class="col-3 col-form-label col-form-label-sm">Uhrzeit</label>
                     <div>
-                        <input type="time" class="form-control form-control-sm" id="gametime" value="15:00" />
+                        <input type="time" class="form-control form-control-sm @error('gametime') is-invalid @enderror" id="gametime" name="gametime" value="{{ old('gametime') ?? $matchday->gametime }}">
+                        @error('gametime')
+                        <p class="invalid-feedback">{{ $errors->first('gametime') }}</p>
+                        @enderror
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label for="hometeam" class="col-3 col-form-label col-form-label-sm">Heim</label>
                     <div>
-                        <input type="text" class="form-control form-control-sm" id="hometeam" placeholder="THC neue fische e.V." />
+                        <input type="text" class="form-control form-control-sm @error('hometeam') is-invalid @enderror" id="hometeam" name="hometeam" value="{{ old('hometeam') ?? $matchday->hometeam }}">
+                        @error('hometeam')
+                        <p class="invalid-feedback">{{ $errors->first('hometeam') }}</p>
+                        @enderror
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label for="awayteam" class="col-3 col-form-label col-form-label-sm">Gast</label>
                     <div>
-                        <input type="text" class="form-control form-control-sm" id="awayteam" placeholder="THC alte fische e.V." />
+                        <input type="text" class="form-control form-control-sm @error('awayteam') is-invalid @enderror" id="awayteam" name="awayteam" value="{{ old('awayteam') ?? $matchday->awayteam }}">
+                        @error('awayteam')
+                        <p class="invalid-feedback">{{ $errors->first('awayteam') }}</p>
+                        @enderror
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label for="venue" class="col-3 col-form-label col-form-label-sm">Spielort</label>
-                    <input type="text" class="col-6 form-control form-control-sm" id="venue" placeholder="Gasstraße" />
-                    <input type="text" class="col-2 form-control form-control-sm" id="venue" placeholder="6" />
+                    <input type="text" class="col-6 form-control form-control-sm @error('venue_street') is-invalid @enderror" id="venue" name="venue_street" value="{{ old('venue_street') ?? $matchday->venue_street }}">
+                    <input type="text" class="col-2 form-control form-control-sm @error('venue_housenumber') is-invalid @enderror" id="venue" name="venue_housenumber" value="{{ old('venue_housenumber') ?? $matchday->venue_housenumber }}">
 
                     <label for="venue" class="col-3 col-form-label col-form-label-sm"></label>
-                    <input type="text" class="col-3 form-control form-control-sm" id="venue" pattern="[0-9]{5}" placeholder="22761" />
-                    <input type="text" class="col-5 form-control form-control-sm" id="venue" placeholder="Hamburg" />
+                    <input type="text" class="col-3 form-control form-control-sm @error('venue_zip') is-invalid @enderror" id="venue" name="venue_zip" pattern="[0-9]{5}" value="{{ old('venue_zip') ?? $matchday->venue_zip }}">
+                    <input type="text" class="col-5 form-control form-control-sm @error('venue_city') is-invalid @enderror" id="venue" name="venue_city" value="{{ old('venue_city') ?? $matchday->venue_city }}">
                 </div>
 
                 <div class="form-group row">
                     <label for="result" class="col-4 col-form-label col-form-label-sm">Ergebnis</label>
-                    <select class="col-2 form-control form-control-sm" id="result">
+                    <select class="col-2 form-control form-control-sm" id="result" name="result_hometeam">
                         <option>0</option>
                         <option>1</option>
                         <option>2</option>
@@ -68,7 +93,7 @@ TennisApp | Termine/Bearbeiten
                         <option>8</option>
                         <option selected>9</option>
                     </select>
-                    <select class="col-2 form-control form-control-sm" id="result">
+                    <select class="col-2 form-control form-control-sm" id="result" name="result_awayteam">
                         <option selected>0</option>
                         <option>1</option>
                         <option>2</option>
@@ -81,14 +106,20 @@ TennisApp | Termine/Bearbeiten
                         <option>9</option>
                     </select>
                 </div>
-            </form>
+            </div>
         </div>
         <div class="card-footer row justify-content-around">
-            <a href="{{ route('home') }}" class="col-5 btn btn-sm footer-buttons" type="button">Speichern</a>
-            <a href="{{ route('home') }}" class="col-5 btn btn-sm footer-buttons text-danger" type="button">Löschen</a>
+            <button class="col-5 btn btn-sm footer-buttons" type="submit">Speichern</button>
+            <a class="col-5 btn btn-sm footer-buttons text-danger" onclick="deleteForm.submit(); return false;">Löschen</a>
         </div>
-    </div>
+    </form>
 
-    <!-- cards container closing tag -->
+    <!-- container closing tag -->
 </div>
+
+<form action="{{ route('matchdays.destroy', $matchday->id) }}" id="deleteForm" method="POST">
+    @csrf
+    @method('DELETE')
+</form>
+
 @endsection

@@ -13,7 +13,7 @@ TennisApp | Termine
 <div class="container pb-5 mb-5">
 
     <!-- Gamedate-Card_dynamic -->
-    @foreach ($matchdays as $matchday)
+    @foreach ($matchdays->sortBy('gamedate') as $matchday)
     <div class="card shadow my-4">
         <div class="card-body">
             <form>
@@ -58,8 +58,7 @@ TennisApp | Termine
         </div>
         <div class="card-footer row">
             <a href="{{ route('planner.planner') }}" class="col-5 btn btn-sm footer-buttons" type="button">Anzeigen</a>
-            <a href="{{ route('matchdays.edit') }}" class="col-5 btn btn-sm footer-buttons" type="button">Bearbeiten</a>
-            <!-- <a href="{{ route('matchdays.edit', ['matchday' => $matchday]) }}" class="col-5 btn btn-sm footer-buttons" type="button">Bearbeiten</a> -->
+            <a href="{{ route('matchdays.edit', ['matchday' => $matchday]) }}" class="col-5 btn btn-sm footer-buttons" type="button">Bearbeiten</a>
         </div>
     </div>
     @endforeach

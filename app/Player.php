@@ -17,8 +17,10 @@ class Player extends Model
         'ranking', 'core_team', 'role', 'email'
     ];
 
-    /** 
-     * 
-     */
+    public function user()
+    {
+        return $this->belongsTo('\App\User');  // ('\App\User', 'email', 'email');
+    }
+
     use SoftDeletes;
 }

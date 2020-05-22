@@ -17,6 +17,11 @@ TennisApp | Spieler
             <form>
 
                 <div class="row">
+                    <p class="col-5">Rang</p>
+                    <p class="col-7"><strong>{{ $player->ranking }}</strong></p>
+                </div>
+
+                <div class="row">
                     <p class="col-5">LK</p>
                     <p class="col-7"><strong>{{ $player->performance_class }}</strong></p>
                 </div>
@@ -48,7 +53,7 @@ TennisApp | Spieler
 
                 <div class="row">
                     <p class="col-5">Tel mobil</p>
-                    <a href="tel:{{ $player->tel_mobile }} class=" col-7"><strong>{{ $player->tel_mobile }}</strong></a> <!-- tel:+4915129114492 -->
+                    <a href="tel:{{ $player->tel_mobile }}" class="col-7"><strong>{{ $player->tel_mobile }}</strong></a> <!-- tel:+4915129114492 -->
                 </div>
 
                 @if($player->birthday != 0000-00-00)
@@ -64,8 +69,7 @@ TennisApp | Spieler
                 </div>
 
                 <div>
-                    <a href="{{ route('players.edit') }}" class="bigbutton btn btn-primary btn-block" type="button">Bearbeiten</a>
-                    <!-- <a href="{{ route('players.edit', ['player' => $player]) }}" class="bigbutton btn btn-primary btn-block" type="button">Bearbeiten</a> -->
+                    <a href="{{ route('players.edit', ['player' => $player]) }}" class="bigbutton btn btn-primary btn-block" type="button">Bearbeiten</a>
                 </div>
             </form>
         </div>

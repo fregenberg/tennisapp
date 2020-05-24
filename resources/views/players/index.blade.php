@@ -18,8 +18,8 @@ TennisApp | AlleSpieler
     @foreach ($players->sortBy('ranking') as $player)
     <div class="card shadow my-4 text-center lineimage">
         <div class="card-body py-0">
-            <p class="m-1">{{ $player->ranking }}. {{ $player->firstname }} {{ $player->name }}</p> <!-- One-to-One-Relationship // {{ $user->player->ranking }} -->
-            <a href="{{ route('players.show', $player->id) }}" class="stretched-link"></a> <!-- alt. One-to-One-Relationship // {{ $player->user->name }} -->
+            <p class="m-1">{{ $player->ranking }}. {{ $player->firstname }} {{ $player->name }}</p> <!-- One-to-One-Relationship // geschweifte Klammern Dollar user->player->ranking -->
+            <a href="{{ route('players.show', $player->id) }}" class="stretched-link"></a> <!-- alt. One-to-One-Relationship // geschweifte Klammern Dollar player->user->name -->
         </div>
     </div>
     @endforeach

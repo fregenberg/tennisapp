@@ -44,11 +44,12 @@ Route::group(['middleware' => 'auth'], function () {
     Route::delete('/spieler/{player}', 'PlayerController@destroy')->name('players.destroy');
 
 
-    Route::get('/planer', function () {
-        return view('planner/planner');
-    })->name('planner.planner');
-    // Route::get('/planer/{matchday}', 'MatchdayController@show')->name('planner.planner');
-    // // Route::get('/termine/{matchday}', 'MatchdayController@show')->name('planner.planner');
+    Route::get('/alleplaner', 'PlannerController@index')->name('planner.index');
+
+    Route::get('/planer', 'PlannerController@show')->name('planner.show');
+
+    Route::get('planer/bearbeiten/{matchday}', 'PlannerController@edit')->name('planner.edit');
+    Route::patch('/planer/{matchday}', 'PlannerController@update')->name('planner.update');
 });
 
 Auth::routes();

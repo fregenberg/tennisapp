@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Matchday;
+use Illuminate\Http\Request;
 
 class MatchdayController extends Controller
 {
@@ -18,7 +19,7 @@ class MatchdayController extends Controller
         return view('home', [
             'matchdays' => Matchday::all()
         ]);
-        // $matchdays = \App\Matchday::all();
+        // $matchdays = Matchday::all();
         // return view('home', array('matchdays' => $matchdays));
     }
 
@@ -29,7 +30,7 @@ class MatchdayController extends Controller
      */
     public function create()
     {
-        // TODO show a form for creating a NEW matchday (route '/termine/erstellen'; view 'matchdays.create'); followed by store
+        // show a form for creating a NEW matchday (route '/termine/erstellen'; view 'matchdays.create'); followed by store
         return view('matchdays.create');
     }
 
@@ -41,8 +42,14 @@ class MatchdayController extends Controller
      */
     public function store(Request $request)
     {
-        // TODO validate the request and 
-        // TODO store a NEW matchday in storage (no own route; after view 'matchdays.create')
+        // validate the request and 
+        // store a NEW matchday in storage (no own route; after view 'matchdays.create')
+        Matchday::create($this->validateData());
+        return redirect()->route('home');
+
+        // $newMatchday = $this->validateData();
+        // Matchday::create($newMatchday);
+        // return redirect()->route('home');
     }
 
     /**
@@ -53,14 +60,14 @@ class MatchdayController extends Controller
      */
     public function show(Matchday $matchday)
     {
-        // show a SPECIFIC matchday (no route; no view); 'anzeigen' leads to 'planner'
-        // alt.: TODO create a PlannerController
-        $players = \App\Player::all();
+        // TODO show a SPECIFIC matchday (no route; no view); 'anzeigen' leads to 'planner'
+        // TODO alt.: TODO create a PlannerController
+        // $players = \App\Player::all();
 
-        return view('planner.planner', [
-            'matchday' => $matchday,
-            'players' => $players
-        ]);
+        // return view('planner.planner', [
+        //     'matchday' => $matchday,
+        //     'players' => $players
+        // ]);
     }
 
     /**
@@ -71,8 +78,8 @@ class MatchdayController extends Controller
      */
     public function edit(Matchday $matchday)
     {
-        // TODO show an EXISTING matchday (ID!) in a form for editing (route '/termine/bearbeiten'; view 'matchdays.edit'); followed by update
-        return view('matchdays.edit');
+        // show an EXISTING matchday (ID!) in a form for editing (route '/termine/bearbeiten'; view 'matchdays.edit'); followed by update
+        return view('matchdays.edit', ['matchday' => $matchday]);
     }
 
     /**
@@ -84,8 +91,10 @@ class MatchdayController extends Controller
      */
     public function update(Request $request, Matchday $matchday)
     {
-        // TODO validate the request and 
-        // TODO update an EXISTING matchday (ID!) in storage (no own route; after view 'matchdays.edit')
+        // validate the request and 
+        // update an EXISTING matchday (ID!) in storage (no own route; after view 'matchdays.edit')
+        $matchday->update($this->validateData());
+        return redirect()->route('home');
     }
 
     /**
@@ -96,13 +105,26 @@ class MatchdayController extends Controller
      */
     public function destroy(Matchday $matchday)
     {
-        // TODO delete an EXISTING matchday (ID!) (no own route; on view 'matchdays.edit')
+        // delete an EXISTING matchday (ID!) (no own route; on view 'matchdays.edit')
+        $matchday->delete();
+
+        return redirect()->route('home')
+            ->with('success', 'Spieltag erfolgreich gelöscht');
     }
 
     private function validateData()
     {
         return request()->validate([
-            // TODO implement here
+            'gamedate' => 'date|nullable',
+            'gametime' => 'nullable',
+            'hometeam' => 'nullable',
+            'awayteam' => 'nullable',
+            'venue_street' => 'nullable',
+            'venue_housenumber' => 'nullable',
+            'venue_zip' => 'nullable',
+            'venue_city' => 'nullable',
+            'result_hometeam' => 'nullable',
+            'result_awayteam' => 'nullable',
         ]);
     }
 }

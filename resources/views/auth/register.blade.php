@@ -19,9 +19,9 @@ TennisApp | Register
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
                     <div class="form-group row">
-                        <label for="lk" class="col-4 col-form-label col-form-label-sm">LK</label>
+                        <label for="performance_class" class="col-4 col-form-label col-form-label-sm">LK</label>
                         <div>
-                            <select class="form-control form-control-sm" id="lk">
+                            <select class="form-control form-control-sm" id="performance_class" name="performance_class">
                                 <option>LK1</option>
                                 <option>LK2</option>
                                 <option>LK3</option>
@@ -50,29 +50,25 @@ TennisApp | Register
                     </div>
 
                     <div class="form-group row">
-                        <label for="id" class="col-4 col-form-label col-form-label-sm">ID-Nummer</label>
+                        <label for="dtb_id" class="col-4 col-form-label col-form-label-sm">ID-Nummer</label>
                         <div>
-                            <input type="text" class="form-control form-control-sm" id="id" pattern="[0-9]{8}" placeholder="16700001">
+                            <input type="text" class="form-control form-control-sm" id="dtb_id" name="dtb_id" pattern="[0-9]{8}" placeholder="16700001" value="{{ old('dtb_id') }}">
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="vorname" class="col-4 col-form-label col-form-label-sm">Vorname*</label>
+                        <label for="firstname" class="col-4 col-form-label col-form-label-sm">Vorname</label>
                         <div>
-                            <input type="text" class="form-control form-control-sm" id="vorname" required placeholder="Otto">
+                            <input type="text" class="form-control form-control-sm" id="firstname" name="firstname" required placeholder="Boris" value="{{ old('firstname') }}">
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label for="name" class="col-4 col-form-label col-form-label-sm">{{ __('Name*') }}</label>
-
                         <div>
-                            <input type="text" class="form-control form-control-sm @error('name') is-invalid @enderror" id="name" placeholder="Mustermann" name="name" value="{{ old('name') }}" required autocomplete="name">
-
+                            <input type="text" class="form-control form-control-sm @error('name') is-invalid @enderror" id="name" name="name" required placeholder="Becker" value="{{ old('name') }}" autocomplete="name">
                             @error('name')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
+                            <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                             @enderror
                         </div>
                     </div>
@@ -80,62 +76,56 @@ TennisApp | Register
                     <div class="form-group row">
                         <label for="nickname" class="col-4 col-form-label col-form-label-sm">Spitzname</label>
                         <div>
-                            <input type="text" class="form-control form-control-sm" id="nickname" placeholder="Bobbele">
+                            <input type="text" class="form-control form-control-sm" id="nickname" name="nickname" placeholder="Bobbele" value="{{ old('nickame') }}">
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="telprivat" class="col-4 col-form-label col-form-label-sm">Tel privat</label>
+                        <label for="tel_private" class="col-4 col-form-label col-form-label-sm">Tel privat</label>
                         <div>
-                            <input type="tel" class="form-control form-control-sm" id="telprivat" placeholder="+49 40 12345678">
+                            <input type="tel" class="form-control form-control-sm" id="tel_private" name="tel_private" placeholder="040 12345678" value="{{ old('tel_private') }}">
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="telmobil" class="col-4 col-form-label col-form-label-sm">Tel mobil</label>
+                        <label for="tel_mobile" class="col-4 col-form-label col-form-label-sm">Tel mobil</label>
                         <div>
-                            <input type="tel" class="form-control form-control-sm" id="telmobil" placeholder="+49 171 2345678">
+                            <input type="tel" class="form-control form-control-sm" id="tel_mobile" name="tel_mobile" placeholder="0171 2345678" value="{{ old('tel_mobile') }}">
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label for="birthday" class="col-4 col-form-label col-form-label-sm">Geburtstag</label>
                         <div>
-                            <input type="date" class="form-control form-control-sm" id="birthday" value="1967-11-22">
+                            <input type="date" class="form-control form-control-sm" id="birthday" name="birthday" value="{{ old('birthday') }}">
+
+
+                            @enderror
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label for="email" class="col-4 col-form-label col-form-label-sm">{{ __('E-Mail*') }}</label>
-
                         <div>
-                            <input type="email" class="form-control form-control-sm @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="otto@mustermann.de">
-
+                            <input type="email" class="form-control form-control-sm @error('email') is-invalid @enderror" id="email" name="email" required placeholder="boris.b@tennis.de" value="{{ old('email') }}" autocomplete="email">
                             @error('email')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
+                            <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                             @enderror
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label for="password" class="col-4 col-form-label col-form-label-sm">{{ __('Passwort*') }}</label>
-
                         <div>
                             <input type="password" class="form-control form-control-sm @error('password') is-invalid @enderror" id="password" name="password" required autocomplete="new-password">
-
                             @error('password')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
+                            <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                             @enderror
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label for="password-confirm" class="col-4 col-form-label col-form-label-sm">{{ __('Bestätigung*') }}</label>
-
                         <div>
                             <input type="password" class="form-control form-control-sm" id="password-confirm" name="password_confirmation" required autocomplete="new-password">
                         </div>

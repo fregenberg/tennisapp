@@ -42,15 +42,14 @@ Route::group(['middleware' => 'auth'], function () {
     // Route::get('/spieler/{player}/bearbeiten', 'PlayerController@edit')->name('players.edit');
     Route::patch('/spieler/{player}', 'PlayerController@update')->name('players.update');
     Route::delete('/spieler/{player}', 'PlayerController@destroy')->name('players.destroy');
-
-
+  
+  
     Route::get('/alleplaner', 'PlannerController@index')->name('planner.index');
 
     Route::get('/planer', 'PlannerController@show')->name('planner.show');
 
     Route::get('planer/bearbeiten/{matchday}', 'PlannerController@edit')->name('planner.edit');
     Route::patch('/planer/{matchday}', 'PlannerController@update')->name('planner.update');
-});
 
 Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');

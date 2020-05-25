@@ -55,15 +55,15 @@ TennisApp | Nächster Spieltag
                     <p class="col-4">{{ $player->firstname }} {{ $player->name }}</p>
                     <ul class="col-7 entry-list">
                         <li class="participation">
-                            <input type="radio" name="stefan" id="stefan_yes" class="input" value="yes">
+                            <input type="radio" name="stefan" id="stefan_yes" class="input" value="yes" disabled>
                             <label for="stefan_yes" class="willingness">Ja</label>
                         </li>
                         <li class="participation">
-                            <input type="radio" name="stefan" id="stefan_maybe" class="input" value="maybe">
+                            <input type="radio" name="stefan" id="stefan_maybe" class="input" value="maybe" disabled>
                             <label for="stefan_maybe" class="willingness">Vielleicht</label>
                         </li>
                         <li class="participation">
-                            <input type="radio" name="stefan" id="stefan_no" class="input" value="no">
+                            <input type="radio" name="stefan" id="stefan_no" class="input" value="no" disabled>
                             <label for="stefan_no" class="willingness">Nein</label>
                         </li>
                     </ul>

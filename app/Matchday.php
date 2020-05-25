@@ -13,7 +13,7 @@ class Matchday extends Model
 
     public function players()
     {
-        return $this->belongsToMany('App\Player')->withPivot('player_availability');
+        return $this->belongsToMany('App\Player')->withPivot('player_availability')->withTimestamps();
     }
 
     use SoftDeletes;

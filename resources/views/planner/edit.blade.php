@@ -53,32 +53,24 @@ TennisApp | Planer/Bearbeiten
                 <!-- TODO Authorization: only Captains, Admins -->
 
                 @foreach ($allPlayers->sortBy('ranking') as $player)
-                <!-- $matchday->players -->
-
-                <div class="form-group row">
-                    <label for="nickname" class="col-4 col-form-label col-form-label-sm">Spitzname</label>
-                    <div>
-                        <input type="text" class="form-control form-control-sm @error('nickname') is-invalid @enderror" id="nickname" name="nickname" value="{{ old('nickame') ?? $player->nickname }}">
-                        @error('nickname')
-                        <p class="invalid-feedback">{{ $errors->first('nickname') }}</p>
-                        @enderror
-                    </div>
-                </div>
 
                 <div class="form-group row">
                     <p class="col-4">{{ $player->firstname }} {{ $player->name }}</p>
                     <ul class="col-7 entry-list">
                         <li class="participation">
-                            <input type="radio" name="stefan" id="stefan_yes" class="input" value="yes">
-                            <label for="stefan_yes" class="willingness">Ja</label>
+                            <input @isset($player->matchdays()->find($matchday->id)->pivot) @if($player->matchdays()->find($matchday->id)->pivot->player_availability == 'yes') checked @endif @endisset
+                            type="radio" name="{{ $player->id }}" id="{{ $player->id }}_yes" class="input" value="yes">
+                            <label for="{{ $player->id }}_yes" class="willingness">Ja</label>
                         </li>
                         <li class="participation">
-                            <input type="radio" name="stefan" id="stefan_maybe" class="input" value="maybe">
-                            <label for="stefan_maybe" class="willingness">Vielleicht</label>
+                            <input @isset($player->matchdays()->find($matchday->id)->pivot) @if($player->matchdays()->find($matchday->id)->pivot->player_availability == 'maybe') checked @endif @endisset
+                            type="radio" name="{{ $player->id }}" id="{{ $player->id }}_maybe" class="input" value="maybe">
+                            <label for="{{ $player->id }}_maybe" class="willingness">Vielleicht</label>
                         </li>
                         <li class="participation">
-                            <input type="radio" name="stefan" id="stefan_no" class="input" value="no">
-                            <label for="stefan_no" class="willingness">Nein</label>
+                            <input @isset($player->matchdays()->find($matchday->id)->pivot) @if($player->matchdays()->find($matchday->id)->pivot->player_availability == 'no') checked @endif @endisset
+                            type="radio" name="{{ $player->id }}" id="{{ $player->id }}_no" class="input" value="no">
+                            <label for="{{ $player->id }}_no" class="willingness">Nein</label>
                         </li>
                     </ul>
                 </div>

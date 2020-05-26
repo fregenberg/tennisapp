@@ -81,7 +81,7 @@ TennisApp | Spieler/Erstellen
                 </div>
 
                 <div class="form-group row">
-                    <label for="firstname" class="col-4 col-form-label col-form-label-sm">Vorname</label>
+                    <label for="firstname" class="col-4 col-form-label col-form-label-sm">Vorname*</label>
                     <div>
                         <input type="text" class="form-control form-control-sm @error('firstname') is-invalid @enderror" id="firstname" name="firstname" required placeholder="Boris" value="{{ old('firstname') }}">
                         @error('firstname')
@@ -91,7 +91,7 @@ TennisApp | Spieler/Erstellen
                 </div>
 
                 <div class="form-group row">
-                    <label for="name" class="col-4 col-form-label col-form-label-sm">Name</label>
+                    <label for="name" class="col-4 col-form-label col-form-label-sm">Name*</label>
                     <div>
                         <input type="text" class="form-control form-control-sm @error('name') is-invalid @enderror" id="name" name="name" required placeholder="Becker" value="{{ old('name') }}">
                         @error('name')
@@ -144,7 +144,7 @@ TennisApp | Spieler/Erstellen
                 <!-- // TODO core_team (boolean checkbox) -->
 
                 <div class="form-group row">
-                    <label for="email" class="col-4 col-form-label col-form-label-sm">E-Mail</label>
+                    <label for="email" class="col-4 col-form-label col-form-label-sm">E-Mail*</label>
                     <div>
                         <input type="email" class="form-control form-control-sm @error('email') is-invalid @enderror" id="email" name="email" required placeholder="boris.b@tennis.de" value="{{ old('email') }}">
                         @error('email')

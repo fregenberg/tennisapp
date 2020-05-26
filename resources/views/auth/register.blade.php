@@ -57,7 +57,7 @@ TennisApp | Register
                     </div>
 
                     <div class="form-group row">
-                        <label for="firstname" class="col-4 col-form-label col-form-label-sm">Vorname</label>
+                        <label for="firstname" class="col-4 col-form-label col-form-label-sm">Vorname*</label>
                         <div>
                             <input type="text" class="form-control form-control-sm" id="firstname" name="firstname" required placeholder="Boris" value="{{ old('firstname') }}">
                         </div>
@@ -98,9 +98,6 @@ TennisApp | Register
                         <label for="birthday" class="col-4 col-form-label col-form-label-sm">Geburtstag</label>
                         <div>
                             <input type="date" class="form-control form-control-sm" id="birthday" name="birthday" value="{{ old('birthday') }}">
-
-
-                            @enderror
                         </div>
                     </div>
 

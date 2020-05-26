@@ -42,7 +42,7 @@ TennisApp | Termine/Bearbeiten
                 <div class="form-group row">
                     <label for="gametime" class="col-3 col-form-label col-form-label-sm">Uhrzeit</label>
                     <div>
-                        <input type="time" class="form-control form-control-sm @error('gametime') is-invalid @enderror" id="gametime" name="gametime" value="{{ old('gametime') ?? $matchday->gametime }}">
+                        <input type="time" class="form-control form-control-sm @error('gametime') is-invalid @enderror" id="gametime" name="gametime" value="{{ old('gametime') ?? \Carbon\Carbon::parse($matchday->gametime)->format('G:i') }}">
                         @error('gametime')
                         <p class="invalid-feedback">{{ $errors->first('gametime') }}</p>
                         @enderror

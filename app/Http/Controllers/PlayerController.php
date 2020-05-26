@@ -137,7 +137,7 @@ class PlayerController extends Controller
             'core_team' => 'boolean|nullable',
             'role' => 'nullable',
 
-            'email' => 'email|max:255|required|string|unique',
+            'email' => 'email|max:255|required|string',
         ]);
     }
 }

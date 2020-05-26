@@ -22,6 +22,7 @@ TennisApp | Register
                         <label for="performance_class" class="col-4 col-form-label col-form-label-sm">LK</label>
                         <div>
                             <select class="form-control form-control-sm" id="performance_class" name="performance_class">
+                                <option></option>
                                 <option>LK1</option>
                                 <option>LK2</option>
                                 <option>LK3</option>

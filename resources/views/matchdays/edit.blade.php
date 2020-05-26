@@ -82,28 +82,28 @@ TennisApp | Termine/Bearbeiten
                 <div class="form-group row">
                     <label for="result" class="col-4 col-form-label col-form-label-sm">Ergebnis</label>
                     <select class="col-2 form-control form-control-sm" id="result" name="result_hometeam">
-                        <option>0</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option selected>9</option>
+                        <option @if (($matchday->result_hometeam) == 0) selected @endif>0</option>
+                        <option @if (($matchday->result_hometeam) == 1) selected @endif>1</option>
+                        <option @if (($matchday->result_hometeam) == 2) selected @endif>2</option>
+                        <option @if (($matchday->result_hometeam) == 3) selected @endif>3</option>
+                        <option @if (($matchday->result_hometeam) == 4) selected @endif>4</option>
+                        <option @if (($matchday->result_hometeam) == 5) selected @endif>5</option>
+                        <option @if (($matchday->result_hometeam) == 6) selected @endif>6</option>
+                        <option @if (($matchday->result_hometeam) == 7) selected @endif>7</option>
+                        <option @if (($matchday->result_hometeam) == 8) selected @endif>8</option>
+                        <option @if (($matchday->result_hometeam) == 9) selected @endif>9</option>
                     </select>
                     <select class="col-2 form-control form-control-sm" id="result" name="result_awayteam">
-                        <option selected>0</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
+                        <option @if (($matchday->result_awayteam) == 0) selected @endif>0</option>
+                        <option @if (($matchday->result_awayteam) == 1) selected @endif>1</option>
+                        <option @if (($matchday->result_awayteam) == 2) selected @endif>2</option>
+                        <option @if (($matchday->result_awayteam) == 3) selected @endif>3</option>
+                        <option @if (($matchday->result_awayteam) == 4) selected @endif>4</option>
+                        <option @if (($matchday->result_awayteam) == 5) selected @endif>5</option>
+                        <option @if (($matchday->result_awayteam) == 6) selected @endif>6</option>
+                        <option @if (($matchday->result_awayteam) == 7) selected @endif>7</option>
+                        <option @if (($matchday->result_awayteam) == 8) selected @endif>8</option>
+                        <option @if (($matchday->result_awayteam) == 9) selected @endif>9</option>
                     </select>
                 </div>
             </div>

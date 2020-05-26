@@ -58,17 +58,17 @@ TennisApp | Planer/Bearbeiten
                     <p class="col-4">{{ $player->firstname }} {{ $player->name }}</p>
                     <ul class="col-7 entry-list">
                         <li class="participation">
-                            <input disabled @isset($player->matchdays()->find($matchday->id)->pivot) @if($player->matchdays()->find($matchday->id)->pivot->player_availability == 'yes') checked @endif @endisset
+                            <input @isset($player->matchdays()->find($matchday->id)->pivot) @if($player->matchdays()->find($matchday->id)->pivot->player_availability == 'yes') checked @endif @endisset
                             type="radio" name="{{ $player->id }}" id="{{ $player->id }}_yes" class="input" value="yes">
                             <label for="{{ $player->id }}_yes" class="willingness">Ja</label>
                         </li>
                         <li class="participation">
-                            <input disabled @isset($player->matchdays()->find($matchday->id)->pivot) @if($player->matchdays()->find($matchday->id)->pivot->player_availability == 'maybe') checked @endif @endisset
+                            <input @isset($player->matchdays()->find($matchday->id)->pivot) @if($player->matchdays()->find($matchday->id)->pivot->player_availability == 'maybe') checked @endif @endisset
                             type="radio" name="{{ $player->id }}" id="{{ $player->id }}_maybe" class="input" value="maybe">
                             <label for="{{ $player->id }}_maybe" class="willingness">Vielleicht</label>
                         </li>
                         <li class="participation">
-                            <input disabled @isset($player->matchdays()->find($matchday->id)->pivot) @if($player->matchdays()->find($matchday->id)->pivot->player_availability == 'no') checked @endif @endisset
+                            <input @isset($player->matchdays()->find($matchday->id)->pivot) @if($player->matchdays()->find($matchday->id)->pivot->player_availability == 'no') checked @endif @endisset
                             type="radio" name="{{ $player->id }}" id="{{ $player->id }}_no" class="input" value="no">
                             <label for="{{ $player->id }}_no" class="willingness">Nein</label>
                         </li>

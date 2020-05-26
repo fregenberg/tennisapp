@@ -44,29 +44,32 @@ TennisApp | Spieler/Bearbeiten
                     <label for="performance_class" class="col-4 col-form-label col-form-label-sm">LK</label>
                     <div>
                         <select class="form-control form-control-sm" id="performance_class" name="performance_class">
-                            <option>LK1</option>
-                            <option>LK2</option>
-                            <option>LK3</option>
-                            <option>LK4</option>
-                            <option>LK5</option>
-                            <option>LK6</option>
-                            <option>LK7</option>
-                            <option>LK8</option>
-                            <option>LK9</option>
-                            <option>LK10</option>
-                            <option>LK11</option>
-                            <option>LK12</option>
-                            <option>LK13</option>
-                            <option>LK14</option>
-                            <option selected>LK15</option>
-                            <option>LK16</option>
-                            <option>LK17</option>
-                            <option>LK18</option>
-                            <option>LK19</option>
-                            <option>LK20</option>
-                            <option>LK21</option>
-                            <option>LK22</option>
-                            <option>LK23</option>
+
+                            <option @if (($player->performance_class) == '') selected @endif></option>
+                            <option @if (($player->performance_class) == 'LK1') selected @endif>LK1</option>
+                            <option @if (($player->performance_class) == 'LK2') selected @endif>LK2</option>
+                            <option @if (($player->performance_class) == 'LK3') selected @endif>LK3</option>
+                            <option @if (($player->performance_class) == 'LK4') selected @endif>LK4</option>
+                            <option @if (($player->performance_class) == 'LK5') selected @endif>LK5</option>
+                            <option @if (($player->performance_class) == 'LK6') selected @endif>LK6</option>
+                            <option @if (($player->performance_class) == 'LK7') selected @endif>LK7</option>
+                            <option @if (($player->performance_class) == 'LK8') selected @endif>LK8</option>
+                            <option @if (($player->performance_class) == 'LK9') selected @endif>LK9</option>
+                            <option @if (($player->performance_class) == 'LK10') selected @endif>LK10</option>
+                            <option @if (($player->performance_class) == 'LK11') selected @endif>LK11</option>
+                            <option @if (($player->performance_class) == 'LK12') selected @endif>LK12</option>
+                            <option @if (($player->performance_class) == 'LK13') selected @endif>LK13</option>
+                            <option @if (($player->performance_class) == 'LK14') selected @endif>LK14</option>
+                            <option @if (($player->performance_class) == 'LK15') selected @endif>LK15</option>
+                            <option @if (($player->performance_class) == 'LK16') selected @endif>LK16</option>
+                            <option @if (($player->performance_class) == 'LK17') selected @endif>LK17</option>
+                            <option @if (($player->performance_class) == 'LK18') selected @endif>LK18</option>
+                            <option @if (($player->performance_class) == 'LK19') selected @endif>LK19</option>
+                            <option @if (($player->performance_class) == 'LK20') selected @endif>LK20</option>
+                            <option @if (($player->performance_class) == 'LK21') selected @endif>LK21</option>
+                            <option @if (($player->performance_class) == 'LK22') selected @endif>LK22</option>
+                            <option @if (($player->performance_class) == 'LK23') selected @endif>LK23</option>
+
                         </select>
                     </div>
                 </div>
@@ -173,9 +176,9 @@ TennisApp | Spieler/Bearbeiten
                     <label for="role" class="col-4 col-form-label col-form-label-sm">Rolle</label>
                     <div>
                         <select class="form-control form-control-sm" id="role" name="role" value="{{ old('role') ?? $player->role }}">
-                            <option selected></option>
-                            <option>Captain</option>
-                            <option>Admin</option>
+                            <option @if (($player->role) == '') selected @endif></option>
+                            <option @if (($player->role) == 'Captain') selected @endif></option>
+                            <option @if (($player->role) == 'Admin') selected @endif></option>
                         </select>
                     </div>
                 </div>

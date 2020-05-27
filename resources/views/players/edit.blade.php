@@ -177,8 +177,8 @@ TennisApp | Spieler/Bearbeiten
                     <div>
                         <select class="form-control form-control-sm" id="role" name="role" value="{{ old('role') ?? $player->role }}">
                             <option @if (($player->role) == '') selected @endif></option>
-                            <option @if (($player->role) == 'Captain') selected @endif></option>
-                            <option @if (($player->role) == 'Admin') selected @endif></option>
+                            <option @if (($player->role) == 'Captain') selected @endif>Captain</option>
+                            <option @if (($player->role) == 'Admin') selected @endif>Admin</option>
                         </select>
                     </div>
                 </div>

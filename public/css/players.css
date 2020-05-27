@@ -51,6 +51,20 @@ h1 {
     color: #b0bec5 !important;
 }
 
+/* SHOW-TABLE */
+
+.matchdaytable {
+    border: none;
+    color: white;
+    /* font-size: 80%; */
+    word-wrap: break-word;
+}
+
+.fdg {
+    vertical-align: top !important;
+    padding-left: 1.4rem !important;
+}
+
 /* BIG BUTTON */
 
 .bigbutton {

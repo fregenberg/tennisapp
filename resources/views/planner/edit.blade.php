@@ -16,28 +16,28 @@ TennisApp | Planer/Bearbeiten
         @csrf
         @method('PATCH')
 
-        <div class="card shadow my-4">
+        <div class="card shadow my-3">
 
             <table class="table table-sm table-borderless matchdaytable">
                 <thead>
                     <tr>
-                        <td class="col-4 rowname">Datum</td>
-                        <td class="col-8">{{ \Carbon\Carbon::parse($matchday->gamedate)->format('j.n.Y')}}</td>
+                        <td class="col-4 rowname_up pt-2">Datum</td>
+                        <td class="col-8 pt-2">{{ \Carbon\Carbon::parse($matchday->gamedate)->format('j.n.Y')}}</td>
                     </tr>
                     <tr>
-                        <td class="col-4 rowname">Uhrzeit</td>
+                        <td class="col-4 rowname_up">Uhrzeit</td>
                         <td class="col-8">{{ \Carbon\Carbon::parse($matchday->gametime)->format('G:i')}}</td>
                     </tr>
                     <tr>
-                        <td class="col-4 rowname">Heim</td>
+                        <td class="col-4 rowname_up">Heim</td>
                         <td class="col-8">{{ $matchday->hometeam }}</td>
                     </tr>
                     <tr>
-                        <td class="col-4 rowname">Gast</td>
+                        <td class="col-4 rowname_up">Gast</td>
                         <td class="col-8">{{ $matchday->awayteam }}</td>
                     </tr>
                     <tr>
-                        <td class="col-4 rowname">Spielort</td>
+                        <td class="col-4 rowname_up">Spielort</td>
                         <td class="col-8">{{ $matchday->venue_street }} {{ $matchday->venue_housenumber }} <br> {{ $matchday->venue_zip }} {{ $matchday->venue_city }} </td>
                     </tr>
                 </thead>

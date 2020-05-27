@@ -115,6 +115,16 @@ TennisApp | Spieler/Bearbeiten
                 </div>
 
                 <div class="form-group row">
+                    <label for="birthday" class="col-4 col-form-label col-form-label-sm">Geburtstag</label>
+                    <div>
+                        <input type="date" class="form-control form-control-sm @error('birthday') is-invalid @enderror" id="birthday" name="birthday" value="{{ old('birthday') ?? $player->birthday }}">
+                        @error('birthday')
+                        <p class="invalid-feedback">{{ $errors->first('birthday') }}</p>
+                        @enderror
+                    </div>
+                </div>
+
+                <div class="form-group row">
                     <label for="tel_private" class="col-4 col-form-label col-form-label-sm">Tel privat</label>
                     <div>
                         <input type="tel" class="form-control form-control-sm @error('tel_private') is-invalid @enderror" id="tel_private" name="tel_private" value="{{ old('tel_private') ?? $player->tel_private }}">
@@ -130,16 +140,6 @@ TennisApp | Spieler/Bearbeiten
                         <input type="tel" class="form-control form-control-sm @error('tel_mobile') is-invalid @enderror" id="tel_mobile" name="tel_mobile" value="{{ old('tel_mobile') ?? $player->tel_mobile }}">
                         @error('tel_mobile')
                         <p class="invalid-feedback">{{ $errors->first('tel_mobile') }}</p>
-                        @enderror
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <label for="birthday" class="col-4 col-form-label col-form-label-sm">Geburtstag</label>
-                    <div>
-                        <input type="date" class="form-control form-control-sm @error('birthday') is-invalid @enderror" id="birthday" name="birthday" value="{{ old('birthday') ?? $player->birthday }}">
-                        @error('birthday')
-                        <p class="invalid-feedback">{{ $errors->first('birthday') }}</p>
                         @enderror
                     </div>
                 </div>

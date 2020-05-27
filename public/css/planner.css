@@ -38,7 +38,9 @@ h1 {
 }
 
 .col-4 {
-    vertical-align: top !important;
+    vertical-align: top !important; /* TODO Refactoring: siehe table-row & col-2 */
+    padding-left: 1.2em !important;
+    /* padding-top: 1.2em !important; */
 }
 
 .playerstable {
@@ -51,7 +53,7 @@ h1 {
 }
 
 .table-row {
-    vertical-align: middle !important;
+    vertical-align: middle !important; /* TODO Refactoring: siehe col-4 & col-2 */
     width: 100%;
 
     /* padding-left: 0.6em; */
@@ -61,10 +63,14 @@ h1 {
     padding-left: 0.6em !important;
 }
 
+.rowname_up {
+    padding-left: 1.2em !important;
+}
+
 .col-2 {
     margin: 0em;
     padding: 0em !important;
-    vertical-align: middle !important;
+    vertical-align: middle !important; /* TODO Refactoring: siehe col-4 & table-row */
 
     /* width: 16.67%; */
 }

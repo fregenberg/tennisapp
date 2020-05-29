@@ -21,13 +21,11 @@ Route::get('/presentation', function () {
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', 'MatchdayController@index')->name('home');
-    // Route::get('/alletermine', 'MatchdayController@index')->name('home');
 
     Route::get('/termine/erstellen', 'MatchdayController@create')->name('matchdays.create');
     Route::post('/termine/erstellen', 'MatchdayController@store')->name('matchdays.store');
 
     Route::get('/termine/bearbeiten/{matchday}', 'MatchdayController@edit')->name('matchdays.edit');
-    // // Route::get('/termine/{matchday}/bearbeiten', 'MatchdayController@edit')->name('matchdays.edit');
     Route::patch('/termine/{matchday}', 'MatchdayController@update')->name('matchdays.update');
     Route::delete('/termine/{matchday}', 'MatchdayController@destroy')->name('matchdays.destroy');
 
@@ -39,7 +37,6 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/spieler/{player}', 'PlayerController@show')->name('players.show');
     Route::get('/spieler/bearbeiten/{player}', 'PlayerController@edit')->name('players.edit');
-    // Route::get('/spieler/{player}/bearbeiten', 'PlayerController@edit')->name('players.edit');
     Route::patch('/spieler/{player}', 'PlayerController@update')->name('players.update');
     Route::delete('/spieler/{player}', 'PlayerController@destroy')->name('players.destroy');
 
@@ -53,4 +50,3 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 Auth::routes();
-// Route::get('/home', 'HomeController@index')->name('home');

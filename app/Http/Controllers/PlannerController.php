@@ -57,10 +57,18 @@ class PlannerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Player $player)
+    public function update(Request $request, Matchday $matchday)
     {
         // TODO update the ACTUAL planner (ID!) in storage
-        // 
+
+        $data = $request->except(['_token', '_method']);
+
+        foreach ($data as $playerId => $playerAvailability) {
+            $data[$playerId] = ['player_availability' => $playerAvailability];
+        }
+
+        $matchday->players()->syncWithoutDetaching($data);
+
         return redirect()->route('home');
     }
 }

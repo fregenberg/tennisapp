@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Player;
+use App\User;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 
 class PlayerController extends Controller
@@ -51,7 +53,14 @@ class PlayerController extends Controller
     {
         // validate the request and 
         // TODO store a NEW player in storage (no own route; after view 'players.create')
-        Player::create($this->validateData());
+        $data = $this->validateData();
+        $user = User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => Hash::make('derwarnochdrauf')
+        ]);
+        $player = new Player($data);
+        $user->player()->save($player);
         return redirect()->route('players.index');
 
         // $newPlayer = $this->validateData();
@@ -119,8 +128,8 @@ class PlayerController extends Controller
             'ranking' => 'nullable',
             'performance_class' => 'nullable',
             'dtb_id' => 'digits:8|nullable',
-            'firstname' => 'required',
-            'name' => 'required',
+            'firstname' => 'required|string',
+            'name' => 'required|string',
             'nickname' => 'nullable',
             'tel_private' => 'nullable',
             'tel_mobile' => 'nullable',
@@ -128,7 +137,7 @@ class PlayerController extends Controller
             'core_team' => 'boolean|nullable',
             'role' => 'nullable',
 
-            'email' => 'email|required',
+            'email' => 'email|max:255|required|string',
         ]);
     }
 }

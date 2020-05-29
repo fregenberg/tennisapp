@@ -14,63 +14,66 @@ TennisApp | Nächster Spieltag
 
     <form>
 
-        <div class="card shadow my-4">
-            <!-- Card header -->
-            <div class="card-header">
+        <div class="card shadow my-3">
 
-                <div class="form-group row">
-                    <small class="col-4">Datum</small>
-                    <small class="col-6">{{ \Carbon\Carbon::parse($matchday->gamedate)->format('j.n.Y')}}</small>
-                </div>
-                <div class="form-group row">
-                    <small class="col-4">Uhrzeit</small>
-                    <small class="col-6">{{ \Carbon\Carbon::parse($matchday->gametime)->format('G:i')}}</small>
-                </div>
-                <div class="form-group row pt-1">
-                    <small class="col-4">Heim</small>
-                    <small class="col-6">{{ $matchday->hometeam }}</small>
-                </div>
-                <div class="form-group row pb-1">
-                    <small class="col-4">Gast</small>
-                    <small class="col-6">{{ $matchday->awayteam }}</small>
-                </div>
-                <div class="form-group row">
-                    <small class="col-4">Spielort</small>
-                    <small class="col-6">{{ $matchday->venue_street }} {{ $matchday->venue_housenumber }}</small>
-                </div>
-                <div class="form-group row">
-                    <small class="col-4"></small>
-                    <small class="col-6">{{ $matchday->venue_zip }} {{ $matchday->venue_city }}</small>
-                </div>
-            </div>
+            <table class="table table-sm table-borderless matchdaytable">
+                <thead>
+                    <tr>
+                        <td class="col-4 pt-2">Datum</td>
+                        <td class="col-8 pt-2">{{ \Carbon\Carbon::parse($matchday->gamedate)->format('j.n.Y')}}</td>
+                    </tr>
+                    <tr>
+                        <td class="col-4">Uhrzeit</td>
+                        <td class="col-8">{{ \Carbon\Carbon::parse($matchday->gametime)->format('G:i')}}</td>
+                    </tr>
+                    <tr>
+                        <td class="col-4">Heim</td>
+                        <td class="col-8">{{ $matchday->hometeam }}</td>
+                    </tr>
+                    <tr>
+                        <td class="col-4">Gast</td>
+                        <td class="col-8">{{ $matchday->awayteam }}</td>
+                    </tr>
+                    <tr>
+                        <td class="col-4">Spielort</td>
+                        <td class="col-8">{{ $matchday->venue_street }} {{ $matchday->venue_housenumber }} <br> {{ $matchday->venue_zip }} {{ $matchday->venue_city }} </td>
+                    </tr>
+                </thead>
+            </table>
 
-            <!-- Card body -->
-            <div class="card-body">
+            <table class="table table-sm playerstable">
+                <tbody>
 
-                <!-- // TODO search core_team (≈ bookmarking) -->
+                    <!-- // TODO search core_team (≈ bookmarking) -->
 
-                @foreach ($matchday->players->sortBy('ranking') as $player)
+                    @foreach ($matchday->players->sortBy('ranking') as $player)
 
-                <div class="form-group row">
-                    <p class="col-4">{{ $player->firstname }} {{ $player->name }}</p>
-                    <ul class="col-7 entry-list">
-                        <li class="participation">
-                            <input type="radio" name="stefan" id="stefan_yes" class="input" value="yes">
-                            <label for="stefan_yes" class="willingness">Ja</label>
-                        </li>
-                        <li class="participation">
-                            <input type="radio" name="stefan" id="stefan_maybe" class="input" value="maybe">
-                            <label for="stefan_maybe" class="willingness">Vielleicht</label>
-                        </li>
-                        <li class="participation">
-                            <input type="radio" name="stefan" id="stefan_no" class="input" value="no">
-                            <label for="stefan_no" class="willingness">Nein</label>
-                        </li>
-                    </ul>
-                </div>
+                    @if($player->matchdays()->find($matchday->id)->pivot->player_availability != null)
+                    <tr class="container-fluid table-row">
+                        <td scope="row" class="rowname">{{ $player->firstname }} {{ $player->name }}</td>
+                        <td class="col-2">
+                            <input disabled @isset($player->matchdays()->find($matchday->id)->pivot) @if($player->matchdays()->find($matchday->id)->pivot->player_availability == 'yes') checked @endif @endisset
+                            type="radio" name="{{ $player->id }}" id="{{ $player->id }}_yes" class="input" value="yes">
+                            <label for="{{ $player->id }}_yes" class="label">Ja</label>
+                        </td>
+                        <td class="col-2">
+                            <input disabled @isset($player->matchdays()->find($matchday->id)->pivot) @if($player->matchdays()->find($matchday->id)->pivot->player_availability == 'maybe') checked @endif @endisset
+                            type="radio" name="{{ $player->id }}" id="{{ $player->id }}_maybe" class="input" value="maybe">
+                            <label for="{{ $player->id }}_maybe" class="label">?</label>
+                        </td>
+                        <td class="col-2">
+                            <input disabled @isset($player->matchdays()->find($matchday->id)->pivot) @if($player->matchdays()->find($matchday->id)->pivot->player_availability == 'no') checked @endif @endisset
+                            type="radio" name="{{ $player->id }}" id="{{ $player->id }}_no" class="input" value="no">
+                            <label for="{{ $player->id }}_no" class="label">Nein</label>
+                        </td>
+                    </tr>
+                    @endif
 
-                @endforeach
-            </div>
+                    @endforeach
+
+                </tbody>
+            </table>
+
         </div>
 
     </form>

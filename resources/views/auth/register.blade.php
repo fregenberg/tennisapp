@@ -22,6 +22,7 @@ TennisApp | Register
                         <label for="performance_class" class="col-4 col-form-label col-form-label-sm">LK</label>
                         <div>
                             <select class="form-control form-control-sm" id="performance_class" name="performance_class">
+                                <option></option>
                                 <option>LK1</option>
                                 <option>LK2</option>
                                 <option>LK3</option>
@@ -57,7 +58,7 @@ TennisApp | Register
                     </div>
 
                     <div class="form-group row">
-                        <label for="firstname" class="col-4 col-form-label col-form-label-sm">Vorname</label>
+                        <label for="firstname" class="col-4 col-form-label col-form-label-sm">Vorname*</label>
                         <div>
                             <input type="text" class="form-control form-control-sm" id="firstname" name="firstname" required placeholder="Boris" value="{{ old('firstname') }}">
                         </div>
@@ -81,6 +82,13 @@ TennisApp | Register
                     </div>
 
                     <div class="form-group row">
+                        <label for="birthday" class="col-4 col-form-label col-form-label-sm">Geburtstag</label>
+                        <div>
+                            <input type="date" class="form-control form-control-sm" id="birthday" name="birthday" value="{{ old('birthday') }}">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
                         <label for="tel_private" class="col-4 col-form-label col-form-label-sm">Tel privat</label>
                         <div>
                             <input type="tel" class="form-control form-control-sm" id="tel_private" name="tel_private" placeholder="040 12345678" value="{{ old('tel_private') }}">
@@ -91,16 +99,6 @@ TennisApp | Register
                         <label for="tel_mobile" class="col-4 col-form-label col-form-label-sm">Tel mobil</label>
                         <div>
                             <input type="tel" class="form-control form-control-sm" id="tel_mobile" name="tel_mobile" placeholder="0171 2345678" value="{{ old('tel_mobile') }}">
-                        </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="birthday" class="col-4 col-form-label col-form-label-sm">Geburtstag</label>
-                        <div>
-                            <input type="date" class="form-control form-control-sm" id="birthday" name="birthday" value="{{ old('birthday') }}">
-
-
-                            @enderror
                         </div>
                     </div>
 

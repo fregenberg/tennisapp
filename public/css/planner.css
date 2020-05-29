@@ -21,14 +21,85 @@ h1 {
     font-weight: bold;
 }
 
-/* CARDS */
+/* TABLE BODY */
 
 .card {
     background-image: url("../images/matchdays_background_blurred.jpg");
     background-size: cover;
-    border: 2px solid whitesmoke;
-    color: white;
+
+    border-left: none;
 }
+
+.matchdaytable {
+    border: none;
+    color: white;
+    font-size: 80%;
+    word-wrap: break-word;
+}
+
+.col-4 {
+    vertical-align: top !important; /* TODO Refactoring: siehe table-row & col-2 */
+    padding-left: 1.2em !important;
+    /* padding-top: 1.2em !important; */
+}
+
+.playerstable {
+    color: white;
+    word-wrap: break-word;
+    margin-bottom: 0 !important;
+
+    /* border: 2px solid whitesmoke; */
+    /* table-layout: fixed; */
+}
+
+.table-row {
+    vertical-align: middle !important; /* TODO Refactoring: siehe col-4 & col-2 */
+    width: 100%;
+
+    /* padding-left: 0.6em; */
+}
+
+.rowname {
+    padding-left: 0.6em !important;
+}
+
+.rowname_up {
+    padding-left: 1.2em !important;
+}
+
+.col-2 {
+    margin: 0em;
+    padding: 0em !important;
+    vertical-align: middle !important; /* TODO Refactoring: siehe col-4 & table-row */
+
+    /* width: 16.67%; */
+}
+
+/* THREE-WAY TOGGLE WITH RADIO BUTTONS */
+
+.input {
+    position: absolute;
+    visibility: hidden;
+}
+
+.label {
+    display: block;
+    margin: 0;
+    padding: 0.5em !important;
+    text-align: center;
+
+    font-size: 90%;
+
+    /* border: 1px solid #ddd;
+    cursor: pointer; */
+}
+
+.input:checked + .label {
+    background: #0275d8;
+    color: #fdfb50;
+}
+
+/* Speichern-Button war vorher im Card-Footer */
 
 .card-footer {
     justify-content: space-around;
@@ -38,46 +109,6 @@ h1 {
     background-color: #0275d8;
     color: #fdfb50;
     border: 1px solid #fdfb50;
-}
-
-/* THREE-WAY TOGGLE WITH RADIO BUTTONS */
-
-.entry-list {
-    display: table;
-    width: 100%;
-    /* margin: 2em 0; */
-    padding: 0;
-}
-
-.participation {
-    display: table-cell;
-    width: 33%;
-    margin: 0;
-    padding: 0;
-    /* list-style-type: none; */
-}
-
-.input {
-    position: absolute;
-    visibility: hidden;
-}
-
-.willingness {
-    display: block;
-    margin: 0 -1px -1px 0;
-    padding: 0em 0.25em;
-
-    border: 1px solid #ddd;
-
-    font-size: 90%;
-    text-align: center;
-
-    /* cursor: pointer; */
-}
-
-.input:checked + .willingness {
-    background: #0275d8;
-    color: #fdfb50;
 }
 
 /* BIG BUTTON */
@@ -102,6 +133,7 @@ h1 {
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 20;
 }
 
 /* Style the links inside the navigation bar */

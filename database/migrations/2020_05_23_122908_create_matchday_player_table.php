@@ -20,7 +20,7 @@ class CreateMatchdayPlayerTable extends Migration
                 ->onDelete('cascade');
             $table->foreignId('player_id')->constrained()
                 ->onDelete('cascade');
-            $table->integer('player_availability')->nullable();
+            $table->enum('player_availability', ['yes', 'no', 'maybe'])->nullable();
 
             $table->timestamps();
         });

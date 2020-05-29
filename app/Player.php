@@ -19,7 +19,7 @@ class Player extends Model
 
     public function matchdays()
     {
-        return $this->belongsToMany('App\Matchday')->withPivot('player_availability');
+        return $this->belongsToMany('App\Matchday')->withPivot('player_availability')->withTimestamps();
     }
 
     use SoftDeletes;

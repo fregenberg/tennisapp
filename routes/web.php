@@ -40,8 +40,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/spieler/bearbeiten/{player}', 'PlayerController@edit')->name('players.edit');
     Route::patch('/spieler/{player}', 'PlayerController@update')->name('players.update');
     Route::delete('/spieler/{player}', 'PlayerController@destroy')->name('players.destroy');
-
-
+  
+  
     Route::get('/alleplaner', 'PlannerController@index')->name('planner.index');
 
     Route::get('/planer', 'PlannerController@show')->name('planner.show');

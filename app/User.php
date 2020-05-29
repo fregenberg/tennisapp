@@ -37,11 +37,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    /**
-     * 
-     */
     public function player()
     {
-        return $this->hasOne('\App\Player');  // ('\App\Player', 'email', 'email');
+        return $this->hasOne('App\Player');
+        // return $this->hasOne(Player::class);
     }
 }

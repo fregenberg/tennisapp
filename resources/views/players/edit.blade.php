@@ -172,7 +172,7 @@ TennisApp | Spieler/Bearbeiten
                 <div class="form-group row">
                     <label for="role" class="col-4 col-form-label col-form-label-sm">Rolle</label>
                     <div>
-                        <select class="form-control form-control-sm" id="role" name="role">
+                        <select class="form-control form-control-sm" id="role" name="role" value="{{ old('role') ?? $player->role }}">
                             <option selected></option>
                             <option>Captain</option>
                             <option>Admin</option>

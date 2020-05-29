@@ -60,14 +60,7 @@ class MatchdayController extends Controller
      */
     public function show(Matchday $matchday)
     {
-        // TODO show a SPECIFIC matchday (no route; no view); 'anzeigen' leads to 'planner'
-        // TODO alt.: TODO create a PlannerController
-        // $players = \App\Player::all();
-
-        // return view('planner.planner', [
-        //     'matchday' => $matchday,
-        //     'players' => $players
-        // ]);
+        // 
     }
 
     /**

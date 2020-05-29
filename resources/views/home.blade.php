@@ -57,7 +57,7 @@ TennisApp | Termine
             </form>
         </div>
         <div class="card-footer row">
-            <a href="{{ route('planner.planner') }}" class="col-5 btn btn-sm footer-buttons" type="button">Anzeigen</a>
+            <a href="{{ route('planner.edit', ['matchday' => $matchday]) }}" class="col-5 btn btn-sm footer-buttons" type="button">Anzeigen</a>
             <a href="{{ route('matchdays.edit', ['matchday' => $matchday]) }}" class="col-5 btn btn-sm footer-buttons" type="button">Bearbeiten</a>
         </div>
     </div>

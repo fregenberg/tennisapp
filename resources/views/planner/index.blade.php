@@ -6,8 +6,8 @@ TennisApp | AllePlaner
 
 @section('content')
 
-<div class="heading container-fluid shadow static-top p-3 d-flex">
-    <h1 class="pt-1">Punktspiel Planer</h1>
+<div class="container-fluid shadow static-top p-3 d-flex css_heading">
+    <h1 class="pt-1 css_headline">Punktspiel Planer</h1>
 </div>
 
 <div class="container pb-5 mb-5">

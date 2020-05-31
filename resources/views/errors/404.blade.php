@@ -11,17 +11,19 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- TennisApp CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bottomnavtabbar.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/errors.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/header.css') }}">
 
     <title>Fuck die Gans</title>
 </head>
 
 <body>
-    <h2 class="top container-fluid bg-transparent static-top justify-content-center p-3 d-flex">404</h2>
+    <h2 class="container-fluid bg-transparent static-top justify-content-center p-3 d-flex css_headline">404</h2>
 
-    <div class="container pl-3">
-        <h2 class="middle ml-2">Sieht gut aus</h2>
-        <h2 class="middle ml-4">bringt aber nix...</h2>
+    <div class="container pl-3 css_rotate-container">
+        <h2 class="ml-2 css_rotate-middle">Sieht gut aus</h2>
+        <h2 class="ml-4 css_rotate-middle">bringt aber nix...</h2>
     </div>
 
 

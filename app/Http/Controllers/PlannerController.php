@@ -42,7 +42,7 @@ class PlannerController extends Controller
      */
     public function edit(Matchday $matchday)
     {
-        // TODO show the SELECTED planner (ID!) in a form for editing (route 'planer/bearbeiten/{planner}'; view 'planer.edit'); followed by update
+        // show the SELECTED planner (ID!) in a form for editing (route 'planer/bearbeiten/{planner}'; view 'planer.edit'); followed by update
         return view('planner.edit', [
             'matchday' => $matchday,
             'allPlayers' => Player::all(),
@@ -59,7 +59,7 @@ class PlannerController extends Controller
      */
     public function update(Request $request, Matchday $matchday)
     {
-        // TODO update the ACTUAL planner (ID!) in storage
+        // update the ACTUAL planner (ID!) in storage
 
         $data = $request->except(['_token', '_method']);
 

@@ -9,15 +9,14 @@ TennisApp | Register
 <div class="overlay">
 
     <div class="container pt-5 mt-5">
-        <h3 class="font-weight-normal pt-3">Register</h3>
-        <!-- <div class="row justify-content-center">
-                <div class="col-md-8"> -->
-        <div class="card bg-transparent border-0 shadow pt-1 mb-5">
-            <!-- // <div class="card-header">{{ __('Register') }}</div> -->
+        <h3 class="pt-3 css_auth-headline">Register</h3>
 
-            <div class="card-body">
-                <form method="POST" action="{{ route('register') }}">
-                    @csrf
+        <form method="POST" action="{{ route('register') }}">
+            @csrf
+
+            <div class="card bg-transparent border-0 shadow pt-1 mb-5 css_cards">
+                <div class="card-body">
+
                     <div class="form-group row">
                         <label for="performance_class" class="col-4 col-form-label col-form-label-sm">LK</label>
                         <div>
@@ -130,14 +129,15 @@ TennisApp | Register
                     </div>
 
                     <div class="pt-3">
-                        <button type="submit" class="btn btn-primary btn-block">
+                        <button type="submit" class="btn btn-primary btn-block css_bigbutton">
                             {{ __('Register') }}
                         </button>
                     </div>
 
-                </form>
+                </div>
             </div>
-        </div>
+
+        </form>
 
         <!-- container closing tag -->
     </div>
@@ -147,9 +147,9 @@ TennisApp | Register
 
 <!-- header -->
 <div class="navbar p-1">
-    <div class="col-9 image">
-        <img src="images/logo_transparent.png" class="img-fluid" alt="">
+    <div class="col-9 css_auth-image">
+        <img src="images/auth_logo-transparent.png" class="img-fluid" alt="">
     </div>
-    <a href="{{ route('login') }}" class="col-3 mb-1">Login</a>
+    <a href="{{ route('login') }}" class="col-3 mb-1 css_auth-switch">Login</a>
 </div>
 @endsection

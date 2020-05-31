@@ -6,8 +6,8 @@ TennisApp | Spieler/Erstellen
 
 @section('content')
 
-<div class="heading container-fluid shadow static-top p-3 d-flex">
-    <h1 class="pt-1">Spieler</h1>
+<div class="container-fluid shadow static-top p-3 d-flex css_heading">
+    <h1 class="pt-1 css_headline">Spieler</h1>
 </div>
 
 <!-- // @if ($errors->any())
@@ -25,7 +25,7 @@ TennisApp | Spieler/Erstellen
     <form method="POST" action="{{ route('players.store') }}">
         @csrf
 
-        <div class="card shadow my-4 playerblurredimage">
+        <div class="card shadow my-4 css_cards css_playercardsbackground">
             <div class="card-body">
 
                 <!-- TODO Authorization: only Captains, Admins -->
@@ -167,9 +167,9 @@ TennisApp | Spieler/Erstellen
                 </div>
             </div>
 
-            <div class="card-footer row justify-content-around">
-                <button class="col-5 btn btn-sm footer-buttons" type="submit">Speichern</button>
-                <a href="{{ route('players.index') }}" class="col-5 btn btn-sm footer-buttons text-danger" type="button">Abbrechen</a>
+            <div class="card-footer row css_footer-buttons-space">
+                <button class="col-5 btn btn-sm css_footer-buttons" type="submit">Speichern</button>
+                <a href="{{ route('players.index') }}" class="col-5 btn btn-sm css_footer-buttons text-danger" type="button">Abbrechen</a>
             </div>
         </div>
     </form>

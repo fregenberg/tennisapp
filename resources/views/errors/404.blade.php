@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <h2 class="container-fluid bg-transparent static-top justify-content-center p-3 d-flex css_headline">404</h2>
+    <h2 class="container-fluid static-top bg-transparent p-3 css_headline css_404-headline">404</h2>
 
     <div class="container pl-3 css_rotate-container">
         <h2 class="ml-2 css_rotate-middle">Sieht gut aus</h2>

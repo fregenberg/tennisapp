@@ -6,19 +6,9 @@ TennisApp | Termine/Erstellen
 
 @section('content')
 
-<div class="container-fluid shadow static-top p-3 d-flex css_heading">
+<div class="container-fluid static-top p-3 css_heading">
     <h1 class="pt-1 css_headline">Spieltermine</h1>
 </div>
-
-<!-- // @if ($errors->any())
-<div class="alert alert-danger">
-    <ul>
-//        @foreach ($errors->all() as $error)
-//        <li>{{ $error }}</li>
-        @endforeach
-    </ul>
-</div>
-@endif -->
 
 <div class="container pb-5 mb-5">
 

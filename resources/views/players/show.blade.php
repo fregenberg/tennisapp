@@ -6,7 +6,7 @@ TennisApp | Spieler
 
 @section('content')
 
-<div class="container-fluid shadow static-top p-3 d-flex css_heading">
+<div class="container-fluid static-top p-3 css_heading">
     <h1 class="pt-1 css_headline">Spieler</h1>
 </div>
 
@@ -60,7 +60,7 @@ TennisApp | Spieler
 
                 <tr>
                     <td class="col-5 css_playertable-rowlabel">Tel mobil</td>
-                    <td class="col-7"><a href="tel:{{ $player->tel_mobile }}"><strong>{{ $player->tel_mobile }}</strong></a></td> <!-- tel:+4915129114492 -->
+                    <td class="col-7"><a href="tel:{{ $player->tel_mobile }}"><strong>{{ $player->tel_mobile }}</strong></a></td>
                 </tr>
 
                 <tr>

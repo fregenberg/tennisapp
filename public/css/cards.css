@@ -32,4 +32,5 @@
 
 .css_linebackground {
     background-image: url("../images/players_line.jpg");
+    text-align: center;
 }

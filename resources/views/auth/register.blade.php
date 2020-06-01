@@ -14,7 +14,7 @@ TennisApp | Register
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
-            <div class="card bg-transparent border-0 shadow pt-1 mb-5 css_cards">
+            <div class="card bg-transparent border-0 pt-1 mb-5 css_cards">
                 <div class="card-body">
 
                     <div class="form-group row">

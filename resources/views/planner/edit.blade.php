@@ -6,7 +6,7 @@ TennisApp | Planer/Bearbeiten
 
 @section('content')
 
-<div class="container-fluid shadow static-top p-3 d-flex css_heading">
+<div class="container-fluid static-top p-3 css_heading">
     <h1 class="pt-1 css_headline">Punktspiel Planer</h1>
 </div>
 

@@ -28,7 +28,7 @@ TennisApp | Spieler/Erstellen
         <div class="card shadow my-4 css_cards css_playercardsbackground">
             <div class="card-body">
 
-                <!-- TODO Authorization: only Captains, Admins -->
+                @if(Gate::check('isadmin') || Gate::check('iscaptain'))
                 <div class="form-group row">
                     <label for="ranking" class="col-4 col-form-label col-form-label-sm">Rang</label>
                     <div>
@@ -38,6 +38,7 @@ TennisApp | Spieler/Erstellen
                         @enderror
                     </div>
                 </div>
+                @endif
 
                 <div class="form-group row">
                     <label for="performance_class" class="col-4 col-form-label col-form-label-sm">LK</label>
@@ -141,8 +142,9 @@ TennisApp | Spieler/Erstellen
                     </div>
                 </div>
 
-                <!-- Authorization: only Captains, Admins -->
+                <!-- // @if(Gate::check('isadmin') || Gate::check('iscaptain')) -->
                 <!-- // TODO core_team (boolean checkbox) -->
+                <!-- @endif -->
 
                 <div class="form-group row">
                     <label for="email" class="col-4 col-form-label col-form-label-sm">E-Mail*</label>
@@ -154,7 +156,7 @@ TennisApp | Spieler/Erstellen
                     </div>
                 </div>
 
-                <!-- Authorization: only Captains, Admins -->
+                @if(Gate::check('isadmin') || Gate::check('iscaptain'))
                 <div class="form-group row">
                     <label for="role" class="col-4 col-form-label col-form-label-sm">Rolle</label>
                     <div>
@@ -165,6 +167,7 @@ TennisApp | Spieler/Erstellen
                         </select>
                     </div>
                 </div>
+                @endif
             </div>
 
             <div class="card-footer row css_footer-buttons-space">

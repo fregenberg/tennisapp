@@ -47,7 +47,6 @@ TennisApp | Planer/Bearbeiten
                 <tbody>
 
                     <!-- // TODO search core_team (≈ bookmarking) -->
-                    <!-- TODO Authorization: only Captains, Admins -->
 
                     @foreach ($allPlayers->sortBy('ranking') as $player)
 

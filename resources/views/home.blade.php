@@ -47,16 +47,25 @@ TennisApp | Termine
             </tbody>
         </table>
 
+        @if(Gate::check('isadmin') || Gate::check('iscaptain'))
         <div class="card-footer row css_footer-buttons-space">
             <a href="{{ route('planner.edit', ['matchday' => $matchday]) }}" class="col-5 btn btn-sm css_footer-buttons" type="button">Anzeigen</a>
             <a href="{{ route('matchdays.edit', ['matchday' => $matchday]) }}" class="col-5 btn btn-sm css_footer-buttons" type="button">Bearbeiten</a>
         </div>
+        @else
+        <div class="card-footer row css_footer-buttons-space">
+            <a href="{{ route('planner.edit', ['matchday' => $matchday]) }}" class="col-5 btn btn-sm css_footer-buttons" type="button">Anzeigen</a>
+        </div>
+        @endif
+
     </div>
     @endforeach
 
+    @if(Gate::check('isadmin') || Gate::check('iscaptain'))
     <div>
         <a href="{{ route('matchdays.create') }}" class="btn btn-primary btn-block css_bigbutton" type="button">neuen Termin anlegen</a>
     </div>
+    @endif
 
     <!-- cards container closing tag -->
 </div>

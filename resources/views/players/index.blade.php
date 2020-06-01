@@ -24,9 +24,11 @@ TennisApp | AlleSpieler
     </div>
     @endforeach
 
+    @if(Gate::check('isadmin') || Gate::check('iscaptain'))
     <div class="css_interval">
         <a href="{{ route('players.create') }}" class="btn btn-primary btn-block css_bigbutton" type="button">neuer Spieler</a>
     </div>
+    @endif
 
     <!-- cards container closing tag -->
 </div>

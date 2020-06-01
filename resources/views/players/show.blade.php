@@ -73,9 +73,9 @@ TennisApp | Spieler
 
     </div>
 
-    <div>
-        <a href="{{ route('players.edit', ['player' => $player]) }}" class="btn btn-primary btn-block css_bigbutton" type="button">Bearbeiten</a>
-    </div>
+    @if(Gate::check('update', $player) || Gate::check('isadmin') || Gate::check('iscaptain'))
+    <a href="{{ route('players.edit', ['player' => $player]) }}" class="btn btn-primary btn-block css_bigbutton" type="button">Bearbeiten</a>
+    @endif
 
 </div>
 

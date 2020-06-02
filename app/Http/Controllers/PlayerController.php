@@ -25,13 +25,6 @@ class PlayerController extends Controller
         // return view('players/index', array('players' => $players));
     }
 
-    // One-to-One-Relationship
-    // public function index($user_id)
-    // {
-    //     $user = User::find($user_id);
-    //     return view('players.index', compact('user'));
-    // }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -52,7 +45,7 @@ class PlayerController extends Controller
     public function store(Request $request)
     {
         // validate the request and 
-        // TODO store a NEW player in storage (no own route; after view 'players.create')
+        // store a NEW player in storage (no own route; after view 'players.create')
         $data = $this->validateData();
         $user = User::create([
             'name' => $data['name'],

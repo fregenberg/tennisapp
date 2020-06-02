@@ -6,19 +6,9 @@ TennisApp | Spieler/Bearbeiten
 
 @section('content')
 
-<div class="heading container-fluid shadow static-top p-3 d-flex">
-    <h1 class="pt-1">Spieler</h1>
+<div class="container-fluid static-top p-3 css_heading">
+    <h1 class="pt-1 css_headline">Spieler</h1>
 </div>
-
-<!-- // @if ($errors->any())
-<div class="alert alert-danger">
-    <ul>
-//        @foreach ($errors->all() as $error)
-//        <li>{{ $error }}</li>
-        @endforeach
-    </ul>
-</div>
-@endif -->
 
 <div class="container pb-5 mb-5">
 
@@ -26,10 +16,10 @@ TennisApp | Spieler/Bearbeiten
         @csrf
         @method('PATCH')
 
-        <div class="card shadow my-4 playerblurredimage">
+        <div class="card shadow my-4 css_cards css_playercardsbackground">
             <div class="card-body">
 
-                <!-- TODO Authorization: only Captains, Admins -->
+                @if(Gate::check('isadmin') || Gate::check('iscaptain'))
                 <div class="form-group row">
                     <label for="ranking" class="col-4 col-form-label col-form-label-sm">Rang</label>
                     <div>
@@ -39,6 +29,7 @@ TennisApp | Spieler/Bearbeiten
                         @enderror
                     </div>
                 </div>
+                @endif
 
                 <div class="form-group row">
                     <label for="performance_class" class="col-4 col-form-label col-form-label-sm">LK</label>
@@ -144,8 +135,9 @@ TennisApp | Spieler/Bearbeiten
                     </div>
                 </div>
 
-                <!-- Authorization: only Captains, Admins -->
+                <!-- // @if(Gate::check('isadmin') || Gate::check('iscaptain')) -->
                 <!-- // TODO core_team (boolean checkbox) -->
+                <!-- @endif -->
 
                 <div class="form-group row">
                     <label for="email" class="col-4 col-form-label col-form-label-sm">E-Mail</label>
@@ -157,6 +149,7 @@ TennisApp | Spieler/Bearbeiten
                     </div>
                 </div>
 
+                <!-- TODO Set new password -->
                 <div class="form-group row">
                     <label for="password" class="col-4 col-form-label col-form-label-sm">Passwort</label>
                     <div>
@@ -171,7 +164,7 @@ TennisApp | Spieler/Bearbeiten
                     </div>
                 </div>
 
-                <!-- Authorization: only Captains, Admins -->
+                @if(Gate::check('isadmin') || Gate::check('iscaptain'))
                 <div class="form-group row">
                     <label for="role" class="col-4 col-form-label col-form-label-sm">Rolle</label>
                     <div>
@@ -182,11 +175,12 @@ TennisApp | Spieler/Bearbeiten
                         </select>
                     </div>
                 </div>
+                @endif
             </div>
 
-            <div class="card-footer row justify-content-around">
-                <button class="col-5 btn btn-sm footer-buttons" type="submit">Speichern</button>
-                <a class="col-5 btn btn-sm footer-buttons text-danger" onclick="deleteForm.submit(); return false;">Löschen</a>
+            <div class="card-footer row css_footer-buttons-space">
+                <button class="col-5 btn btn-sm css_footer-buttons" type="submit">Speichern</button>
+                <a class="col-5 btn btn-sm css_footer-buttons text-danger" onclick="deleteForm.submit(); return false;">Löschen</a>
             </div>
         </div>
     </form>

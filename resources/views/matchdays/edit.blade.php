@@ -6,19 +6,9 @@ TennisApp | Termine/Bearbeiten
 
 @section('content')
 
-<div class="heading container-fluid shadow static-top p-3 d-flex">
-    <h1 class="pt-1">Spieltermine</h1>
+<div class="container-fluid static-top p-3 css_heading">
+    <h1 class="pt-1 css_headline">Spieltermine</h1>
 </div>
-
-<!-- // @if ($errors->any())
-<div class="alert alert-danger">
-    <ul>
-//        @foreach ($errors->all() as $error)
-//        <li>{{ $error }}</li>
-        @endforeach
-    </ul>
-</div>
-@endif -->
 
 <div class="container pb-5 mb-5">
 
@@ -26,8 +16,7 @@ TennisApp | Termine/Bearbeiten
         @csrf
         @method('PATCH')
 
-        <div class="card shadow my-4">
-
+        <div class="card shadow my-4 css_cards css_matchdaycardsbackground">
             <div class="card-body">
 
                 <div class="form-group row">
@@ -105,9 +94,9 @@ TennisApp | Termine/Bearbeiten
                 </div>
             </div>
 
-            <div class="card-footer row justify-content-around">
-                <button class="col-5 btn btn-sm footer-buttons" type="submit">Speichern</button>
-                <a class="col-5 btn btn-sm footer-buttons text-danger" onclick="deleteForm.submit(); return false;">Löschen</a>
+            <div class="card-footer row css_footer-buttons-space">
+                <button class="col-5 btn btn-sm css_footer-buttons" type="submit">Speichern</button>
+                <a class="col-5 btn btn-sm css_footer-buttons text-danger" onclick="deleteForm.submit(); return false;">Löschen</a>
             </div>
         </div>
     </form>

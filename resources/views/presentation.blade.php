@@ -10,7 +10,7 @@
     <!-- Styles -->
     <style>
         body {
-            background: url("../images/logo_transparent.png") no-repeat center center fixed;
+            background: url("../images/auth_logo-transparent.png") no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             background-size: contain;
@@ -31,7 +31,7 @@
 </head>
 
 <body>
-    <a href="{{ url('/') }}" class="frontpage">
+    <a href="{{ route('register') }}" class="frontpage">
 </body>
 
 </html>

@@ -1,0 +1,60 @@
+/* HOME: MATCHDAYTABLE IN NORMAL FONT SIZE */
+
+.css_matchdaytable {
+    border: none;
+    color: whitesmoke;
+    word-wrap: break-word;
+}
+
+.css_matchdaytable-rowlabel {
+    vertical-align: top !important;
+    padding-left: 1.4rem !important;
+}
+
+/* PLANNER.EDIT & .SHOW: MATCHDAYTABLE WITH 80% FONT SIZE and PLANNERTABLE RADIO BUTTONS */
+
+.css_matchdaytable-small {
+    border: none;
+    color: whitesmoke;
+    word-wrap: break-word;
+    font-size: 80%;
+}
+
+.css_matchdaytable-small-rowlabel {
+    vertical-align: top !important;
+    padding-left: 1.2em !important;
+}
+
+.css_plannertable {
+    color: whitesmoke;
+    word-wrap: break-word;
+    margin-bottom: 0 !important;
+}
+
+.css_plannertable-row {
+    vertical-align: middle !important;
+    width: 100%;
+}
+
+.css_plannertable-playername {
+    padding-left: 0.6em !important;
+}
+
+.css_plannertable-tablecolumn {
+    margin: 0em;
+    padding: 0em !important;
+    vertical-align: middle !important;
+}
+
+/* PLAYERS.SHOW: PLAYERTABLE WITH PLAYER INFORMATION */
+
+.css_playertable {
+    border: none;
+    color: whitesmoke;
+    word-wrap: break-word;
+}
+
+.css_playertable-rowlabel {
+    vertical-align: top !important;
+    padding-left: 1.4rem !important;
+}

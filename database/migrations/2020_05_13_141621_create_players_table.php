@@ -26,7 +26,6 @@ class CreatePlayersTable extends Migration
             $table->string('tel_mobile')->nullable();
             $table->date('birthday')->nullable();
             $table->boolean('core_team')->nullable();
-            $table->string('role')->nullable();
 
             $table->string('email')->unique();
 

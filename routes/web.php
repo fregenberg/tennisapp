@@ -18,6 +18,12 @@ Route::get('/presentation', function () {
     return view('presentation');
 });
 
+Auth::routes();
+// Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/impressum', function () {
+    return view('imprint');
+})->name('impressum');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', 'MatchdayController@index')->name('home');
@@ -50,6 +56,4 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('planer/bearbeiten/{matchday}', 'PlannerController@edit')->name('planner.edit');
     Route::patch('/planer/{matchday}', 'PlannerController@update')->name('planner.update');
-
-Auth::routes();
-// Route::get('/home', 'HomeController@index')->name('home');
+});

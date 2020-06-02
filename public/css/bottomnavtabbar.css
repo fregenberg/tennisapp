@@ -1,0 +1,32 @@
+/* BOTTOM NAVIGATION TAB BAR */
+
+.navbar {
+    background-color: #fdfb50;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    justify-content: space-around;
+    z-index: 20;
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+    float: left;
+    display: block;
+    color: #0275d8;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar svg {
+    max-width: 30%;
+}
+
+/* Add a color to the active/current link */
+.navbar a.active {
+    background-color: #0275d8;
+    color: #fdfb50;
+}

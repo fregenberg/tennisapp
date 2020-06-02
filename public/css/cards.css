@@ -1,0 +1,36 @@
+/* CARDS */
+
+.css_cards {
+    border: 2px solid whitesmoke;
+    color: whitesmoke;
+}
+
+::placeholder {
+    color: #b0bec5 !important;
+}
+
+/* CARD-BACKGROUNDS */
+
+.css_matchdaycardsbackground {
+    background-image: url("../images/matchdays_planner-background_blurred.jpg");
+    background-size: cover;
+}
+
+.css_plannercardsbackground {
+    background-image: url("../images/matchdays_planner-background_blurred.jpg");
+    background-size: cover;
+
+    border: none;
+}
+
+.css_playercardsbackground {
+    background-image: url("../images/players_background_blurred.jpg");
+    background-size: cover;
+}
+
+/* LINE-BACKGROUND, players.index only */
+
+.css_linebackground {
+    background-image: url("../images/players_line.jpg");
+    text-align: center;
+}

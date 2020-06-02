@@ -48,6 +48,16 @@ body {
     text-align: center;
 }
 
+/* only REGISTER-FORM */
+
+::placeholder {
+    color: #b0bec5 !important;
+}
+
+.col-form-label-sm {
+    font-size: 0.848rem;
+}
+
 /* only LOGIN-FORM */
 
 .css_auth-form {
@@ -71,12 +81,12 @@ label {
     color: whitesmoke;
 }
 
-/* only REGISTER-FORM */
+/* IMPRINT */
 
-::placeholder {
-    color: #b0bec5 !important;
-}
-
-.col-form-label-sm {
-    font-size: 0.848rem;
+.css_imprint {
+    bottom: 0;
+    color: #0275d8;
+    font-size: 17px;
+    position: fixed;
+    width: 100%;
 }

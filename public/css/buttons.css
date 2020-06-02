@@ -1,0 +1,29 @@
+/* BIG BUTTONS */
+
+.css_bigbutton {
+    background-color: #0275d8;
+    color: #fdfb50;
+    border: 2px solid #fdfb50;
+}
+
+/* .css_bigbutton:hover {
+    background-color: whitesmoke;
+    color: #0275d8;
+    border: 2px solid #0275d8;
+} */
+
+.css_interval {
+    margin-bottom: 27.5%;
+}
+
+/* EDIT-, CREATE- & SAVE-BUTTONS */
+
+.css_footer-buttons-space {
+    justify-content: space-around;
+}
+
+.css_footer-buttons {
+    background-color: #0275d8;
+    color: #fdfb50;
+    border: 1px solid #fdfb50;
+}

@@ -1,0 +1,17 @@
+/* HEADER */
+
+.css_heading {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+}
+
+.css_headline {
+    color: #fdfb50;
+    font-weight: bold;
+}
+
+.css_404-headline {
+    display: flex;
+    justify-content: center;
+}

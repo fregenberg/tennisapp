@@ -61,6 +61,10 @@ TennisApp | Login
         <!-- container closing tag -->
     </div>
 
+    <div>
+        <a href="{{ route('impressum') }}" class="text-center mb-3 css_imprint">Impressum</a>
+    </div>
+
     <!-- overlay closing tag -->
 </div>
 

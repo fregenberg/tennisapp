@@ -20,7 +20,7 @@
     background-image: url("../images/matchdays_planner-background_blurred.jpg");
     background-size: cover;
 
-    border-left: none;
+    border: none;
 }
 
 .css_playercardsbackground {

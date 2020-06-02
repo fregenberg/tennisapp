@@ -21,6 +21,10 @@ Route::get('/presentation', function () {
 Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/impressum', function () {
+    return view('imprint');
+})->name('impressum');
+
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', 'MatchdayController@index')->name('home');
     // Route::get('/alletermine', 'MatchdayController@index')->name('home');
